@@ -1,0 +1,795 @@
+@import "tailwindcss";
+
+/* Critical CSS - Inline for faster rendering */
+@font-face {
+  font-family: 'Canela';
+  src: url('/fonts/Canela-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #091A2A;
+  --primary: #021C57;
+  --secondary: #0050FF;
+  --accent: #D9D6D1;
+  --surface: #F3F5F7;
+  --gray: #797979;
+  --stroke: #060011;
+  --dark: #091A2A;
+}
+
+@theme inline{
+  --font-heading: var(--font-canela);
+  --font-sans: var(--font-satoshi);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-gray: var(--gray);
+  --color-stroke: var(--stroke);
+  --color-dark: var(--dark);
+  --text-6xl: 80px;
+  --text-5xl: 59px;
+  --text-4xl: 44.4px;
+  --text-4xl-2: 34.4px;
+  --text-3xl: 29.6px;
+  --text-2xl: 22px;
+  --text-xl: 18px;
+  --text-lg: 18px;
+  --text-md: 16px;
+  --text-sm: 14px;
+}
+
+.container {
+  @apply mx-auto max-w-[1260px] px-4 md:px-0;
+}
+
+/* Responsive heading styles */
+h1, .heading-1 {
+  @apply text-5xl sm:text-6xl md:text-6xl lg:text-6xl font-heading;
+}
+h2, .heading-2 {
+  @apply text-4xl-2 sm:text-5xl md:text-5xl lg:text-5xl font-heading;
+}
+h3, .heading-3 {
+  @apply text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-heading;
+}
+h4, .heading-4 {
+  @apply text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-heading;
+}
+h5, .heading-5 {
+  @apply text-xl sm:text-2xl md:text-2xl lg:text-2xl font-heading;
+}
+h6, .heading-6 {
+  @apply text-lg sm:text-xl md:text-xl lg:text-xl font-heading;
+}
+
+body {
+  position: relative;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reduce layout shifts */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Comprehensive Prose Styling */
+.prose {
+  @apply max-w-none text-dark font-sans;
+  color: var(--dark);
+}
+
+/* Typography Scale */
+.prose h1 {
+  @apply !text-4xl sm:!text-5xl md:!text-5xl lg:!text-5xl font-heading font-normal leading-tight pb-2 mb-6 border-b border-dark/10 mt-10;
+  color: var(--dark);
+}
+
+.prose h2 {
+  @apply !text-3xl sm:!text-4xl md:!text-4xl lg:!text-4xl font-heading font-normal leading-tight pb-2 mb-6 border-b border-dark/10 mt-10;
+  color: var(--dark);
+}
+
+.prose h3 {
+  @apply !text-2xl sm:!text-3xl md:!text-3xl lg:!text-3xl font-heading font-normal leading-tight pb-2 mb-4;
+  color: var(--dark);
+}
+
+.prose h4 {
+  @apply !text-xl sm:!text-2xl md:!text-2xl lg:!text-2xl font-heading font-normal leading-tight pb-2 mb-4;
+  color: var(--dark);
+}
+
+.prose h5 {
+  @apply !text-lg sm:!text-xl md:!text-xl lg:!text-xl font-heading font-normal leading-tight pb-2 mb-3;
+  color: var(--dark);
+}
+
+.prose h6 {
+  @apply !text-md sm:!text-lg md:!text-lg lg:!text-lg font-heading font-normal leading-tight pb-2 mb-3;
+  color: var(--dark);
+}
+
+/* Paragraphs */
+.prose p {
+  @apply text-md leading-relaxed pb-6 text-dark/70;
+}
+
+.prose p:last-child {
+  @apply pb-0;
+}
+
+/* Lists */
+.prose ul {
+  @apply pb-6 space-y-3;
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose ul li {
+  @apply text-md text-dark/70 flex items-start leading-relaxed;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.prose ul li::before {
+  content: "—";
+  @apply text-dark/50 mr-2 font-sans;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.prose ol {
+  @apply pb-6 space-y-3;
+  list-style: none;
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+
+.prose ol li {
+  @apply text-md text-dark/70 flex items-start leading-relaxed;
+  position: relative;
+  padding-left: 2rem;
+  counter-increment: list-counter;
+}
+
+.prose ol li::before {
+  content: counter(list-counter) ".";
+  @apply text-dark/50 mr-2 font-sans font-medium;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Nested Lists */
+.prose ul ul,
+.prose ol ol,
+.prose ul ol,
+.prose ol ul {
+  @apply mt-3 ml-4;
+}
+
+.prose ul ul li::before {
+  content: "•";
+  @apply text-dark/30;
+}
+
+.prose ol ol li::before {
+  content: counter(list-counter, lower-alpha) ".";
+  @apply text-dark/30;
+}
+
+/* Blockquotes */
+.prose blockquote {
+  @apply border-l-4 border-secondary/30 pl-6 py-4 my-8 bg-surface/50 italic;
+  font-family: var(--font-heading);
+}
+
+.prose blockquote p {
+  @apply text-lg text-dark/80 pb-0;
+  margin-bottom: 0;
+}
+
+/* TipTap Editor Styles */
+.ProseMirror {
+  @apply outline-none min-h-[200px] p-3;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  @apply text-gray-400 float-left h-0 pointer-events-none;
+}
+
+.ProseMirror h1 {
+  @apply text-4xl font-heading font-normal leading-tight pb-2 mb-6 border-b border-dark/10 mt-10;
+  color: var(--dark);
+}
+
+.ProseMirror h2 {
+  @apply text-3xl font-heading font-normal leading-tight pb-2 mb-6 border-b border-dark/10 mt-10;
+  color: var(--dark);
+}
+
+.ProseMirror h3 {
+  @apply text-2xl font-heading font-normal leading-tight pb-2 mb-4;
+  color: var(--dark);
+}
+
+.ProseMirror p {
+  @apply text-md leading-relaxed pb-6 text-dark/70;
+}
+
+.ProseMirror ul {
+  @apply pb-6 space-y-3;
+  list-style: none;
+  padding-left: 0;
+}
+
+.ProseMirror ul li {
+  @apply text-md text-dark/70 flex items-start leading-relaxed;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.ProseMirror ul li::before {
+  content: "—";
+  @apply text-dark/50 mr-2 font-sans;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ProseMirror ol {
+  @apply pb-6 space-y-3;
+  list-style: none;
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+
+.ProseMirror ol li {
+  @apply text-md text-dark/70 flex items-start leading-relaxed;
+  position: relative;
+  padding-left: 2rem;
+  counter-increment: list-counter;
+}
+
+.ProseMirror ol li::before {
+  content: counter(list-counter) ".";
+  @apply text-dark/50 mr-2 font-sans font-medium;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ProseMirror blockquote {
+  @apply border-l-4 border-secondary/30 pl-6 py-4 my-8 bg-surface/50 italic;
+  font-family: var(--font-heading);
+}
+
+.ProseMirror a {
+  @apply text-secondary hover:text-secondary/80 underline decoration-secondary/30 hover:decoration-secondary transition-colors duration-200;
+}
+
+.ProseMirror code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+}
+
+.ProseMirror pre {
+  @apply bg-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+.ProseMirror pre code {
+  @apply bg-transparent p-0;
+}
+
+.ProseMirror img {
+  @apply max-w-full h-auto rounded-lg;
+}
+
+.ProseMirror table {
+  @apply w-full border-collapse border border-gray-300 my-4;
+}
+
+.ProseMirror th,
+.ProseMirror td {
+  @apply border border-gray-300 px-3 py-2 text-left;
+}
+
+.ProseMirror th {
+  @apply bg-gray-100 font-semibold;
+}
+
+.ProseMirror hr {
+  @apply border-t border-gray-300 my-8;
+}
+
+.prose blockquote cite {
+  @apply text-sm text-dark/50 not-italic block mt-2;
+  font-family: var(--font-sans);
+}
+
+/* Links */
+.prose a {
+  @apply text-secondary hover:text-secondary/80 underline decoration-secondary/30 hover:decoration-secondary transition-colors duration-200;
+}
+
+.prose a:hover {
+  @apply text-secondary/80;
+}
+
+/* Strong and Emphasis */
+.prose strong {
+  @apply font-semibold text-dark;
+}
+
+.prose em {
+  @apply italic text-dark/80;
+}
+
+/* Code */
+.prose code {
+  @apply bg-surface px-2 py-1 rounded text-sm font-mono text-dark/80;
+}
+
+.prose pre {
+  @apply bg-dark text-white p-4 rounded-lg overflow-x-auto my-6;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-white;
+}
+
+/* Images */
+.prose img {
+  @apply w-full h-auto rounded-lg my-8 shadow-lg;
+  max-width: 100%;
+}
+
+.prose figure {
+  @apply my-8;
+}
+
+.prose figcaption {
+  @apply text-sm text-dark/50 text-center mt-2 italic;
+}
+
+/* Tables */
+.prose table {
+  @apply w-full border-collapse my-8;
+}
+
+.prose thead {
+  @apply bg-surface;
+}
+
+.prose th {
+  @apply text-left p-4 border-b border-dark/10 font-semibold text-dark;
+}
+
+.prose td {
+  @apply p-4 border-b border-dark/5 text-dark/70;
+}
+
+.prose tbody tr:hover {
+  @apply bg-surface/30;
+}
+
+/* Horizontal Rules */
+.prose hr {
+  @apply border-dark/10 my-8;
+  border: none;
+  border-top: 1px solid;
+}
+
+/* Definition Lists */
+.prose dl {
+  @apply my-6;
+}
+
+.prose dt {
+  @apply font-semibold text-dark mb-2;
+}
+
+.prose dd {
+  @apply text-dark/70 ml-4 mb-4;
+}
+
+/* Small Text */
+.prose small {
+  @apply text-sm text-dark/50;
+}
+
+/* Abbreviations */
+.prose abbr {
+  @apply border-b border-dotted border-dark/30 cursor-help;
+}
+
+/* Mark */
+.prose mark {
+  @apply bg-secondary/20 px-1 rounded;
+}
+
+/* Subscript and Superscript */
+.prose sub,
+.prose sup {
+  @apply text-xs;
+}
+
+.prose sub {
+  @apply bottom-0;
+}
+
+.prose sup {
+  @apply top-0;
+}
+
+/* Print Styles */
+@media print {
+  .prose {
+    @apply text-black;
+  }
+  
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-black border-black/20;
+  }
+  
+  .prose a {
+    @apply text-black underline;
+  }
+  
+  .prose blockquote {
+    @apply border-black/30 bg-gray-100;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .prose h1 {
+    @apply !text-3xl pb-2 mb-4;
+  }
+  
+  .prose h2 {
+    @apply !text-2xl pb-2 mb-4;
+  }
+  
+  .prose h3 {
+    @apply !text-xl pb-2 mb-3;
+  }
+  
+  .prose p {
+    @apply text-base pb-4;
+  }
+  
+  .prose ul li,
+  .prose ol li {
+    @apply text-base;
+  }
+  
+  .prose blockquote {
+    @apply pl-4 py-3 my-6;
+  }
+  
+  .prose blockquote p {
+    @apply text-base;
+  }
+}
+
+/* TipTap Editor Styles */
+.tiptap-editor {
+  border: 1px solid #e2e8f0;
+  background: white;
+  font-family: inherit;
+  overflow: hidden;
+  margin-top: 0px !important;
+}
+
+.tiptap-toolbar {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.toolbar-group {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding-right: 0.75rem;
+  border-right: 1px solid #e2e8f0;
+}
+
+.toolbar-group:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.toolbar-button {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+}
+
+.toolbar-button:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+.toolbar-button.is-active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.toolbar-button.is-active:hover {
+  background: #2563eb;
+}
+
+.tiptap-content {
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.tiptap-content .ProseMirror {
+  outline: none;
+  min-height: 180px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.tiptap-content .ProseMirror p {
+  margin: 0.5rem 0;
+}
+
+.tiptap-content .ProseMirror h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+  color: #1f2937;
+}
+
+.tiptap-content .ProseMirror h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.5rem 0;
+  color: #1f2937;
+}
+
+.tiptap-content .ProseMirror h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.25rem 0;
+  color: #1f2937;
+}
+
+.tiptap-content .ProseMirror blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #6b7280;
+  background: #f9fafb;
+  padding: 0.75rem 1rem;
+}
+
+.tiptap-content .ProseMirror ul,
+.tiptap-content .ProseMirror ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.tiptap-content .ProseMirror li {
+  margin: 0.25rem 0;
+}
+
+.tiptap-content .ProseMirror code {
+  background: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+.tiptap-content .ProseMirror pre {
+  background: #f3f4f6;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.tiptap-content .ProseMirror pre code {
+  background: none;
+  padding: 0;
+}
+
+.tiptap-content .ProseMirror a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.tiptap-content .ProseMirror a:hover {
+  color: #2563eb;
+}
+
+.tiptap-content .ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.tiptap-content .ProseMirror table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.tiptap-content .ProseMirror table td,
+.tiptap-content .ProseMirror table th {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.tiptap-content .ProseMirror table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+.tiptap-content .ProseMirror hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1rem 0;
+}
+
+/* Placeholder styling */
+.tiptap-content .ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+
+/* TipTap drag and drop styling */
+.tiptap-content .ProseMirror.drag-over {
+  border: 2px dashed #3b82f6;
+  background: #f0f9ff;
+}
+
+/* Image Upload Styles */
+.image-upload {
+  width: 100%;
+}
+
+.upload-area {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f9fafb;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.upload-area.drag-active {
+  border-color: #3b82f6;
+  background: #dbeafe;
+  transform: scale(1.02);
+}
+
+.upload-area.uploading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.preview-container:hover .preview-overlay {
+  opacity: 1;
+}
+
+.remove-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+}

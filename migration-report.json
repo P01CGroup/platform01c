@@ -1,0 +1,241 @@
+{
+  "timestamp": "2025-07-28T12:06:32.025Z",
+  "source_url": "https://platform01consulting.com",
+  "insights_migration": {
+    "total": 55,
+    "successful": 55,
+    "failed": 0,
+    "errors": []
+  },
+  "images_migration": {
+    "total": 54,
+    "successful": 0,
+    "failed": 54,
+    "errors": [
+      {
+        "title": "Corporate Success Stories: Netflix",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Growth Conundrum in Manufacturing: Challenges and Strategic Solutions",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Strategic Buyouts in M&#038;A",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Mastering Communication Design in the GCC: Strategies for Cultural Impact and Market Success",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Role of Cultural Insights in Building Authentic Brand Communications",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Brand Equity: How to Measure and Strengthen the Value of Your Brand",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Optimizing Your Marketing Processes for Maximum Efficiency and Impact",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Leveraging Digital Analytics to Optimize Marketing Campaigns in Real-Time",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Harnessing Social Listening to Enhance Brand Reputation in the GCC",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Building Loyalty Programs That Drive Long-Term Customer Engagement Your Brand",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Reputation Management for CEOs and Boards: Building and Protecting Your Brand",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Leveraging Consumer Insights to Drive Product Innovation",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Building a Strong Brand Identity: How to Stand Out in the GCC",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Designing Communication Campaigns that Resonate with GCC Audiences",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Pricing Strategies for the GCC: Balancing Value and Affordability",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Navigating Crisis Communication &#8211; Protecting Your Brand in Challenging Times",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Using Customer Personas to Drive Marketing Strategy and Brand Success",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Power of Storytelling in Creating Emotional Connections with Consumers",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Customized Workshops: Empowering Teams to Build World-Class Marketing Competencies",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Developing a Winning Marketing Strategy: From Concept to Execution",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Platform01 Consulting: 2024 &#8211; A Remarkable Year in Review",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "How to Conduct Effective Pricing Sensitivity Analysis for Your Brand in the GCC",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Art of Brand Positioning: Carving Your Unique Market Space",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Mastering Customer Insights: Turning Data into Actionable Business Strategies",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Building the Brand Funnel™ &#8211; the P01C Way",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Crucial Role of Commercial Integration in M&#038;A Success",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Portfolio Valuations: Why It Matters for Private Capital Investors",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Developing the Value Chain of Wind Turbines and Equipment",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Solar Panel Manufacturing: Materials, Technology and Sustainability",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Approach to Turnaround Industrial Businesses",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Navigating the Logistics Landscape: Understanding the Sub-Sectors",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Corporate Turnaround Story: Advanced Micro Devices (AMD)",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "LEGO: One of the Greatest Turnaround Stories In Corporate History",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Metaverse",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Corporate Turnaround Story: Delta Airlines",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Corporate Turnaround Stories: Ford Motor Company 2006-2010",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Strategic Planning in Recession",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Strategic Options Analysis",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Impact of Renewables on the Grid",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Finding and Pitching to Potential Investors",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Private Equity Investment Strategies",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Future of Hydrogen",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Importance of Liquidation Preference for a Startup Founder",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Role of LNG in Energy Transition",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Business Valuation of A Distressed Business",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Valuing Early Stage Startups – Venture Capital Approach",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Brand Valuation",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "What VCs Look for in Startups",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Framework To Maximize The Exit Potential",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Blue Ocean Strategy",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Significance of a Feasibility Study",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "Demystifying Growth Investing Strategy",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "The Art of Financial Modeling",
+        "error": "client.from(...).update(...).eq is not a function"
+      },
+      {
+        "title": "A Structured Approach to Analyze Businesses in the Tech Sector",
+        "error": "client.from(...).update(...).eq is not a function"
+      }
+    ]
+  },
+  "summary": {
+    "total_insights": 55,
+    "successful_insights": 55,
+    "failed_insights": 0,
+    "total_images": 54,
+    "successful_images": 0,
+    "failed_images": 54
+  }
+}
