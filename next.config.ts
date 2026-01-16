@@ -370,20 +370,20 @@ const nextConfig: NextConfig = {
   },
   /* config options here */
   images: {
-    // remotePatterns: [
-    //   {
-    //     protocol: "https",
-    //     hostname: "images.unsplash.com",
-    //   },
-    //   {
-    //     protocol: "https",
-    //     hostname: "vsqfvsosprmjdktwilrj.supabase.co",
-    //   },
-    //   {
-    //     protocol: "https",
-    //     hostname: "platform01consulting.com",
-    //   },
-    // ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "vsqfvsosprmjdktwilrj.supabase.co",
+      },
+      {
+        protocol: "https",
+        hostname: "platform01consulting.com",
+      },
+    ],
     // Optimize image delivery
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 31536000, // 1 year
@@ -415,12 +415,8 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Cache-Control",
-            value: "public, max-age=0, immutable",
+            value: "public, max-age=31536000, immutable",
           },
-          // {
-          //   key: 'Cache-Control',
-          //   value: 'public, max-age=31536000, immutable',
-          // },
         ],
       },
       {
@@ -428,12 +424,8 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=0, immutable",
+            value: "public, max-age=31536000, immutable",
           },
-          // {
-          //   key: 'Cache-Control',
-          //   value: 'public, max-age=31536000, immutable',
-          // },
         ],
       },
       {
@@ -441,12 +433,8 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=0, immutable",
+            value: "public, max-age=31536000, immutable",
           },
-          // {
-          //   key: 'Cache-Control',
-          //   value: 'public, max-age=31536000, immutable',
-          // },
         ],
       },
       {
