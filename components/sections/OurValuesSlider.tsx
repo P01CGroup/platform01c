@@ -119,7 +119,9 @@ export default function OurValuesSlider({
     >
       <div className="container">
         <div className="relative mb-8">
-          <h2 className="heading-3 mb-0">{parse(heading)}</h2>
+          <h2 className="heading-3 mb-0 md:max-w-[calc(100%-300px)]">
+            {parse(heading)}
+          </h2>
           <div className="flex items-center justify-start md:justify-end gap-2 pt-4 md:pt-0 md:absolute bottom-0 right-0">
             <button
               ref={navPrev}
