@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
       if (!body[field as keyof ContactFormData]?.trim()) {
         return NextResponse.json(
           { error: `${field} is required` },
-          { status: 400 }
+          { status: 400 },
         );
       }
     }
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(body.email)) {
       return NextResponse.json(
         { error: "Invalid email format" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -51,11 +51,11 @@ export async function POST(request: NextRequest) {
     try {
       console.log(
         "Attempting to send email with API key:",
-        process.env.RESEND_API_KEY ? "Present" : "Missing"
+        process.env.RESEND_API_KEY ? "Present" : "Missing",
       );
 
       const emailResult = await resend.emails.send({
-        from: "info@p01cglobal.com", // Use Resend's default sender for testing
+        from: "info@platform01consulting.com", // Use Resend's default sender for testing
         to: [
           "nabeel.a@p01cglobal.com",
           "mustafa.n@p01cglobal.com",
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
                      day: "numeric",
                      hour: "2-digit",
                      minute: "2-digit",
-                   }
+                   },
                  )}
                </p>
                <p style="margin: 5px 0 0 0; color: #6c757d; font-size: 14px;">
@@ -155,7 +155,7 @@ export async function POST(request: NextRequest) {
     } catch (sheetsError: any) {
       console.error(
         "Failed to save contact submission to Google Sheets:",
-        sheetsError
+        sheetsError,
       );
       console.error("Sheets error details:", {
         message: sheetsError?.message || "Unknown error",
@@ -171,13 +171,13 @@ export async function POST(request: NextRequest) {
         message:
           "Your inquiry has been submitted successfully. We'll get back to you soon!",
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Contact form submission error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
