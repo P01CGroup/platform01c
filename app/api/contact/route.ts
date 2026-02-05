@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
       );
 
       const emailResult = await resend.emails.send({
-        from: "leads@marketing.platform01consulting.com", // Use Resend's default sender for testing
+        from: "info@p01cglobal.com", // Use Resend's default sender for testing
         to: [
           "nabeel.a@p01cglobal.com",
           "mustafa.n@p01cglobal.com",
