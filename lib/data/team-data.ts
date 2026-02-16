@@ -593,6 +593,12 @@ export const teamConfigs = {
   ],
   "corporate-advisors": ["eliza-prendzov", "abdullah-alkhaldi"],
   "corporate-managing-director": ["nabeel-ahmed"],
+  "financial-modelling-and-analysis": [
+    "mustafa-nadeem",
+    "ali-shah-khawaja",
+    "shafi-akhund",
+    "muhammad-aizaz",
+  ],
 };
 
 // Function to get team data for a specific page (both consulting and corporate)
@@ -605,7 +611,7 @@ export const getTeamDataForPage = (pageKey: keyof typeof teamConfigs) => {
 
 // Function to get corporate team data for a specific page
 export const getCorporateTeamDataForPage = (
-  pageKey: keyof typeof teamConfigs
+  pageKey: keyof typeof teamConfigs,
 ) => {
   const memberIds = teamConfigs[pageKey];
   return getCorporateTeamMembers(memberIds);
