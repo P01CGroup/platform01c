@@ -126,7 +126,7 @@ export const teamMembers: Record<string, TeamMember> = {
       src: "/consulting-team/6.png",
       alt: "Ali Shah Khawaja",
     },
-    text1: "Manager",
+    text1: "Senior Manager",
     text2: "Strategy & Advisory",
     background: "6+ years in M&A Advisory and Financial Due Diligence",
     sectorsOfExpertise: "M&A and Due Diligence",
@@ -229,14 +229,13 @@ export const teamMembers: Record<string, TeamMember> = {
       src: "/consulting-team/16.png",
       alt: "Mohammad Zaryab",
     },
-    text1: "Junior Analyst",
+    text1: "Analyst I",
     text2: "Strategy & Advisory",
     background: "Experience in Strategy and Advisory across diverse projects",
     sectorsOfExpertise: "Business",
     priorExperience: "Inducted in Platform01 Graduate Program",
     education: "BS Economics & Finance",
-    // professionalQualifications:
-    //   "Financial Modeling & Valuation Analyst (FMVA®) from Corporate Finance Institute (CFI), Canada",
+    professionalQualifications: "CFA Level I Candidate at CFA Institute, USA",
   },
   "mohammad-misaad": {
     id: "mohammad-misaad",
@@ -289,6 +288,21 @@ export const teamMembers: Record<string, TeamMember> = {
   // },
 
   // details incomplete for zoha ayaz
+  "yusra-amjad": {
+    id: "yusra-amjad",
+    name: "Yusra Amjad",
+    image: {
+      src: "/consulting-team/19.png",
+      alt: "Yusra Amjad",
+    },
+    text1: "Junior Analyst",
+    text2: "Strategy & Advisory",
+    background: "Experience in Strategy and Advisory across diverse projects.",
+    sectorsOfExpertise: "Business.",
+    priorExperience: "Inducted in Platform01 Graduate Program.",
+    education: "BBA & MBA Finance",
+    professionalQualifications: "CFA Level II Candidate at CFA Institute, USA",
+  },
   "zoha-ayaz": {
     id: "zoha-ayaz",
     name: "Zoha Ayaz",
@@ -302,6 +316,21 @@ export const teamMembers: Record<string, TeamMember> = {
     sectorsOfExpertise: "Mergers & Acquisitions",
     priorExperience: "Inducted in Platform01 Graduate Program",
     education: "BBA Economics & Finance",
+    professionalQualifications: "",
+  },
+  "alishba-nasim": {
+    id: "alishba-nasim",
+    name: "Alishba Nasim",
+    image: {
+      src: "/consulting-team/18.png",
+      alt: "Alishba Nasim",
+    },
+    text1: "M&A Analyst",
+    text2: "Intern",
+    background: "Experience in conducting outreach",
+    sectorsOfExpertise: "Mergers & Acquisitions",
+    priorExperience: "Inducted in Platform01 Graduate Program",
+    education: "BBA Marketing",
     professionalQualifications: "",
   },
   // 'muzna-zafar': {
@@ -575,7 +604,9 @@ export const teamConfigs = {
     "mohammad-misaad",
     // "abdul-moiz",
     // "hamna-asghar",
+    "yusra-amjad",
     "zoha-ayaz",
+    "alishba-nasim",
   ],
   "consulting-managing-director": ["mustafa-nadeem"],
 
