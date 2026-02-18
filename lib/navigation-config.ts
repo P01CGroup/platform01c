@@ -58,6 +58,10 @@ export const navigationData: (NavItemData | MegaMenuData)[] = [
             href: "/transactions-advisory-services",
           },
           { label: "M&A Consulting", href: "/ma-advisory" },
+          {
+            label: "Financial Modelling",
+            href: "/financial-modelling-and-analysis",
+          },
         ],
       },
       {
