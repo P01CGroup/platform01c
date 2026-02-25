@@ -156,13 +156,12 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question:
-      "Who offers professional financial modelling services in UAE and KSA?",
+    question: "Who offers professional financial modelling services in UAE?",
     answer: (
       <span>
         Professional financial modelling services in the United Arab Emirates
-        and Saudi Arabia are typically provided by specialized consulting firms
-        with experience in:
+        are typically provided by specialized consulting firms with experience
+        in:
         <ul className="list-disc pl-6 mt-2">
           <li>Investment analysis</li>
           <li>Project finance</li>
@@ -324,8 +323,7 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question:
-      "Is financial modelling mandatory for business expansion in UAE or KSA?",
+    question: "Is financial modelling mandatory for business expansion in UAE?",
     answer: (
       <span>
         It may not always be legally mandatory, but it is often commercially
@@ -394,7 +392,7 @@ const faqData: FAQItem[] = [
 const FeasibilityStudyGeneric = async () => {
   // Fetch credentials with the relevant service tag
   const { data: credentials, error } = await credentialsService.getCredentials({
-    service_tags: ["Healthcare"],
+    // service_tags: ["Feasibility Study", "Healthcare"],
     is_active: true,
   });
 

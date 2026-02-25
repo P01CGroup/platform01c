@@ -85,6 +85,7 @@ export default function Credentials({
 
   return (
     <section
+      id={"credentials"}
       className={`${bgSurface ? "bg-[color:var(--surface)]" : "bg-white"} pt-16`}
     >
       <div className="container pb-16">

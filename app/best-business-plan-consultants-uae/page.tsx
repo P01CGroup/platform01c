@@ -78,6 +78,23 @@ const BusinessPlanData: ServiceHeroData = {
     ultrawide: "/services/ultrawide/business-plan.png",
   },
   showContactForm: true,
+  awards: [
+    {
+      image: "/awards/top-consulting-firm-middle-east.png",
+      text: "Top Consulting Firm <br/> ConsultancyME",
+      alt: "Top Consulting Firm 2025 Middle East 2025",
+    },
+    {
+      image: "/awards/strategist-award.png",
+      text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
+      alt: "Top Strategist - 2026",
+    },
+    {
+      image: "/awards/ma-award-1.png",
+      text: "Top M&A Advisory <br/> Boutique 2025",
+      alt: "Top M&A Advisory Boutique 2025",
+    },
+  ],
 };
 
 const teamData = getTeamDataForPage("business-plan");
@@ -274,12 +291,12 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question: "Is the business plan suitable for investors in the UAE and KSA?",
+    question: "Is the business plan suitable for investors in the UAE?",
     answer: (
       <span>
         Absolutely. We tailor language, data points, and format to meet investor
-        preferences in both KSA and UAE, aligning with the expectations of VCs,
-        family offices, and banks in the region.
+        preferences in UAE, aligning with the expectations of VCs, family
+        offices, and banks in the region.
       </span>
     ),
   },

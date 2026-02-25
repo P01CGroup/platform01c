@@ -90,14 +90,19 @@ const feasibilityStudyData: ServiceHeroData = {
   },
   awards: [
     {
-      image: "/awards/strategist-award.png",
-      text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
-      alt: "Top M&A Boutique UAE - 2025",
-    },
-    {
       image: "/awards/top-consulting-firm-middle-east.png",
       text: "Top Consulting Firm <br/> ConsultancyME",
       alt: "Top Consulting Firm 2025 Middle East 2025",
+    },
+    {
+      image: "/awards/strategist-award.png",
+      text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
+      alt: "Top Strategist - 2026",
+    },
+    {
+      image: "/awards/ma-award-1.png",
+      text: "Top M&A Advisory <br/> Boutique 2025",
+      alt: "Top M&A Advisory Boutique 2025",
     },
   ],
   showContactForm: true,
@@ -323,7 +328,7 @@ const FeasibilityStudyUAE = async () => {
         FourColumn={true}
       >
         {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null
+          item ? <TeamCard key={item.id || index} member={item} /> : null,
         )}
       </TeamShowcase>
 

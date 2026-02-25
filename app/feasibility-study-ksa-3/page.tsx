@@ -122,7 +122,7 @@ const faqData: FAQItem[] = [
   },
   {
     question:
-      "What types of feasibility studies does Platform01 Consulting provide in the UAE and Saudi Arabia?",
+      "What types of feasibility studies does Platform01 Consulting provide in the Saudi Arabia?",
     answer:
       "We offer fully integrated feasibility studies for: Industrial Projects (manufacturing, logistics, agri-processing), Infrastructure (transport, utilities, PPPs), Healthcare (hospitals, specialty clinics, diagnostics), Education (K-12 schools, universities, training centers), Energy (renewables, clean tech, district cooling), Real Estate (residential, commercial, hospitality, retail, mixed-use), and other sectors. As a leading feasibility study firm, we ensure each study is grounded in both market realism and financial rigor.",
   },
@@ -335,7 +335,7 @@ const FeasibilityStudySceondary = async () => {
         FourColumn={true}
       >
         {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null
+          item ? <TeamCard key={item.id || index} member={item} /> : null,
         )}
       </TeamShowcase>
       <Credentials

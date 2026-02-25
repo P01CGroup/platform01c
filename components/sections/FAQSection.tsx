@@ -29,7 +29,7 @@ export default function FAQSection({
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="bg-white pb-20">
+    <section id={"faqs"} className="bg-white pb-20">
       <div className="container pt-5">
         <Header text="FAQs" className="mb-26" />
         {heading && <h2 className="heading-3 mb-8 max-w-[460px]">{heading}</h2>}

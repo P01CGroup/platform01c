@@ -118,6 +118,19 @@ const Navbar = () => {
   // This function will be passed to the mobile nav to handle link clicks
   const closeMenu = () => setIsMenuOpen(false);
 
+  const restrictedPages = [
+    "/feasibility-study-ksa-2",
+    "/smb-advisory-services-uae",
+    "/transactions-advisory-services-uae",
+    "/best-business-plan-consultants-uae",
+    "/business-valuation-services-uae",
+    "/ma-consulting-services-2",
+    "/feasibility-study-uae",
+  ];
+
+  const isRestrictedPage =
+    mounted && restrictedPages.some((path) => pathname.startsWith(path));
+
   return (
     <>
       <header
@@ -134,7 +147,7 @@ const Navbar = () => {
             !isMenuOpen &&
             (navbarVariant === "dark"
               ? "border-b border-white/15"
-              : "border-b border-dark/10")
+              : "border-b border-dark/10"),
         )}
       >
         <div className="container relative !md:px-4 !py-4 flex items-center justify-between">
@@ -145,14 +158,39 @@ const Navbar = () => {
           <>
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1 static">
-              {navigationData.map((item) => (
-                <NavItem
-                  key={item.label}
-                  item={item}
-                  navbarVariant={navbarVariant}
-                  isScrolled={isScrolledState}
-                />
-              ))}
+              {!mounted ? null : isRestrictedPage ? (
+                <>
+                  <Link
+                    href="#credentials"
+                    className="px-4 py-2 text-dark hover:bg-dark/5 transition"
+                  >
+                    Credentials
+                  </Link>
+
+                  <Link
+                    href="#teams"
+                    className="px-4 py-2 text-dark hover:bg-dark/5 transition"
+                  >
+                    Teams
+                  </Link>
+
+                  <Link
+                    href="#faqs"
+                    className="px-4 py-2 text-dark hover:bg-dark/5 transition"
+                  >
+                    FAQs
+                  </Link>
+                </>
+              ) : (
+                navigationData.map((item) => (
+                  <NavItem
+                    key={item.label}
+                    item={item}
+                    navbarVariant={navbarVariant}
+                    isScrolled={isScrolledState}
+                  />
+                ))
+              )}
             </nav>
 
             <div className="hidden md:flex items-center gap-4">
@@ -258,7 +296,7 @@ const NavItem = ({
               ? !isScrolled
                 ? "text-dark"
                 : "text-dark"
-              : "text-dark"
+              : "text-dark",
           )}
           aria-haspopup="true"
           aria-expanded={isHovered}
@@ -281,7 +319,7 @@ const NavItem = ({
               ? !isScrolled
                 ? "text-dark"
                 : "text-dark"
-              : "text-dark"
+              : "text-dark",
           )}
         >
           {item.label}
@@ -297,7 +335,7 @@ const NavItem = ({
             className={cn(
               "absolute top-full origin-top",
               item.isMegaMenu ? "pt-0" : "pt-5",
-              item.isMegaMenu ? "left-0 w-full" : "left-0"
+              item.isMegaMenu ? "left-0 w-full" : "left-0",
             )}
           >
             <div className="bg-white shadow-lg overflow-hidden">
@@ -382,8 +420,34 @@ const MegaMenuContent = ({ items }: { items: any[] }) => (
 const MobileNavContent = ({ closeMenu }: { closeMenu: () => void }) => {
   const [[level, direction], setLevel] = useState([0, 0]);
   const [navPath, setNavPath] = useState<string[]>(["root"]);
+  const [mounted, setMounted] = useState(false);
 
-  let currentContent: any[] = navigationData;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const pathname = usePathname();
+
+  const restrictedPages = [
+    "/feasibility-study-ksa-2",
+    "/smb-advisory-services-uae",
+    "/transactions-advisory-services-uae",
+    "/best-business-plan-consultants-uae",
+    "/business-valuation-services-uae",
+    "/ma-consulting-services-2",
+    "/feasibility-study-uae",
+  ];
+
+  const isRestrictedPage =
+    mounted && restrictedPages.some((path) => pathname.startsWith(path));
+
+  let currentContent: any[] = isRestrictedPage
+    ? [
+        { label: "Credentials", href: "#credentials" },
+        { label: "Teams", href: "#teams" },
+        { label: "FAQs", href: "#faqs" },
+      ]
+    : navigationData;
   let isMegaMenuContent = false;
 
   // Traverse data to find content for the current level
