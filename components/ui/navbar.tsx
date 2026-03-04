@@ -158,7 +158,8 @@ const Navbar = () => {
           <>
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1 static">
-              {!mounted &&
+              {
+                // {!mounted &&
                 navigationData.map((item) => (
                   <NavItem
                     key={item.label}
@@ -166,7 +167,8 @@ const Navbar = () => {
                     navbarVariant={navbarVariant}
                     isScrolled={isScrolledState}
                   />
-                ))}
+                ))
+              }
               {/* {!mounted ? null : isRestrictedPage ? (
                 <>
                   <Link
