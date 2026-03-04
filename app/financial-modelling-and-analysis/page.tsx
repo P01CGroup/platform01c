@@ -19,6 +19,7 @@ import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
 import Link from "next/link";
+import ContentBlock from "@/components/sections/ContentBlocks";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -411,7 +412,7 @@ const FeasibilityStudyGeneric = async () => {
         showContactForm={true}
         showContactFormMobileView={true}
       />
-      <div className="container pt-5">
+      {/* <div className="container pt-5">
         <Header text="Financial Modelling Services " className="mb-26" />
         <h2 className="heading-4 max-w-[1010px] ">
           At Platform01 Consulting, we offer professional financial modelling
@@ -427,6 +428,27 @@ const FeasibilityStudyGeneric = async () => {
               className="last:border-b-0 border-b border-dark/10 py-6"
             />
           ))}
+        </div>
+      </div> */}
+      <div className="">
+        <div className="container pt-5">
+          <Header text="Financial Modelling Services " className="mb-26" />
+          <h2 className="heading-4 max-w-[1010px] ">
+            At Platform01 Consulting, we offer professional financial modelling
+            services for businesses, investors and leaders in the United Arab
+            Emirates, Kingdom of Saudi Arabia and wider EMEA region. We develop:
+          </h2>
+
+          <ContentBlock bgSurface={false} slides={checklistItems} />
+          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
+            {bespokeItems.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div> */}
         </div>
       </div>
       {/* <TeamText>
@@ -481,33 +503,55 @@ const FeasibilityStudyGeneric = async () => {
         heading={"Transaction Advisory, Investor Documentation"}
         supportingText={""}
       />
-      <div className="container pt-5">
-        <Header text="Financial Modelling Services " className="mb-26" />
-        <h2 className="heading-4 max-w-[1010px] ">
-          Our Bespoke and Investor Grade Financial Models are designed for:
-        </h2>
+      <div className="">
+        <div className="container pt-5">
+          <Header text="Financial Modelling Services " className="mb-26" />
+          <h2 className="heading-4 max-w-[1010px] ">
+            Our Bespoke and Investor Grade Financial Models are designed for:
+          </h2>
 
-        <div className="flex flex-col gap-0 mt-12 mb-8">
-          {bespokeItems.map((item, index) => (
-            <ChecklistItem
-              key={index}
-              text={item}
-              className="last:border-b-0 border-b border-dark/10 py-6"
-            />
-          ))}
+          <ContentBlock slides={bespokeItems} />
+          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
+            {bespokeItems.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div> */}
         </div>
-        <p className="text-dark/50 max-w-[620px] mb-20">
-          Read more:{" "}
-          <Link
-            className="underline hover:text-dark"
-            href="https://www.platform01consulting.com/insights/the-art-of-financial-modeling"
-          >
-            the Art of Financial Modelling
-          </Link>
-        </p>
       </div>
-      <div className="container pt-5">
-        {/* <Header text="Financial Modelling Services " className="mb-26" /> */}
+      <DynamicInsightsSlider bgSurface={true} />
+      <div className="bg-[color:var(--surface)]">
+        <div className="container pt-5">
+          <Header text="Financial Modelling Services " className="mb-26" />
+          <h2 className="heading-4 max-w-[1010px] ">
+            Why Businesses Choose Platform01 Consulting
+          </h2>
+
+          <ContentBlock slides={consultingItems} />
+          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
+            {bespokeItems.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div> */}
+          <p className="text-dark/50 max-w-[620px] mb-20">
+            Read more:{" "}
+            <Link
+              className="underline hover:text-dark"
+              href="https://www.platform01consulting.com/insights/the-art-of-financial-modeling"
+            >
+              the Art of Financial Modelling
+            </Link>
+          </p>
+        </div>
+      </div>
+      {/* <div className="container pt-5">
         <h2 className="heading-4 max-w-[1010px] ">
           Why Businesses Choose Platform01 Consulting
         </h2>
@@ -521,14 +565,14 @@ const FeasibilityStudyGeneric = async () => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
       {/* <ServicesSection
         services={servicesData}
         heading="Tailored Scope for Optimal Value"
         supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to Feasibility Studies. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation.'
       /> */}
 
-      {/* <DynamicInsightsSlider bgSurface={true} />
+      {/* 
       <CallToAction
         heading="Let' Talk"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you."

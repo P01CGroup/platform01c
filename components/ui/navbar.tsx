@@ -158,7 +158,16 @@ const Navbar = () => {
           <>
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1 static">
-              {!mounted ? null : isRestrictedPage ? (
+              {!mounted &&
+                navigationData.map((item) => (
+                  <NavItem
+                    key={item.label}
+                    item={item}
+                    navbarVariant={navbarVariant}
+                    isScrolled={isScrolledState}
+                  />
+                ))}
+              {/* {!mounted ? null : isRestrictedPage ? (
                 <>
                   <Link
                     href="#credentials"
@@ -190,7 +199,7 @@ const Navbar = () => {
                     isScrolled={isScrolledState}
                   />
                 ))
-              )}
+              )} */}
             </nav>
 
             <div className="hidden md:flex items-center gap-4">
@@ -441,13 +450,14 @@ const MobileNavContent = ({ closeMenu }: { closeMenu: () => void }) => {
   const isRestrictedPage =
     mounted && restrictedPages.some((path) => pathname.startsWith(path));
 
-  let currentContent: any[] = isRestrictedPage
-    ? [
-        { label: "Credentials", href: "#credentials" },
-        { label: "Teams", href: "#teams" },
-        { label: "FAQs", href: "#faqs" },
-      ]
-    : navigationData;
+  let currentContent: any[] = navigationData;
+  // let currentContent: any[] = isRestrictedPage
+  //   ? [
+  //       { label: "Credentials", href: "#credentials" },
+  //       { label: "Teams", href: "#teams" },
+  //       { label: "FAQs", href: "#faqs" },
+  //     ]
+  //   : navigationData;
   let isMegaMenuContent = false;
 
   // Traverse data to find content for the current level
