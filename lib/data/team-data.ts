@@ -60,25 +60,25 @@ export const teamMembers: Record<string, TeamMember> = {
       "BBA Finance from Institute of Business Administration (AACSB accredited)",
     professionalQualifications: "NA",
   },
-  "mohammad-ovais": {
-    id: "mohammad-ovais",
-    name: "Mohammad Ovais, CFA",
-    image: {
-      src: "/consulting-team/3.png",
-      alt: "Mohammad Ovais, CFA",
-    },
-    text1: "Senior Practitioner and SME",
-    text2: "Infrastructure & Healthcare",
+  // "mohammad-ovais": {
+  //   id: "mohammad-ovais",
+  //   name: "Mohammad Ovais, CFA",
+  //   image: {
+  //     src: "/consulting-team/3.png",
+  //     alt: "Mohammad Ovais, CFA",
+  //   },
+  //   text1: "Senior Practitioner and SME",
+  //   text2: "Infrastructure & Healthcare",
 
-    background: "13+ years in Corporate Finance and Investments",
-    sectorsOfExpertise: "Healthcare, Power, Oil & Gas, Renewable Energy",
-    priorExperience:
-      "General Electric and GE Healthcare (Fortune 500 companies)",
-    education:
-      "BBA Finance from Institute of Business Administration (AACSB accredited)",
-    professionalQualifications:
-      "Chartered Financial Analyst accredited by the CFA Institute, USA",
-  },
+  //   background: "13+ years in Corporate Finance and Investments",
+  //   sectorsOfExpertise: "Healthcare, Power, Oil & Gas, Renewable Energy",
+  //   priorExperience:
+  //     "General Electric and GE Healthcare (Fortune 500 companies)",
+  //   education:
+  //     "BBA Finance from Institute of Business Administration (AACSB accredited)",
+  //   professionalQualifications:
+  //     "Chartered Financial Analyst accredited by the CFA Institute, USA",
+  // },
   "shwetabh-sameer": {
     id: "shwetabh-sameer",
     name: "Shwetabh Sameer, CFA",
@@ -539,14 +539,14 @@ export const teamConfigs = {
   "growth-strategy": [
     "saad-jilani",
     "shwetabh-sameer",
-    "mohammad-ovais",
+    // "mohammad-ovais",
     "shafi-akhund",
   ],
   "feasibility-study": [
     "saad-jilani",
     "shwetabh-sameer",
     "shafi-akhund",
-    "mohammad-ovais",
+    // "mohammad-ovais",
   ],
   "business-plan": ["mustafa-nadeem", "saad-jilani", "shwetabh-sameer"],
   "real-estate-strategy": ["mustafa-nadeem", "shafi-akhund"],
@@ -555,7 +555,7 @@ export const teamConfigs = {
     "saad-jilani",
     "shwetabh-sameer",
     "omar-abedin",
-    "mohammad-ovais",
+    // "mohammad-ovais",
   ],
   "smb-advisory-services": [
     "mustafa-nadeem",
@@ -589,7 +589,8 @@ export const teamConfigs = {
   // Consulting team page
   "consulting-team-primary": [
     "saad-jilani",
-    "mohammad-ovais",
+    // "mohammad-ovais",
+    "shafi-akhund",
     "shwetabh-sameer",
   ],
   "consulting-team-secondary": [
