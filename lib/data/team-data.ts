@@ -594,7 +594,7 @@ export const teamConfigs = {
     "shwetabh-sameer",
   ],
   "consulting-team-secondary": [
-    "shafi-akhund",
+    // "shafi-akhund",
     "ali-shah-khawaja",
     "sharan-raza",
     "shammaas-abdullah",
