@@ -20,6 +20,7 @@ import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
 import Link from "next/link";
 import ContentBlock from "@/components/sections/ContentBlocks";
+import NumberedList from "@/components/ui/NumberedList";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -439,16 +440,17 @@ const FeasibilityStudyGeneric = async () => {
             Emirates, Kingdom of Saudi Arabia and wider EMEA region. We develop:
           </h2>
 
-          <ContentBlock bgSurface={false} slides={checklistItems} />
-          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
-            {bespokeItems.map((item, index) => (
-              <ChecklistItem
-                key={index}
-                text={item}
-                className="last:border-b-0 border-b border-dark/10 py-6"
-              />
+          {/* <ContentBlock bgSurface={false} slides={checklistItems} /> */}
+          <div className="gap-y-4 grid grid-cols-1 md:grid-cols-2 mt-12 mb-8">
+            {checklistItems.map((item, index) => (
+              // <ChecklistItem
+              //   key={index}
+              //   text={item}
+              //   className="last:border-b-0 border-b border-dark/10 py-6"
+              // />
+              <NumberedList key={index + 1} title={item} idx={index} />
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
       {/* <TeamText>
@@ -510,7 +512,17 @@ const FeasibilityStudyGeneric = async () => {
             Our Bespoke and Investor Grade Financial Models are designed for:
           </h2>
 
-          <ContentBlock slides={bespokeItems} />
+          {/* <ContentBlock slides={bespokeItems} /> */}
+          <div className="gap-y-4 grid grid-cols-1 mt-12 mb-8">
+            {bespokeItems.map((item, index) => (
+              // <ChecklistItem
+              //   key={index}
+              //   text={item}
+              //   className="last:border-b-0 border-b border-dark/10 py-6"
+              // />
+              <NumberedList key={index + 1} title={item} idx={index} />
+            ))}
+          </div>
           {/* <div className="flex flex-col gap-0 mt-12 mb-8">
             {bespokeItems.map((item, index) => (
               <ChecklistItem
@@ -522,7 +534,7 @@ const FeasibilityStudyGeneric = async () => {
           </div> */}
         </div>
       </div>
-      <DynamicInsightsSlider bgSurface={true} />
+      {/* <DynamicInsightsSlider bgSurface={true} /> */}
       <div className="bg-[color:var(--surface)]">
         <div className="container pt-5">
           <Header text="Financial Modelling Services " className="mb-26" />
@@ -530,16 +542,16 @@ const FeasibilityStudyGeneric = async () => {
             Why Businesses Choose Platform01 Consulting
           </h2>
 
-          <ContentBlock slides={consultingItems} />
-          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
-            {bespokeItems.map((item, index) => (
+          {/* <ContentBlock slides={consultingItems} /> */}
+          <div className="gap-y-4 grid grid-cols-1 md:grid-cols-2 mt-12 mb-8">
+            {consultingItems.map((item, index) => (
               <ChecklistItem
                 key={index}
                 text={item}
                 className="last:border-b-0 border-b border-dark/10 py-6"
               />
             ))}
-          </div> */}
+          </div>
           <p className="text-dark/50 max-w-[620px] mb-20">
             Read more:{" "}
             <Link

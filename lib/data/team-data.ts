@@ -425,6 +425,16 @@ export const corporateTeamMembers: Record<string, TeamMember> = {
     text1: "Commercial Executive",
     bioLink: false,
   },
+  "bakhtawar-fatima": {
+    id: "bakhtawar-fatima",
+    name: "Bakhtawar Fatima",
+    image: {
+      src: "/corporate-team/18.png",
+      alt: "Bakhtawar Fatima",
+    },
+    text1: "Marketing Executive",
+    bioLink: false,
+  },
   "muqaddas-noor": {
     id: "muqaddas-noor",
     name: "Muqaddas Noor",
@@ -541,11 +551,13 @@ export const teamConfigs = {
     "shwetabh-sameer",
     // "mohammad-ovais",
     "shafi-akhund",
+    "ali-shah-khawaja",
   ],
   "feasibility-study": [
     "saad-jilani",
     "shwetabh-sameer",
     "shafi-akhund",
+    "ali-shah-khawaja",
     // "mohammad-ovais",
   ],
   "business-plan": ["mustafa-nadeem", "saad-jilani", "shwetabh-sameer"],
@@ -583,7 +595,12 @@ export const teamConfigs = {
   "value-creation": ["mustafa-nadeem", "shwetabh-sameer"],
 
   // Restructuring services
-  "restructuring-consulting": ["mustafa-nadeem", "saad-jilani", "shafi-akhund"],
+  "restructuring-consulting": [
+    "mustafa-nadeem",
+    "saad-jilani",
+    "shafi-akhund",
+    "ali-shah-khawaja",
+  ],
   "turnaround-advisory": ["saad-jilani", "shwetabh-sameer", "shafi-akhund"],
 
   // Consulting team page
@@ -620,6 +637,7 @@ export const teamConfigs = {
     "maha-tauqeer",
     "mirta-khan",
     "esha-sachdev",
+    "bakhtawar-fatima",
     "muqaddas-noor",
     "muhammad-shan",
   ],
