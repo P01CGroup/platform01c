@@ -21,6 +21,7 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import Link from "next/link";
 import ContentBlock from "@/components/sections/ContentBlocks";
 import NumberedList from "@/components/ui/NumberedList";
+import { Building2, RefreshCw, Target, TrendingUp } from "lucide-react";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -74,7 +75,7 @@ export async function generateMetadata() {
 const feasibilityStudyData: ServiceHeroData = {
   subheading: "Financial Modelling Services",
   heading:
-    "Bespoke and Investor-Grade Financial Modelling for Visionary Business Leaders in UAE and Saudi Arabia",
+    "Bespoke and Investor-Grade Financial Modelling for Visionary Business Leaders",
   backgroundImages: {
     mobile: "/services/mobile/feasibility-study.png",
     tablet: "/services/tablet/feasibility-study.png",
@@ -131,7 +132,8 @@ const consultingItems = [
 ];
 
 const teamData = {
-  heading: 'Our Unique "Practitioner-Driven" Approach',
+  heading:
+    "Bespoke Financial Modelling by Senior Experts with Prior Experience from Global Financial Institutions",
   // supportingText:
   //   'Our Feasibility Study practice is based on our unique model of "Practitioner-Driven" approach that brings together Relevant Sector Experience from Global Fortune 500 Corporations and Global Financial Institutions with years of Financial Expertise of consulting in the region.',
   team: getTeamDataForPage("financial-modelling-and-analysis"),
@@ -158,12 +160,11 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question: "Who offers professional financial modelling services in UAE?",
+    question: "Who offers professional financial modelling services?",
     answer: (
       <span>
-        Professional financial modelling services in the United Arab Emirates
-        are typically provided by specialized consulting firms with experience
-        in:
+        Professional financial modelling services are typically provided by
+        specialized consulting firms with experience in:
         <ul className="list-disc pl-6 mt-2">
           <li>Investment analysis</li>
           <li>Project finance</li>
@@ -178,11 +179,10 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question:
-      "What is the cost of financial modelling services in Dubai or Riyadh?",
+    question: "What is the cost of financial modelling services?",
     answer: (
       <span>
-        The cost of financial modelling services in Dubai or Riyadh depends on:
+        The cost of financial modelling services depends on:
         <ul className="list-disc pl-6 mt-2">
           <li>Business complexity</li>
           <li>Industry dynamics</li>
@@ -209,8 +209,7 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question:
-      "What financial model is required for investor funding in the UAE and Saudi Arabia?",
+    question: "What financial model is required for investor funding?",
     answer: (
       <span>
         Most institutional and sophisticated investors expect:
@@ -325,7 +324,7 @@ const faqData: FAQItem[] = [
     ),
   },
   {
-    question: "Is financial modelling mandatory for business expansion in UAE?",
+    question: "Is financial modelling mandatory for business expansion?",
     answer: (
       <span>
         It may not always be legally mandatory, but it is often commercially
@@ -436,8 +435,7 @@ const FeasibilityStudyGeneric = async () => {
           <Header text="Financial Modelling Services " className="mb-26" />
           <h2 className="heading-4 max-w-[1010px] ">
             At Platform01 Consulting, we offer professional financial modelling
-            services for businesses, investors and leaders in the United Arab
-            Emirates, Kingdom of Saudi Arabia and wider EMEA region. We develop:
+            services for businesses, investors and leaders. We develop:
           </h2>
 
           {/* <ContentBlock bgSurface={false} slides={checklistItems} /> */}
@@ -513,14 +511,36 @@ const FeasibilityStudyGeneric = async () => {
           </h2>
 
           {/* <ContentBlock slides={bespokeItems} /> */}
-          <div className="gap-y-4 grid grid-cols-1 mt-12 mb-8">
+          <div className="gap-4 grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 mt-12 mb-8">
             {bespokeItems.map((item, index) => (
               // <ChecklistItem
               //   key={index}
               //   text={item}
               //   className="last:border-b-0 border-b border-dark/10 py-6"
               // />
-              <NumberedList key={index + 1} title={item} idx={index} />
+              // <NumberedList key={index + 1} title={item} idx={index} />
+              <div
+                key={index + 1}
+                className={`relative p-6 text-left transition-all duration-200 group border border-dark/10 ${"bg-surface text-dark"}`}
+              >
+                {/* Icon for each service category */}
+                <div
+                  className={`w-12 h-12 mb-8 flex items-center justify-center text-dark ${"bg-white"} group-hover:text-primary transition-colors duration-200`}
+                >
+                  {index === 0 && <Target size={24} />}
+                  {index === 1 && <TrendingUp size={24} />}
+                  {index === 2 && <Building2 size={24} />}
+                  {index === 3 && <RefreshCw size={24} />}
+                  {index === 4 && <Target size={24} />}
+                </div>
+
+                <h5 className="leading-tight">{item}</h5>
+
+                {/* Active indicator */}
+                {/* {activeTab === index && (
+                              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rounded-full"></div>
+                            )} */}
+              </div>
             ))}
           </div>
           {/* <div className="flex flex-col gap-0 mt-12 mb-8">
@@ -543,13 +563,21 @@ const FeasibilityStudyGeneric = async () => {
           </h2>
 
           {/* <ContentBlock slides={consultingItems} /> */}
-          <div className="gap-y-4 grid grid-cols-1 md:grid-cols-2 mt-12 mb-8">
+          <div className="md:col-start-2 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5 py-8">
             {consultingItems.map((item, index) => (
-              <ChecklistItem
-                key={index}
-                text={item}
-                className="last:border-b-0 border-b border-dark/10 py-6"
-              />
+              // <ChecklistItem
+              //   key={index}
+              //   text={item}
+              //   className="last:border-b-0 border-b border-dark/10 py-6"
+              // />
+              <div className="p-8 bg-white flex flex-col gap-15">
+                <div>
+                  <h3 className="heading-3 text-dark/20">
+                    {index > 8 ? `${index + 1}` : `0${index + 1}`}.
+                  </h3>
+                  <h2 className="heading-5 ">{item}</h2>
+                </div>
+              </div>
             ))}
           </div>
           <p className="text-dark/50 max-w-[620px] mb-20">
