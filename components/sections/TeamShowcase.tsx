@@ -12,6 +12,7 @@ const TeamShowcase = ({
   bgSurface = false,
   FourColumn = false,
   noHeader = false,
+  headingFullWidth = false,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -21,6 +22,7 @@ const TeamShowcase = ({
   bgSurface?: boolean;
   FourColumn?: boolean;
   noHeader?: boolean;
+  headingFullWidth?: boolean;
 }) => {
   return (
     <div
@@ -34,7 +36,7 @@ const TeamShowcase = ({
             className={`mb-16 ${FourColumn ? "md:col-span-4" : "md:col-start-2 md:col-span-3"}`}
           >
             <h2
-              className={`heading-3 ${FourColumn ? "md:max-w-1/3" : "md:max-w-1/2"}`}
+              className={`heading-3 ${headingFullWidth ? "max-w-full" : FourColumn ? "md:max-w-1/3" : "md:max-w-1/2"}`}
             >
               {parse(heading)}
             </h2>

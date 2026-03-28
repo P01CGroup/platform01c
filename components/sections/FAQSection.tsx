@@ -19,12 +19,16 @@ interface FAQSectionProps {
   faqs: FAQItem[];
   heading?: string;
   showCTA?: boolean;
+  leftAligned?: boolean;
+  headingFullWidth?: boolean;
 }
 
 export default function FAQSection({
   faqs,
   showCTA,
   heading = "Frequently Asked Questions",
+  leftAligned = false,
+  headingFullWidth = false,
 }: FAQSectionProps) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
@@ -32,14 +36,20 @@ export default function FAQSection({
     <section id={"faqs"} className="bg-white pb-20">
       <div className="container pt-5">
         <Header text="FAQs" className="mb-26" />
-        {heading && <h2 className="heading-3 mb-8 max-w-[460px]">{heading}</h2>}
-        <div className="space-y-4 grid grid-cols-1 md:grid-cols-4">
+        {heading && (
+          <h2
+            className={`heading-3 mb-8 ${headingFullWidth ? "" : "max-w-[460px]"} `}
+          >
+            {heading}
+          </h2>
+        )}
+        <div className={`space-y-4 grid grid-cols-1 md:grid-cols-4`}>
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={faq.question}
-                className="border-b border-dark/10 last:border-b-0 md:col-span-3 md:col-start-2"
+                className={`border-b border-dark/10 last:border-b-0  ${leftAligned ? "md:col-span-4" : "md:col-span-3 md:col-start-2"} `}
               >
                 <button
                   className={`cursor-pointer w-full text-left py-4 flex items-center justify-between border-none outline-none `}
@@ -120,7 +130,9 @@ export default function FAQSection({
           })}
         </div>
         <div className="space-y-4 grid grid-cols-1 md:grid-cols-4">
-          <div className=" md:col-span-3 md:col-start-2 mt-10">
+          <div
+            className={` mt-10 ${leftAligned ? "" : "md:col-span-3 md:col-start-2"}`}
+          >
             <CalendlyModalWrapper>
               <Button size="icon">
                 Talk to an expert{" "}

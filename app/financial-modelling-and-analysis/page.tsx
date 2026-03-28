@@ -489,6 +489,7 @@ const FeasibilityStudyGeneric = async () => {
       <TeamShowcase
         title="Our Consulting Team"
         heading={teamData.heading}
+        headingFullWidth={true}
         supportingText={""}
         FourColumn={true}
       >
@@ -555,7 +556,7 @@ const FeasibilityStudyGeneric = async () => {
         </div>
       </div>
       {/* <DynamicInsightsSlider bgSurface={true} /> */}
-      <div className="bg-[color:var(--surface)]">
+      <div className="">
         <div className="container pt-5">
           <Header text="Financial Modelling Services " className="mb-26" />
           <h2 className="heading-4 max-w-[1010px] ">
@@ -563,14 +564,14 @@ const FeasibilityStudyGeneric = async () => {
           </h2>
 
           {/* <ContentBlock slides={consultingItems} /> */}
-          <div className="md:col-start-2 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5 py-8">
+          <div className="md:col-start-2 md:col-span-3 grid grid-cols-1 md:grid-cols-4 gap-5 py-8">
             {consultingItems.map((item, index) => (
               // <ChecklistItem
               //   key={index}
               //   text={item}
               //   className="last:border-b-0 border-b border-dark/10 py-6"
               // />
-              <div className="p-8 bg-white flex flex-col gap-15">
+              <div className="p-8 bg-[color:var(--surface)] flex flex-col gap-15">
                 <div>
                   <h3 className="heading-3 text-dark/20">
                     {index > 8 ? `${index + 1}` : `0${index + 1}`}.
@@ -580,7 +581,7 @@ const FeasibilityStudyGeneric = async () => {
               </div>
             ))}
           </div>
-          <p className="text-dark/50 max-w-[620px] mb-20">
+          {/* <p className="text-dark/50 max-w-[620px] mb-20">
             Read more:{" "}
             <Link
               className="underline hover:text-dark"
@@ -588,7 +589,7 @@ const FeasibilityStudyGeneric = async () => {
             >
               the Art of Financial Modelling
             </Link>
-          </p>
+          </p> */}
         </div>
       </div>
       {/* <div className="container pt-5">
@@ -617,7 +618,7 @@ const FeasibilityStudyGeneric = async () => {
         heading="Let' Talk"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you."
       /> */}
-      <FAQSection faqs={faqData} />
+      <FAQSection headingFullWidth={true} leftAligned={true} faqs={faqData} />
     </>
   );
 };
