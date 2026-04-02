@@ -19,6 +19,7 @@ interface ServicesSectionProps {
   bgSurface?: boolean;
   supportingText?: string;
   showCTA?: boolean;
+  fullWidth?: boolean;
 }
 
 export default function ServicesSection({
@@ -27,25 +28,34 @@ export default function ServicesSection({
   showCTA,
   bgSurface = false,
   supportingText = "",
+  fullWidth = false,
 }: ServicesSectionProps) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
     <section className={`${bgSurface ? "bg-surface" : "bg-white"} py-20`}>
       <div className="container pt-5">
-        {heading && <h2 className="heading-2 mb-8 max-w-[640px]">{heading}</h2>}
+        {heading && (
+          <h2 className={`heading-2 mb-8 ${fullWidth ? "" : "max-w-[640px]"}`}>
+            {heading}
+          </h2>
+        )}
         {supportingText && (
-          <p className="text-dark/50 text-base mb-8 max-w-[490px]">
+          <p
+            className={`text-dark/50 text-base mb-8 ${fullWidth ? "" : "max-w-[490px]"}`}
+          >
             {supportingText}
           </p>
         )}
-        <div className="space-y-4 grid grid-cols-1 md:grid-cols-4 mt-16">
+        <div
+          className={`space-y-4 grid ${fullWidth ? "" : "grid-cols-1 md:grid-cols-4"} mt-16`}
+        >
           {services.map((service, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={service.title}
-                className="border-b border-dark/10 last:border-b-0 md:col-span-3 md:col-start-2 flex items-start gap-10"
+                className={`border-b border-dark/10 last:border-b-0 ${fullWidth ? "" : "md:col-span-3 md:col-start-2"}  flex items-start gap-10`}
               >
                 <div className="text-sm py-[20px] ">
                   {(idx + 1).toString().padStart(2, "0")}.

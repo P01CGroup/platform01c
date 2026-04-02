@@ -41,7 +41,7 @@ const TeamShowcase = ({
               {parse(heading)}
             </h2>
             <p
-              className={`text-md text-dark/50 ${FourColumn ? "md:max-w-2/3" : "md:max-w-1/2"} ml-auto`}
+              className={`text-md text-dark/50 ${FourColumn ? "md:max-w-2/3" : "md:max-w-1/2"} `}
             >
               {parse(supportingText)}
             </p>
