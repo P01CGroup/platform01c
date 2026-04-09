@@ -82,6 +82,23 @@ const feasibilityStudyData: ServiceHeroData = {
     desktop: "/services/desktop/feasibility-study.png",
     ultrawide: "/services/ultrawide/feasibility-study.png",
   },
+  awards: [
+    {
+      image: "/awards/top-consulting-firm-middle-east.png",
+      text: "Top Consulting Firm <br/> ConsultancyME",
+      alt: "Top Consulting Firm 2025 Middle East 2025",
+    },
+    {
+      image: "/awards/strategist-award.png",
+      text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
+      alt: "Top Strategist - 2026",
+    },
+    {
+      image: "/awards/ma-award-1.png",
+      text: "Top M&A Advisory <br/> Boutique 2025",
+      alt: "Top M&A Advisory Boutique 2025",
+    },
+  ],
   // awards: [
   //   {
   //     image: "/awards/strategist-award.png",
@@ -119,7 +136,7 @@ const bespokeItems = [
   "Bank financing approval",
   "Investor fundraising",
   "Strategic expansion",
-  "Government projects",
+  // "Government projects",
   "Vision-aligned initiatives",
 ];
 
@@ -127,7 +144,7 @@ const consultingItems = [
   "Financial modelling consultants with Global and GCC experience",
   "Structured investor-ready outputs",
   "Assumption-driven and scenario-flexible models",
-  "Fast turnaround time",
+  // "Fast turnaround time",
   "Confidential and secure engagement",
 ];
 

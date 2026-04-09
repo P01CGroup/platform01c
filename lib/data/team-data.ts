@@ -325,8 +325,8 @@ export const teamMembers: Record<string, TeamMember> = {
       src: "/consulting-team/18.png",
       alt: "Alishba Nasim",
     },
-    text1: "M&A Analyst",
-    text2: "Intern",
+    text1: "Analyst",
+    text2: "Analyst I",
     background: "Experience in conducting outreach",
     sectorsOfExpertise: "Mergers & Acquisitions",
     priorExperience: "Inducted in Platform01 Graduate Program",
@@ -561,6 +561,12 @@ export const teamConfigs = {
     // "mohammad-ovais",
   ],
   "business-plan": ["mustafa-nadeem", "saad-jilani", "shwetabh-sameer"],
+  "business-plan-uk": [
+    "mustafa-nadeem",
+    "shwetabh-sameer",
+    "ali-shah-khawaja",
+    "alishba-nasim",
+  ],
   "real-estate-strategy": ["mustafa-nadeem", "shafi-akhund"],
   "market-research": [
     "mustafa-nadeem",
@@ -584,9 +590,22 @@ export const teamConfigs = {
     "shafi-akhund",
   ],
   "business-valuation": ["shwetabh-sameer", "ali-shah-khawaja", "shafi-akhund"],
+  "business-valuation-uk": [
+    "mustafa-nadeem",
+    "shwetabh-sameer",
+    "ali-shah-khawaja",
+    "alishba-nasim",
+    // "shafi-akhund",
+  ],
 
   // Capital services
   "due-diligence": ["mustafa-nadeem", "shwetabh-sameer", "ali-shah-khawaja"],
+  "due-diligence-uk": [
+    "mustafa-nadeem",
+    "shwetabh-sameer",
+    "ali-shah-khawaja",
+    "alishba-nasim",
+  ],
   "portfolio-valuation": [
     "ali-shah-khawaja",
     "shwetabh-sameer",
@@ -638,7 +657,7 @@ export const teamConfigs = {
     "mirta-khan",
     "esha-sachdev",
     "bakhtawar-fatima",
-    "muqaddas-noor",
+    // "muqaddas-noor",
     "muhammad-shan",
   ],
   "corporate-advisors": ["eliza-prendzov", "abdullah-alkhaldi"],
@@ -648,6 +667,14 @@ export const teamConfigs = {
     "ali-shah-khawaja",
     "shafi-akhund",
     "muhammad-aizaz",
+  ],
+  "financial-modelling-and-analysis-uk": [
+    "mustafa-nadeem",
+    "shwetabh-sameer",
+    "ali-shah-khawaja",
+    "alishba-nasim",
+    // "shafi-akhund",
+    // "muhammad-aizaz",
   ],
 };
 

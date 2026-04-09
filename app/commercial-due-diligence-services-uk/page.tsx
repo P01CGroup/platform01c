@@ -93,7 +93,7 @@ const teamData = {
   heading: "Commercial Due Diligence Team",
   supportingText:
     "With a team of former investment bankers, corporate strategists, and private equity professionals, we bring a practitioner&apos;s mindset to every deal",
-  team: getTeamDataForPage("due-diligence"),
+  team: getTeamDataForPage("due-diligence-uk"),
 };
 
 const servicesData = [
@@ -337,7 +337,7 @@ const DueDiligence = async () => {
         heading="Scope of Our Commercial Due Diligence"
       />
 
-      <CallToAction />
+      {/* <CallToAction /> */}
       <FAQSection leftAligned={true} headingFullWidth={true} faqs={faqData} />
     </>
   );

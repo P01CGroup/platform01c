@@ -79,7 +79,7 @@ const teamData = {
   heading: "Accredited and Qualified Business Valuation Team",
   supportingText:
     "Our Business Valuation team includes professionals with CFA, FRM, CIPM, FMVA, and ACCA qualifications, with experience at Big 4 and other reputable advisory firms.",
-  team: getTeamDataForPage("business-valuation"),
+  team: getTeamDataForPage("business-valuation-uk"),
 };
 
 const valuesData = {
@@ -246,7 +246,7 @@ const BusinessValuation = async () => {
         />
       </div> */}
 
-      <TeamText>
+      {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[810px]">
             Exploring Business Valuation Services in UK with Precision and
@@ -263,7 +263,7 @@ const BusinessValuation = async () => {
           strategic insights. If you seek a business valuation partner that
           prioritizes accuracy and reliability, we are here to help.
         </p>
-      </TeamText>
+      </TeamText> */}
 
       <TeamShowcase
         FourColumn={true}
@@ -279,7 +279,7 @@ const BusinessValuation = async () => {
       </TeamShowcase>
 
       <Credentials
-        showCalendly={true}
+        showCalendly={false}
         slides={slides}
         bgSurface={true}
         disableTabs={true}
@@ -309,7 +309,7 @@ const BusinessValuation = async () => {
       />
 
       {/* <DynamicInsightsSlider /> */}
-      <CallToAction />
+      {/* <CallToAction />   */}
     </>
   );
 };

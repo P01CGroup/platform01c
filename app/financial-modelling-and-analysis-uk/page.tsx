@@ -119,7 +119,7 @@ const bespokeItems = [
   "Bank financing approval",
   "Investor fundraising",
   "Strategic expansion",
-  "Government projects",
+  // "Government projects",
   "Vision-aligned initiatives",
 ];
 
@@ -136,7 +136,7 @@ const teamData = {
     "Bespoke Financial Modelling by Senior Experts with Prior Experience from Global Financial Institutions",
   // supportingText:
   //   'Our Feasibility Study practice is based on our unique model of "Practitioner-Driven" approach that brings together Relevant Sector Experience from Global Fortune 500 Corporations and Global Financial Institutions with years of Financial Expertise of consulting in the region.',
-  team: getTeamDataForPage("financial-modelling-and-analysis"),
+  team: getTeamDataForPage("financial-modelling-and-analysis-uk"),
 };
 
 const faqData: FAQItem[] = [

@@ -196,7 +196,10 @@ export default function Credentials({
             displaySlides.map((slide, idx) => (
               <SwiperSlide key={idx}>
                 <div className="pt-4 text-left bg-transparent shadow-none rounded-none h-full">
-                  <div className="text-xs text-dark/50 mb-2 border-b border-dark/10 pb-2">
+                  <div
+                    style={{ minHeight: "41px" }}
+                    className="text-xs text-dark/50 mb-2 border-b border-dark/10 pb-2 min-h-[41px]!"
+                  >
                     {slide.category}
                   </div>
                   <div className="heading-5 leading-snug text-dark">

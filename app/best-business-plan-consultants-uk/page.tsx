@@ -97,7 +97,7 @@ const BusinessPlanData: ServiceHeroData = {
   ],
 };
 
-const teamData = getTeamDataForPage("business-plan");
+const teamData = getTeamDataForPage("business-plan-uk");
 
 const servicesData = [
   {
@@ -366,7 +366,7 @@ const BusinessPlan = async () => {
           financial depth to your vision.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 my-20">
-          <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="md:col-span-4 grid grid-cols-1 md:grid-cols-4 gap-5">
             {teamData.map((item, index) => (
               <TeamCard key={index} member={item} />
             ))}
@@ -519,7 +519,7 @@ const BusinessPlan = async () => {
         calendlyMobileView={false}
       />
       {/* <DynamicInsightsSlider bgSurface={false} /> */}
-      <CallToAction />
+      {/* <CallToAction /> */}
       <FAQSection
         headingFullWidth={true}
         leftAligned={true}
