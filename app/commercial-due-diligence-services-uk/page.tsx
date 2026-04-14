@@ -338,7 +338,7 @@ const DueDiligence = async () => {
       />
 
       {/* <CallToAction /> */}
-      <FAQSection leftAligned={true} headingFullWidth={true} faqs={faqData} />
+      <FAQSection calendlyButtonVisibility={false} leftAligned={true} headingFullWidth={true} faqs={faqData} />
     </>
   );
 };

@@ -21,6 +21,7 @@ interface FAQSectionProps {
   showCTA?: boolean;
   leftAligned?: boolean;
   headingFullWidth?: boolean;
+  calendlyButtonVisibility?: boolean;
 }
 
 export default function FAQSection({
@@ -29,6 +30,7 @@ export default function FAQSection({
   heading = "Frequently Asked Questions",
   leftAligned = false,
   headingFullWidth = false,
+  calendlyButtonVisibility = true,
 }: FAQSectionProps) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
@@ -129,22 +131,24 @@ export default function FAQSection({
             );
           })}
         </div>
-        <div className="space-y-4 grid grid-cols-1 md:grid-cols-4">
-          <div
-            className={` mt-10 ${leftAligned ? "" : "md:col-span-3 md:col-start-2"}`}
-          >
-            <CalendlyModalWrapper>
-              <Button size="icon">
-                Talk to an expert{" "}
-                <ChevronRight
-                  className="stroke-white/50"
-                  height={16}
-                  width={16}
-                />
-              </Button>
-            </CalendlyModalWrapper>
+        {calendlyButtonVisibility && (
+          <div className="space-y-4 grid grid-cols-1 md:grid-cols-4">
+            <div
+              className={` mt-10 ${leftAligned ? "" : "md:col-span-3 md:col-start-2"}`}
+            >
+              <CalendlyModalWrapper>
+                <Button size="icon">
+                  Talk to an expert{" "}
+                  <ChevronRight
+                    className="stroke-white/50"
+                    height={16}
+                    width={16}
+                  />
+                </Button>
+              </CalendlyModalWrapper>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

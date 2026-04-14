@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     if (!email || !password) {
       return NextResponse.json(
         { error: "Email and password required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
             email_verified: true,
           },
         },
-      }
+      },
     );
 
     if (signUpError) {
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       if (updateError) {
         return NextResponse.json(
           { error: updateError.message },
-          { status: 400 }
+          { status: 400 },
         );
       }
     }
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     console.error("Setup error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -86,7 +86,7 @@ export async function GET() {
     console.error("Get session error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

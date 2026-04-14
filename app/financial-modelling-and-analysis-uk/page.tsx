@@ -618,7 +618,12 @@ const FeasibilityStudyGeneric = async () => {
         heading="Let' Talk"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you."
       /> */}
-      <FAQSection headingFullWidth={true} leftAligned={true} faqs={faqData} />
+      <FAQSection
+        calendlyButtonVisibility={false}
+        headingFullWidth={true}
+        leftAligned={true}
+        faqs={faqData}
+      />
     </>
   );
 };

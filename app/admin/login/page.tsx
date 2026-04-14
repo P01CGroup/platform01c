@@ -1,28 +1,26 @@
-"use client";
 import LoginForm from "@/components/admin/LoginForm";
 import Logo from "@/components/ui/logo";
-import { useEffect } from "react";
 
 export default function AdminLoginPage() {
-  const adminRegister = async () => {
-    const response = await fetch("/api/admin/setup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: "usama_khan1994@live.com",
-        password: "Usa@03333109501",
-      }),
-    });
+  // const adminRegister = async () => {
+  //   const response = await fetch("/api/admin/setup", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       email: "usama_khan1994@live.com",
+  //       newPassword: "Usa@03333109501",
+  //     }),
+  //   });
 
-    const result = await response.json();
-    console.log("result", result);
-  };
+  //   const result = await response.json();
+  //   console.log("result", result);
+  // };
 
-  useEffect(() => {
-    adminRegister();
-  }, []);
+  // useEffect(() => {
+  //   adminRegister();
+  // }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-surface py-12 px-4 sm:px-6 lg:px-8">

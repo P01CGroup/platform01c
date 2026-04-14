@@ -62,6 +62,7 @@ const ICON_MAP: Record<
 interface OurValuesSliderProps {
   values: Value[];
   bgSurface?: boolean;
+  calendlyButtonVisibility?: boolean;
   heading?: string;
   supportingText?: string;
 }
@@ -86,6 +87,7 @@ export default function OurValuesSlider({
   heading = "What Sets Us Apart?",
   bgSurface = false,
   supportingText,
+  calendlyButtonVisibility = true,
 }: OurValuesSliderProps) {
   const navPrev = useRef<HTMLButtonElement | null>(null);
   const navNext = useRef<HTMLButtonElement | null>(null);
@@ -159,12 +161,18 @@ export default function OurValuesSlider({
                 <path d="M9 6l6 6-6 6" />
               </svg>
             </button>
-            <CalendlyModalWrapper>
-              <Button size="icon" variant="secondary">
-                Talk to an expert{" "}
-                <ChevronRight className="stroke-white" height={16} width={16} />
-              </Button>
-            </CalendlyModalWrapper>
+            {calendlyButtonVisibility && (
+              <CalendlyModalWrapper>
+                <Button size="icon" variant="secondary">
+                  Talk to an expert{" "}
+                  <ChevronRight
+                    className="stroke-white"
+                    height={16}
+                    width={16}
+                  />
+                </Button>
+              </CalendlyModalWrapper>
+            )}
           </div>
         </div>
         <hr className="border-dark/10 mb-8" />

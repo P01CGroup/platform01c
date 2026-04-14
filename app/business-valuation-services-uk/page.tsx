@@ -300,6 +300,7 @@ const BusinessValuation = async () => {
       />
 
       <OurValuesSlider
+      calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={true}
         {...(valuesData.heading && { heading: valuesData.heading })}

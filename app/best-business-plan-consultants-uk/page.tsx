@@ -373,6 +373,17 @@ const BusinessPlan = async () => {
           </div>
         </div>
       </div>
+      <Credentials
+        showCalendly={false}
+        slides={slides}
+        bgSurface={true}
+        disableTabs={true}
+        heading={"Decades of experience. Billions in advisory value."}
+        supportingText={
+          "We've developed business plans across industries including tech, F&B, fintech, logistics, real estate, and industrials—covering diversification, EMEA expansion, joint ventures, and debt financing."
+        }
+        calendlyMobileView={false}
+      />
       {/* <div className="bg-surface py-16">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-16">
           <div>
@@ -500,6 +511,7 @@ const BusinessPlan = async () => {
         </div>
       </div>
       <OurValuesSlider
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={false}
         {...(valuesData.heading && { heading: valuesData.heading })}
@@ -507,20 +519,11 @@ const BusinessPlan = async () => {
           supportingText: valuesData.supportingText,
         })}
       />
-      <Credentials
-        showCalendly={false}
-        slides={slides}
-        bgSurface={true}
-        disableTabs={true}
-        heading={"Decades of experience. Billions in advisory value."}
-        supportingText={
-          "We've developed business plans across industries including tech, F&B, fintech, logistics, real estate, and industrials—covering diversification, EMEA expansion, joint ventures, and debt financing."
-        }
-        calendlyMobileView={false}
-      />
+
       {/* <DynamicInsightsSlider bgSurface={false} /> */}
       {/* <CallToAction /> */}
       <FAQSection
+        calendlyButtonVisibility={false}
         headingFullWidth={true}
         leftAligned={true}
         faqs={faqData}
