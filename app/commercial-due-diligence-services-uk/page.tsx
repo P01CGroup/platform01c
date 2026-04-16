@@ -286,7 +286,7 @@ const faqData: FAQItem[] = [
 const DueDiligence = async () => {
   // Fetch credentials with the relevant service tag
   const { data: credentials, error } = await credentialsService.getCredentials({
-    service_tags: ["Commercial Due Diligence"],
+    service_tags: ["Commercial Due Diligence UK"],
     is_active: true,
   });
 
@@ -338,7 +338,12 @@ const DueDiligence = async () => {
       />
 
       {/* <CallToAction /> */}
-      <FAQSection calendlyButtonVisibility={false} leftAligned={true} headingFullWidth={true} faqs={faqData} />
+      <FAQSection
+        calendlyButtonVisibility={false}
+        leftAligned={true}
+        headingFullWidth={true}
+        faqs={faqData}
+      />
     </>
   );
 };

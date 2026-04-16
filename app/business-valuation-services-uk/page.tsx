@@ -190,7 +190,7 @@ const BusinessValuation = async () => {
   let credentials: Credential[] = [];
   try {
     const result = await credentialsService.getCredentials({
-      service_tags: ["Business Valuation"],
+      service_tags: ["Business Valuation UK"],
       is_active: true,
     });
     credentials = result.data || [];
@@ -300,7 +300,7 @@ const BusinessValuation = async () => {
       />
 
       <OurValuesSlider
-      calendlyButtonVisibility={false}
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={true}
         {...(valuesData.heading && { heading: valuesData.heading })}
