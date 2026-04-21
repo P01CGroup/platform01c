@@ -96,7 +96,9 @@ export default function Credentials({
                 <p className="text-md text-dark/50">Our Credentials</p>
               </div>
               <div className="flex gap-8 md:col-span-3">
-                <h2 className="heading-3 max-w-[470px]">{heading}</h2>
+                <h2 className="heading-3 max-w-[470px] capitalize">
+                  {heading}
+                </h2>
               </div>
             </>
           ) : (

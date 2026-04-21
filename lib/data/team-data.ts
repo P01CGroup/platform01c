@@ -318,21 +318,7 @@ export const teamMembers: Record<string, TeamMember> = {
     education: "BBA Economics & Finance",
     professionalQualifications: "",
   },
-  "alishba-nasim": {
-    id: "alishba-nasim",
-    name: "Alishba Nasim",
-    image: {
-      src: "/consulting-team/18.png",
-      alt: "Alishba Nasim",
-    },
-    text1: "Analyst",
-    text2: "Analyst I",
-    background: "Experience in conducting outreach",
-    sectorsOfExpertise: "Mergers & Acquisitions",
-    priorExperience: "Inducted in Platform01 Graduate Program",
-    education: "BBA Marketing",
-    professionalQualifications: "",
-  },
+
   // 'muzna-zafar': {
   //   id: 'muzna-zafar',
   //   name: 'Muzna Zafar',
@@ -532,6 +518,21 @@ export const corporateTeamMembers: Record<string, TeamMember> = {
     education: "Masters in Business Administration in Finance",
     professionalQualifications: "CFA Level 3 Qualified",
   },
+  "alishba-nasim": {
+    id: "alishba-nasim",
+    name: "Alishba Nasim",
+    image: {
+      src: "/corporate-team/19.png",
+      alt: "Alishba Nasim",
+    },
+    text1: "Commercial Executive",
+    // text2: "Analyst I",
+    background: "Experience in conducting outreach",
+    sectorsOfExpertise: "Mergers & Acquisitions",
+    priorExperience: "Inducted in Platform01 Graduate Program",
+    education: "BBA Marketing",
+    professionalQualifications: "",
+  },
 };
 
 // Helper functions to get team data for different pages
@@ -643,7 +644,7 @@ export const teamConfigs = {
     // "hamna-asghar",
     "yusra-amjad",
     "zoha-ayaz",
-    "alishba-nasim",
+    // "alishba-nasim",
   ],
   "consulting-managing-director": ["mustafa-nadeem"],
 
@@ -657,6 +658,7 @@ export const teamConfigs = {
     "mirta-khan",
     "esha-sachdev",
     "bakhtawar-fatima",
+    "alishba-nasim",
     // "muqaddas-noor",
     "muhammad-shan",
   ],

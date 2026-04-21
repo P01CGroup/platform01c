@@ -430,10 +430,79 @@ const FeasibilityStudyGeneric = async () => {
           ))}
         </div>
       </div> */}
+      <TeamShowcase
+        title="Our Consulting Team"
+        heading={teamData.heading}
+        headingFullWidth={true}
+        supportingText={""}
+        FourColumn={true}
+      >
+        {teamData.team.map((item, index) =>
+          item ? <TeamCard key={item.id || index} member={item} /> : null,
+        )}
+      </TeamShowcase>
+      <Credentials
+        slides={slides}
+        bgSurface={true}
+        disableTabs={true}
+        heading={"Transaction Advisory, Investor Documentation"}
+        supportingText={""}
+      />
       <div className="">
         <div className="container pt-5">
           <Header text="Financial Modelling Services " className="mb-26" />
-          <h2 className="heading-4 max-w-[1010px] ">
+          <h2 className="heading-3 max-w-[1010px] ">
+            Our Bespoke and Investor Grade Financial Models are designed for:
+          </h2>
+
+          {/* <ContentBlock slides={bespokeItems} /> */}
+          <div className="gap-4 grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 mt-12 mb-8">
+            {bespokeItems.map((item, index) => (
+              // <ChecklistItem
+              //   key={index}
+              //   text={item}
+              //   className="last:border-b-0 border-b border-dark/10 py-6"
+              // />
+              // <NumberedList key={index + 1} title={item} idx={index} />
+              <div
+                key={index + 1}
+                className={`relative p-6 text-left transition-all duration-200 group border border-dark/10 ${"bg-surface text-dark"}`}
+              >
+                {/* Icon for each service category */}
+                <div
+                  className={`w-12 h-12 mb-8 flex items-center justify-center text-dark ${"bg-white"} group-hover:text-primary transition-colors duration-200`}
+                >
+                  {index === 0 && <Target size={24} />}
+                  {index === 1 && <TrendingUp size={24} />}
+                  {index === 2 && <Building2 size={24} />}
+                  {index === 3 && <RefreshCw size={24} />}
+                  {index === 4 && <Target size={24} />}
+                </div>
+
+                <h5 className="leading-tight">{item}</h5>
+
+                {/* Active indicator */}
+                {/* {activeTab === index && (
+                              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rounded-full"></div>
+                            )} */}
+              </div>
+            ))}
+          </div>
+          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
+            {bespokeItems.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div> */}
+        </div>
+      </div>
+      <div className="">
+        <div className="container pt-5">
+          <Header text="Financial Modelling Services " className="mb-26" />
+          <h2 className="heading-3 max-w-[1010px] ">
             At Platform01 Consulting, we offer professional financial modelling
             services for businesses, investors and leaders. We develop:
           </h2>
@@ -486,80 +555,12 @@ const FeasibilityStudyGeneric = async () => {
           </div>
         </div>
       </TeamText> */}
-      <TeamShowcase
-        title="Our Consulting Team"
-        heading={teamData.heading}
-        headingFullWidth={true}
-        supportingText={""}
-        FourColumn={true}
-      >
-        {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null,
-        )}
-      </TeamShowcase>
-      <Credentials
-        slides={slides}
-        bgSurface={true}
-        disableTabs={true}
-        heading={"Transaction Advisory, Investor Documentation"}
-        supportingText={""}
-      />
-      <div className="">
-        <div className="container pt-5">
-          <Header text="Financial Modelling Services " className="mb-26" />
-          <h2 className="heading-4 max-w-[1010px] ">
-            Our Bespoke and Investor Grade Financial Models are designed for:
-          </h2>
 
-          {/* <ContentBlock slides={bespokeItems} /> */}
-          <div className="gap-4 grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 mt-12 mb-8">
-            {bespokeItems.map((item, index) => (
-              // <ChecklistItem
-              //   key={index}
-              //   text={item}
-              //   className="last:border-b-0 border-b border-dark/10 py-6"
-              // />
-              // <NumberedList key={index + 1} title={item} idx={index} />
-              <div
-                key={index + 1}
-                className={`relative p-6 text-left transition-all duration-200 group border border-dark/10 ${"bg-surface text-dark"}`}
-              >
-                {/* Icon for each service category */}
-                <div
-                  className={`w-12 h-12 mb-8 flex items-center justify-center text-dark ${"bg-white"} group-hover:text-primary transition-colors duration-200`}
-                >
-                  {index === 0 && <Target size={24} />}
-                  {index === 1 && <TrendingUp size={24} />}
-                  {index === 2 && <Building2 size={24} />}
-                  {index === 3 && <RefreshCw size={24} />}
-                  {index === 4 && <Target size={24} />}
-                </div>
-
-                <h5 className="leading-tight">{item}</h5>
-
-                {/* Active indicator */}
-                {/* {activeTab === index && (
-                              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rounded-full"></div>
-                            )} */}
-              </div>
-            ))}
-          </div>
-          {/* <div className="flex flex-col gap-0 mt-12 mb-8">
-            {bespokeItems.map((item, index) => (
-              <ChecklistItem
-                key={index}
-                text={item}
-                className="last:border-b-0 border-b border-dark/10 py-6"
-              />
-            ))}
-          </div> */}
-        </div>
-      </div>
       {/* <DynamicInsightsSlider bgSurface={true} /> */}
       <div className="">
         <div className="container pt-5">
           <Header text="Financial Modelling Services " className="mb-26" />
-          <h2 className="heading-4 max-w-[1010px] ">
+          <h2 className="heading-3 max-w-[1010px] ">
             Why Businesses Choose Platform01 Consulting
           </h2>
 

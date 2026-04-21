@@ -356,7 +356,7 @@ const BusinessPlan = async () => {
 
       <div className="container pt-5">
         <Header text="Business Plan Development Services" className="mb-26" />
-        <h2 className="heading-4 max-w-[1010px]">Expert Business Plan team</h2>
+        <h2 className="heading-3 max-w-[1010px]">Expert Business Plan Team</h2>
         <p className="text-dark/50 leading-tight capitalize max-w-[1010px]">
           At Platform01 Consulting, we craft investor-ready, insight-rich
           Business Plans that empower founders, boards, and corporate leaders to
@@ -441,7 +441,7 @@ const BusinessPlan = async () => {
       />
       <div className="bg-surface py-20">
         <div className="container">
-          <h2 className="heading-2 max-w-[1010px]">Our Process</h2>
+          <h2 className="heading-3 max-w-[1010px]">Our Process</h2>
           <p className="text-dark/50 mt-4 max-w-[490px]">
             Our Feasibility Study practice is based on our unique model of
             "Practitioner-Driven" approach that brings together Relevant Sector

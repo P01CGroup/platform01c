@@ -36,7 +36,9 @@ export default function ServicesSection({
     <section className={`${bgSurface ? "bg-surface" : "bg-white"} py-20`}>
       <div className="container pt-5">
         {heading && (
-          <h2 className={`heading-2 mb-8 ${fullWidth ? "" : "max-w-[640px]"}`}>
+          <h2
+            className={`heading-3 capitalize mb-8 ${fullWidth ? "" : "max-w-[640px]"}`}
+          >
             {heading}
           </h2>
         )}

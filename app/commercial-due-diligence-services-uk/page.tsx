@@ -277,7 +277,7 @@ const faqData: FAQItem[] = [
     answer: (
       <span>
         Let's have a conversation about your next transaction. We'll help you
-        ask the right questions — and find the right answers.
+        ask the right questions — and find the right answers. 
       </span>
     ),
   },
