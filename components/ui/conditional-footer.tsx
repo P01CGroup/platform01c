@@ -31,6 +31,11 @@ export default function ConditionalFooter() {
     "/business-valuation-services-uae",
     "/ma-consulting-services-2",
     "/feasibility-study-uae",
+    "/financial-modelling-and-analysis-uk",
+    "/commercial-due-diligence-services-uk",
+    "/business-valuation-services-uk",
+    "/best-business-plan-consultants-uk",
+    "/financial-modelling-and-analysis-uk",
   ];
 
   // Pages where UAE section should be excluded
@@ -39,6 +44,11 @@ export default function ConditionalFooter() {
     "/business-valuation-services-ksa",
     "/feasibility-study-ksa-2",
     "/feasibility-study-ksa-3",
+    "/financial-modelling-and-analysis-uk",
+    "/commercial-due-diligence-services-uk",
+    "/business-valuation-services-uk",
+    "/best-business-plan-consultants-uk",
+    "/financial-modelling-and-analysis-uk",
   ];
 
   const shouldExcludeSaudi = excludeSaudiPages.includes(pathname);

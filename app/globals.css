@@ -2,16 +2,16 @@
 
 /* Critical CSS - Inline for faster rendering */
 @font-face {
-  font-family: 'Canela';
-  src: url('/fonts/Canela-Regular.otf') format('opentype');
+  font-family: "Canela";
+  src: url("/fonts/Canela-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Medium.otf') format('opentype');
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -19,17 +19,17 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #091A2A;
-  --primary: #021C57;
-  --secondary: #0050FF;
-  --accent: #D9D6D1;
-  --surface: #F3F5F7;
+  --foreground: #091a2a;
+  --primary: #021c57;
+  --secondary: #0050ff;
+  --accent: #d9d6d1;
+  --surface: #f3f5f7;
   --gray: #797979;
   --stroke: #060011;
-  --dark: #091A2A;
+  --dark: #091a2a;
 }
 
-@theme inline{
+@theme inline {
   --font-heading: var(--font-canela);
   --font-sans: var(--font-satoshi);
 }
@@ -61,22 +61,31 @@
 }
 
 /* Responsive heading styles */
-h1, .heading-1 {
+h1,
+.heading-1 {
   @apply text-5xl sm:text-6xl md:text-6xl lg:text-6xl font-heading;
 }
-h2, .heading-2 {
+h2,
+.heading-2 {
   @apply text-4xl-2 sm:text-5xl md:text-5xl lg:text-5xl font-heading;
 }
-h3, .heading-3 {
+h3,
+.heading-3 {
   @apply text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-heading;
 }
-h4, .heading-4 {
+h4,
+.heading-4 {
   @apply text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-heading;
 }
-h5, .heading-5 {
+h5,
+.heading-5 {
   @apply text-xl sm:text-2xl md:text-2xl lg:text-2xl font-heading;
 }
-h6, .heading-6 {
+.heading-5-5 {
+  @apply text-xl sm:text-[26px] lg:text-2xl font-heading;
+}
+h6,
+.heading-6 {
   @apply text-lg sm:text-xl md:text-xl lg:text-xl font-heading;
 }
 
@@ -464,7 +473,7 @@ img {
   .prose {
     @apply text-black;
   }
-  
+
   .prose h1,
   .prose h2,
   .prose h3,
@@ -473,11 +482,11 @@ img {
   .prose h6 {
     @apply text-black border-black/20;
   }
-  
+
   .prose a {
     @apply text-black underline;
   }
-  
+
   .prose blockquote {
     @apply border-black/30 bg-gray-100;
   }
@@ -488,28 +497,28 @@ img {
   .prose h1 {
     @apply !text-3xl pb-2 mb-4;
   }
-  
+
   .prose h2 {
     @apply !text-2xl pb-2 mb-4;
   }
-  
+
   .prose h3 {
     @apply !text-xl pb-2 mb-3;
   }
-  
+
   .prose p {
     @apply text-base pb-4;
   }
-  
+
   .prose ul li,
   .prose ol li {
     @apply text-base;
   }
-  
+
   .prose blockquote {
     @apply pl-4 py-3 my-6;
   }
-  
+
   .prose blockquote p {
     @apply text-base;
   }
@@ -638,7 +647,7 @@ img {
 .tiptap-content .ProseMirror code {
   background: #f3f4f6;
   padding: 0.125rem 0.25rem;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.875rem;
 }
 
