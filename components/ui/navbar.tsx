@@ -16,6 +16,7 @@ import {
 import { usePathname } from "next/navigation";
 import { getNavbarVariant } from "@/lib/navbar-config";
 import CalendlyModalWrapper from "./CalendlyModalWrapper";
+import TranslateScript from "../TranslateScript";
 
 // Phase 1: Unify the Animation Language
 const ANIMATION_TRANSITION: Transition = {
@@ -76,6 +77,14 @@ const Navbar = () => {
 
   const pathname = usePathname();
   const navbarVariant = getNavbarVariant(pathname);
+  const [currentLang, setCurrentLang] = useState("en");
+
+  useEffect(() => {
+    const match = document.cookie.match(/googtrans=\/[^/]+\/([^;]+)/);
+    if (match && match[1]) {
+      setCurrentLang(match[1]);
+    }
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -130,6 +139,21 @@ const Navbar = () => {
 
   const isRestrictedPage =
     mounted && restrictedPages.some((path) => pathname.startsWith(path));
+
+  function changeLanguage(lang: string) {
+    const currentLang = "en";
+    document.cookie = `googtrans=/${currentLang}/${lang};path=/`;
+    window.location.reload();
+  }
+
+  function toggleLanguage() {
+    const newLang = currentLang === "en" ? "ar" : "en";
+
+    document.cookie = `googtrans=/en/${newLang};path=/`;
+    document.cookie = `googtrans=/en/${newLang};path=/;domain=${window.location.hostname}`;
+
+    window.location.reload();
+  }
 
   return (
     <>
@@ -205,6 +229,13 @@ const Navbar = () => {
             </nav>
 
             <div className="hidden md:flex items-center gap-4">
+              {/* <Button onClick={() => changeLanguage("en")}>EN</Button>
+              <Button onClick={() => changeLanguage("ar")}>AR</Button> */}
+              <Button onClick={toggleLanguage}>
+                {/* {currentLang === "en" ? "AR" : "EN"} */}
+                EN/AR
+              </Button>
+              <TranslateScript />
               <CalendlyModalWrapper>
                 <Button
                   size="icon"

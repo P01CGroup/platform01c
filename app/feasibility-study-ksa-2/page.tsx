@@ -68,9 +68,9 @@ export async function generateMetadata() {
 }
 
 const feasibilityStudyData: ServiceHeroData = {
-  subheading: "Market Feasibility Study Services",
-  heading:
-    "Building Solid Foundations for Success - Feasibility Study Strategist",
+  subheading: "Feasibility Study Services",
+  heading: "Building Solid Foundations for Success",
+  smallHeading: "Licensed Management Consulting firm in Saudi Arabia",
   backgroundImages: {
     mobile: "/services/mobile/feasibility-study.png",
     tablet: "/services/tablet/feasibility-study.png",
@@ -110,11 +110,12 @@ const checklistItems = [
   "250+ Projects successfully delivered by Team Members for projects worth above SAR 100 billion",
   "Accredited Team from Top Business Schools and with Global Professional Qualifications",
   "Experienced Team from Global Financial Institutions, Fortune 500 Companies, Big 4 Advisory, and other Reputable Firms",
+  "We deliver investment-grade insights that align with Vision 2030 and institutional financing requirements",
 ];
 
 const teamData = {
   heading:
-    'Our Unique "Practitioner-Driven" Approach - Feasibility Study Consulting Services',
+    'Our Unique "Practitioner-Driven" Approach </br>Feasibility Study Consulting Services',
   supportingText:
     'Our Feasibility Study practice is based on our unique model of "Practitioner-Driven" approach that brings together Relevant Sector Experience from Global Fortune 500 Corporations and Global Financial Institutions with years of Financial Expertise of consulting in the region.',
   team: getTeamDataForPage("feasibility-study"),
@@ -250,6 +251,7 @@ const servicesData = [
     ),
   },
 ];
+
 const FeasibilityStudySceondary = async () => {
   // Fetch credentials with the relevant service tag
   const { data: credentials, error } = await credentialsService.getCredentials({
@@ -281,12 +283,17 @@ const FeasibilityStudySceondary = async () => {
         <h2 className="heading-4 max-w-[1010px]">
           Our Feasibility Study Expert service has been designed for clients
           looking for Premium and Bespoke Consulting services delivered through
+          our unique "Practitioner-Driven" approach.
+        </h2>
+        {/* <h2 className="heading-4 max-w-[1010px]">
+          Our Feasibility Study Expert service has been designed for clients
+          looking for Premium and Bespoke Consulting services delivered through
           our unique "Practitioner-Driven" approach that brings deep Industry
           Expertise with Financial Acumen to deliver High-Quality strategic
           insights. Through our feasibility study consulting services in Saudi
           Arabia, we deliver investment-grade insights that align with Vision
           2030 and institutional financing requirements.
-        </h2>
+        </h2> */}
 
         <div className="flex flex-col gap-0 mt-12 mb-16">
           {checklistItems.map((item, index) => (
@@ -336,6 +343,7 @@ const FeasibilityStudySceondary = async () => {
         </div>
       </TeamText>
       <TeamShowcase
+        headingFullWidth={true}
         title="Our Feasibility Study Firm Consulting Team"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -346,7 +354,7 @@ const FeasibilityStudySceondary = async () => {
         )}
       </TeamShowcase>
       <Credentials
-        showCalendly={true}
+        showCalendly={false}
         slides={slides}
         bgSurface={true}
         disableTabs={true}
@@ -358,7 +366,8 @@ const FeasibilityStudySceondary = async () => {
       />
 
       <ServicesSection
-        showCTA={true}
+        fullWidth={true}
+        showCTA={false}
         services={servicesData}
         heading="Tailored Scope for Optimal Value - Feasibility Study Company"
         supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to Feasibility Studies. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
@@ -369,7 +378,11 @@ const FeasibilityStudySceondary = async () => {
         heading="Let' Talk - Feasibility Report of a Project"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you with Bankable Feasibility Study expertise."
       />
-      <FAQSection faqs={faqData} showCTA={true} />
+      <FAQSection
+        calendlyButtonVisibility={false}
+        faqs={faqData}
+        showCTA={false}
+      />
     </>
   );
 };

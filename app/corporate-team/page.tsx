@@ -126,9 +126,9 @@ const CorporateTeam = () => {
         </div>
         <hr className="border-dark/10 my-20" />
         <h2 className="heading-3 mb-4 max-w-[1060px] pb-10">
-          Our External Advisors & Partners have deep rooted industry
-          relationships, connections and expertise from reputable Global
-          Corporations and Financial Institutions
+          Our External Advisors have deep rooted industry relationships,
+          connections and expertise from reputable Global Corporations and
+          Financial Institutions
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 pb-20">
           <div className="md:col-start-2 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5">

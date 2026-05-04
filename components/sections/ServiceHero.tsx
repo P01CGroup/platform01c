@@ -21,6 +21,7 @@ declare global {
 const ServiceHero: React.FC<ServiceHeroData> = ({
   subheading,
   heading,
+  smallHeading,
   className = "",
   backgroundImages,
   showContactForm = true,
@@ -55,6 +56,11 @@ const ServiceHero: React.FC<ServiceHeroData> = ({
               <h2 className="heading-2 leading-snug text-white">
                 {parse(heading)}
               </h2>
+              {smallHeading && (
+                <h4 className="heading-4 leading-snug text-white">
+                  {parse(smallHeading)}
+                </h4>
+              )}
               {/* Mobile CTA Button */}
               {showContactFormMobileView && (
                 <div className="md:hidden mt-6 w-full">

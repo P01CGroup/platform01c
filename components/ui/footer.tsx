@@ -88,6 +88,7 @@ const Footer = ({
                 Floor 5, 4055 King Fahd Road, Samama Holding Tower, P.O. Box
                 12333,
                 {/* <br /> */}
+                <br />
                 Riyadh, Kingdom of Saudi Arabia
               </span>
             </div>
@@ -164,7 +165,8 @@ const Footer = ({
               </span>
               <span>
                 Office 403-D, 4th Floor, Building A4, Dubai Digital Park,
-                Silicon Oasis, Dubai, United Arab Emirates
+                Silicon Oasis, <br />
+                Dubai, United Arab Emirates
               </span>
             </div>
             <div className="flex items-center mb-2 text-sm">
@@ -236,7 +238,9 @@ const Footer = ({
                 </svg>
               </span>
               <span>
-                66 Paul Street, London, Greater London, England, EC2A 4NA
+                66 Paul Street, London, <br />
+                Greater London, EC2A 4NA, <br />
+                England, United Kingdom.
               </span>
             </div>
             <div className="flex items-center mb-2 text-sm">

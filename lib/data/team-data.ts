@@ -639,7 +639,7 @@ export const teamConfigs = {
     "muhammad-aizaz",
     "muhammad-hasnain",
     "mohammad-zaryab",
-    "mohammad-misaad",
+    // "mohammad-misaad",
     // "abdul-moiz",
     // "hamna-asghar",
     "yusra-amjad",

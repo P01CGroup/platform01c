@@ -14,6 +14,7 @@ export interface Award {
 export interface ServiceHeroData {
   subheading: string;
   heading: string;
+  smallHeading?: string;
   backgroundImages: BackgroundImages;
   showContactForm?: boolean;
   className?: string;

@@ -802,3 +802,7 @@ img {
 .remove-btn:hover {
   background: #dc2626;
 }
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
