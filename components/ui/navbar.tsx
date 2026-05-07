@@ -17,6 +17,7 @@ import { usePathname } from "next/navigation";
 import { getNavbarVariant } from "@/lib/navbar-config";
 import CalendlyModalWrapper from "./CalendlyModalWrapper";
 import TranslateScript from "../TranslateScript";
+import { div } from "framer-motion/client";
 
 // Phase 1: Unify the Animation Language
 const ANIMATION_TRANSITION: Transition = {
@@ -231,10 +232,27 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-4">
               {/* <Button onClick={() => changeLanguage("en")}>EN</Button>
               <Button onClick={() => changeLanguage("ar")}>AR</Button> */}
-              <Button onClick={toggleLanguage}>
-                {/* {currentLang === "en" ? "AR" : "EN"} */}
-                EN/AR
-              </Button>
+              {pathname.includes("feasibility-study-ksa-2") && (
+                <div
+                  onClick={toggleLanguage}
+                  className="flex p-2 bg-secondary rounded-full"
+                >
+                  <Button
+                    className="!rounded-[90px]  p-2 px-4 !h-[32px] max-h-[32px]"
+                    variant={currentLang === "ar" ? "primary" : "tertiary"}
+                  >
+                    {/* {currentLang === "en" ? "AR" : "EN"} */}
+                    En
+                  </Button>
+                  <Button
+                    className="!rounded-[90px]  p-2 px-4 !h-[32px] max-h-[32px]"
+                    variant={currentLang === "en" ? "primary" : "tertiary"}
+                  >
+                    {/* {currentLang === "en" ? "AR" : "EN"} */}
+                    Ar
+                  </Button>
+                </div>
+              )}
               <TranslateScript />
               <CalendlyModalWrapper>
                 <Button

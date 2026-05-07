@@ -86,13 +86,13 @@ const feasibilityStudyData: ServiceHeroData = {
     {
       image: "/awards/strategist-award.png",
       text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
-      alt: "Top M&A Boutique UAE - 2025",
+      alt: "Top Strategist - 2026",
     },
-    // {
-    //   image: "/awards/strategist-award.png",
-    //   text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
-    //   alt: "Top M&A Boutique UAE - 2025",
-    // },
+    {
+      image: "/awards/ma-award-1.png",
+      text: "Top M&A Advisory <br/> Boutique 2025",
+      alt: "Top M&A Advisory Boutique 2025",
+    },
   ],
   showContactForm: true,
 };
@@ -329,6 +329,7 @@ const FeasibilityStudySceondary = async () => {
         </div>
       </TeamText>
       <TeamShowcase
+        headingFullWidth={true}
         title="Our Feasibility Study Firm Consulting Team"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -339,7 +340,7 @@ const FeasibilityStudySceondary = async () => {
         )}
       </TeamShowcase>
       <Credentials
-        showCalendly={true}
+        showCalendly={false}
         slides={slides}
         bgSurface={true}
         disableTabs={true}
@@ -351,7 +352,8 @@ const FeasibilityStudySceondary = async () => {
       />
 
       <ServicesSection
-        showCTA={true}
+        fullWidth={true}
+        showCTA={false}
         services={servicesData}
         heading="Tailored Scope for Optimal Value - Feasibility Study Company"
         supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to Feasibility Studies. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
@@ -362,7 +364,11 @@ const FeasibilityStudySceondary = async () => {
         heading="Let' Talk - Feasibility Report of a Project"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you with Bankable Feasibility Study expertise."
       />
-      <FAQSection faqs={faqData} showCTA={true} />
+      <FAQSection
+        calendlyButtonVisibility={false}
+        faqs={faqData}
+        showCTA={false}
+      />
     </>
   );
 };

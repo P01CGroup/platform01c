@@ -291,6 +291,7 @@ const DueDiligence = async () => {
       />
 
       <TeamShowcase
+        FourColumn={true}
         title="Commercial Due Diligence"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -312,13 +313,14 @@ const DueDiligence = async () => {
       />
 
       <ServicesSection
+        fullWidth={true}
         services={servicesData}
         bgSurface={false}
         heading="Scope of Our Commercial Due Diligence"
       />
 
       <CallToAction />
-      <FAQSection faqs={faqData} />
+      <FAQSection calendlyButtonVisibility={false} faqs={faqData} />
     </>
   );
 };

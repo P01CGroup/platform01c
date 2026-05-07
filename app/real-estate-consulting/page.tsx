@@ -380,7 +380,11 @@ const BrandStrategy = async () => {
           </div>
         </div>
       </div>
-      <ServicesSection services={servicesData} heading="Our Services" />
+      <ServicesSection
+        fullWidth={true}
+        services={servicesData}
+        heading="Our Services"
+      />
       <Credentials
         slides={slides}
         bgSurface={true}
@@ -391,13 +395,14 @@ const BrandStrategy = async () => {
         }
       />
       <OurValuesSlider
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={false}
         {...(valuesData.heading && { heading: valuesData.heading })}
       />
-      <DynamicInsightsSlider bgSurface={true} />
+      {/* <DynamicInsightsSlider bgSurface={true} /> */}
       <CallToAction />
-      <FAQSection faqs={faqData} />
+      <FAQSection calendlyButtonVisibility={false} faqs={faqData} />
     </>
   );
 };

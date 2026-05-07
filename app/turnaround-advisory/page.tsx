@@ -342,8 +342,8 @@ const TurnaroundAdvisory = async () => {
       />
       <div className="container pt-5 pb-20">
         <Header text="Turnaround Advisory" className="mb-26" />
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-20">
-          <h2 className="heading-4 md:col-span-3">
+        <div className="grid grid-cols-1 gap-4">
+          <h2 className="heading-4 ">
             At Platform01 Consulting, we specialize in high-stakes turnaround
             advisory for businesses facing financial distress, operational
             breakdowns, or strategic misalignment. We work closely with boards,
@@ -351,7 +351,7 @@ const TurnaroundAdvisory = async () => {
             protect stakeholder value, and implement decisive strategies for
             recovery and renewal.
           </h2>
-          <p className="md:col-span-2 text-dark/50">
+          <p className=" text-dark/50">
             Our approach goes beyond traditional consulting —we bring a
             practitioner mindset, combining real-world leadership experience
             with strategic advisory depth to help companies transform under
@@ -384,6 +384,7 @@ const TurnaroundAdvisory = async () => {
       </TeamText>
 
       <TeamShowcase
+        FourColumn={true}
         title="Our Consulting Team"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -403,15 +404,17 @@ const TurnaroundAdvisory = async () => {
         }
       />
 
-      <DynamicInsightsSlider />
+      {/* <DynamicInsightsSlider /> */}
 
       <ServicesSection
+        fullWidth={true}
         services={servicesData}
         bgSurface={true}
         heading="Our Value Creation Services"
       />
 
       <OurValuesSlider
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={false}
         {...(valuesData.heading && { heading: valuesData.heading })}
@@ -420,7 +423,7 @@ const TurnaroundAdvisory = async () => {
         heading="Business Turnaround Experts and Consultants"
         description="Whether you're a fund manager, family office, or institutional investor, Platform01 brings the clarity, confidence, and global standard you need to make informed decisions and report with authority."
       />
-      <FAQSection faqs={faqData} />
+      <FAQSection calendlyButtonVisibility={false} faqs={faqData} />
     </>
   );
 };
