@@ -441,7 +441,7 @@ const SimpleDropdownContent = ({
 
 const MegaMenuContent = ({ items }: { items: any[] }) => (
   <motion.div layout className="p-8">
-    <div className="container grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
+    <div className="container grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-4">
       {items.map((column, i) => (
         <div key={i}>
           <h5 className="font-canela text-xl text-dark leading-tight">

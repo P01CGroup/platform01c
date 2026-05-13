@@ -20,7 +20,16 @@ import { getTeamDataForPage } from "@/lib/data/team-data";
 import { getSeoMetadata } from "@/lib/seo-config";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import StrategyCards from "@/components/ui/strategy-card";
-import { Building2, RefreshCw, Target, TrendingUp } from "lucide-react";
+import {
+  Building2,
+  Check,
+  RefreshCw,
+  Target,
+  TrendingUp,
+  X,
+} from "lucide-react";
+import ServicesSlider from "./ServicesSlider";
+import ComparisonTable from "./ComparisonTable";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -60,8 +69,8 @@ export async function generateMetadata() {
 
 const TurnaroundAdvisoryData: ServiceHeroData = {
   subheading: "P01SOaaS",
-  heading:
-    "Investor & Growth Focused Strategies. </br> Performance-Led Execution.",
+  heading: "Performance-Driven Strategic Solutions",
+  smallHeading: "For Visionary Businesses, Investors & Leadership Teams",
   backgroundImages: {
     mobile: "/services/mobile/turnaround-advisory.png",
     tablet: "/services/tablet/turnaround-advisory.png",
@@ -192,7 +201,8 @@ const faqData: FAQItem[] = [
         P01SOaaS™ is a fully integrated Strategy Office as a Service platform
         that gives organizations access to Platform01 Consulting’s
         multidisciplinary consulting capabilities under one strategic delivery
-        framework. <br />
+        framework.
+        <br />
         Clients gain access to strategic execution support across Corporate
         Strategy, Business Transformation, PMO & Project Management Support,
         Financial Modelling & Business Analytics, Corporate Finance Support,
@@ -210,7 +220,7 @@ const faqData: FAQItem[] = [
       <span>
         P01SOaaS™ by Platform01 Consulting is designed as a premium Strategy
         Office as a Service solution for businesses in the UAE requiring
-        strategy implementation, PMO support, outsourced analysts, management
+        strategy implementation, PMO support, strategy analysts, management
         reporting, financial analysis, and executionfocused strategic
         consulting.
       </span>
@@ -230,10 +240,10 @@ const faqData: FAQItem[] = [
   },
   {
     question:
-      "Are outsourced analysts and fractional strategic support services available in Saudi Arabia?",
+      "Are analysts and fractional strategic support services available in Saudi Arabia?",
     answer: (
       <span>
-        Yes. P01SOaaS™ supports businesses in Saudi Arabia with outsourced
+        Yes. P01SOaaS™ supports businesses in Saudi Arabia with strategy
         analysts, PMO support, strategic execution capabilities, management
         reporting, business analysis, financial analysis, and flexible strategic
         support solutions.
@@ -242,13 +252,13 @@ const faqData: FAQItem[] = [
   },
   {
     question:
-      "Can businesses in the UK outsource strategy execution and PMO support?",
+      "Can businesses in the UK opt for strategy execution and PMO support?",
     answer: (
       <span>
         Yes. Platform01 Consulting supports UK-based businesses through Strategy
-        Office as a Service engagements that include strategic implementation
-        support, outsourced strategic associates, PMO coordination, business
-        planning, reporting support, and performance management capabilities.
+        Office as a Service engagemwent that include strategic implementation
+        support, strategic associates, PMO coordination, business planning,
+        reporting support, and performance management capabilities.
       </span>
     ),
   },
@@ -296,7 +306,7 @@ const faqData: FAQItem[] = [
     answer: (
       <span>
         Yes. Many organizations use P01SOaaS™ as an alternative to building
-        large internal strategy, finance, analytics, or transformation teams.{" "}
+        large internal strategy, finance, analytics, or transformation teams.
         <br />
         The model provides access to multidisciplinary strategic support
         capabilities under one integrated engagement structure.
@@ -305,13 +315,13 @@ const faqData: FAQItem[] = [
   },
   {
     question:
-      "Does Platform01 Consulting provide outsourced analysts and strategic associates?",
+      "Does Platform01 Consulting provide analysts and strategic associates?",
     answer: (
       <span>
-        Yes. P01SOaaS™ can support businesses with outsourced strategic
-        analysis capabilities including financial analysis, market research,
-        commercial analysis, reporting support, business intelligence, and
-        strategic execution support.
+        Yes. P01SOaaS™ can support businesses with strategic analysis
+        capabilities including financial analysis, market research, commercial
+        analysis, reporting support, business intelligence, and strategic
+        execution support.
       </span>
     ),
   },
@@ -450,6 +460,53 @@ const p01saasItems = [
   "Flexible strategic capability access",
 ];
 
+const traditionalVsP01saas = [
+  {
+    title: "Focused on strategic value creation",
+    traditional: false,
+    p01saas: true,
+  },
+  {
+    title: "Long-term strategic partnership",
+    traditional: false,
+    p01saas: true,
+  },
+  { title: "Execution-driven", traditional: false, p01saas: true },
+  {
+    title: "Integrated multidisciplinary support",
+    traditional: false,
+    p01saas: true,
+  },
+  {
+    title: "Proactive strategic involvement",
+    traditional: false,
+    p01saas: true,
+  },
+  { title: "Ongoing strategic oversight", traditional: false, p01saas: true },
+  { title: "Embedded coordination support", traditional: false, p01saas: true },
+  {
+    title: "Flexible strategic capability access",
+    traditional: false,
+    p01saas: true,
+  },
+  { title: "Focused on billable hours", traditional: true, p01saas: false },
+  { title: "Short-term projects", traditional: true, p01saas: false },
+  { title: "Presentation-driven", traditional: true, p01saas: false },
+  { title: "Siloed service delivery", traditional: true, p01saas: false },
+  { title: "Reactive engagement structure", traditional: true, p01saas: false },
+  { title: "Limited continuity", traditional: true, p01saas: false },
+  {
+    title: "High dependency on internal coordination",
+    traditional: true,
+    p01saas: false,
+  },
+  {
+    title: "Expensive internal hiring alternatives",
+    traditional: true,
+    p01saas: false,
+  },
+];
+
 const strategicServices = [
   {
     title: "Strategy Implementation Services",
@@ -469,7 +526,7 @@ const strategicServices = [
   },
 
   {
-    title: "PMO & Project Management Office Support",
+    title: "Project Management Office Support",
     description:
       "Organizations frequently struggle with fragmented execution, delayed initiatives, and lack of operational visibility.<br/>Our PMO and project management support services help businesses establish stronger execution discipline. <br/>Support areas include:",
     services: [
@@ -494,10 +551,10 @@ const strategicServices = [
       "Fractional CFO support",
       "Fractional Strategy Office support",
       "Fractional business advisory support",
-      "Outsourced financial analysis teams",
+      "Financial analysis support teams",
       "Strategic management support",
       "Commercial planning support",
-      "Outsourced corporate finance support",
+      "Corporate Finance Support",
       "Growth strategy support",
     ],
     additionalText:
@@ -505,7 +562,7 @@ const strategicServices = [
   },
 
   {
-    title: "Outsourced Analysts & Strategic Associates",
+    title: "Strategic Analysts & Associates",
     description:
       "Many businesses require analytical and strategic execution support but face challenges recruiting and retaining experienced resources. P01SOaaS™ provides access to experienced analysts and strategic associates that support:",
     services: [
@@ -565,6 +622,34 @@ const bespokeItems = [
   },
 ];
 
+const newServiceData = [
+  {
+    title: "Growth Companies",
+    description:
+      "Businesses experiencing rapid expansion often struggle with strategic alignment, project prioritization, reporting structures, and execution capacity. <br /> P01SOaaS™ provides structured strategic support to help management teams scale effectively.",
+  },
+  {
+    title: "SMEs & Mid-Market Businesses",
+    description:
+      "Many SMEs require sophisticated strategic and financial capabilities but do not require or cannot justify multiple full-time senior hires. <br /> Our model allows businesses to access enterprise-grade strategic support flexibly.",
+  },
+  {
+    title: "Investors & Family Offices",
+    description:
+      "Investors frequently require ongoing support across portfolio monitoring, investment evaluation, strategic oversight, financial analysis, management reporting, and growth planning.<br /> P01SOaaS™ acts as an extension of the investor’s strategic and analytical capabilities.",
+  },
+  {
+    title: "Founder-Led Businesses",
+    description:
+      "Founders often become overwhelmed managing operations, growth initiatives, strategic planning, reporting, fundraising preparation, and project execution simultaneously. <br />P01SOaaS™ creates structure, accountability, and execution support around management priorities.",
+  },
+  {
+    title: "Corporates Undergoing Transformation",
+    description:
+      "Organizations implementing restructuring, operational improvements, expansion initiatives, new market entry, digitization, or strategic transformation require coordinated execution support.<br />P01SOaaS™ helps management teams drive momentum and maintain visibility across strategic initiatives.",
+  },
+];
+
 const TurnaroundAdvisory = async () => {
   // Fetch credentials with the relevant service tag
   const { data: credentials, error } = await credentialsService.getCredentials({
@@ -589,7 +674,36 @@ const TurnaroundAdvisory = async () => {
         showContactFormMobileView={true}
       />
       <div className="container pt-5 pb-20">
-        <Header text="P01SOaaS" className="mb-26" />
+        <Header
+          text="P01SOaaS (Platform01 Strategy Office as a Service)"
+          className="mb-26"
+        />
+        <div className="grid grid-cols-1 gap-4">
+          <h2 className="heading-4 ">
+            Most businesses have a vision. Few have the structural capacity to
+            execute it consistently — across every initiative, every quarter,
+            without losing momentum.
+          </h2>
+          <p className=" text-dark/50">
+            P01SOaaS™ (Platform01 Strategy Office as a Service) bridges that
+            gap. It is a continuously embedded, performance-driven strategic
+            model that gives companies, investors, family offices, and founders
+            access to a fully integrated strategy office — without the cost,
+            complexity, or commitment of building one inhouse.
+          </p>
+          <p className=" text-dark/50">
+            From strategic planning and PMO support to financial analysis,
+            fractional leadership, and execution oversight — P01SOaaS™ operates
+            as a seamless extension of your leadership team, aligned to your
+            goals, accountable to your outcomes.
+          </p>
+        </div>
+      </div>
+      {/* <div className="container pt-5 pb-20">
+        <Header
+          text="P01SOaaS (Platform01 Strategy Office as a Service)"
+          className="mb-26"
+        />
         <div className="grid grid-cols-1 gap-4">
           <h2 className="heading-4 ">
             Move Beyond Traditional Consulting Retainers
@@ -615,8 +729,7 @@ const TurnaroundAdvisory = async () => {
             value creation.
           </p>
         </div>
-      </div>
-
+      </div> */}
       {/* <TeamText>
         <div>
           <h2 className="heading-3  ">
@@ -641,6 +754,53 @@ const TurnaroundAdvisory = async () => {
       </TeamText> */}
       <TeamText>
         <div>
+          <h2 className="heading-3 max-w-[450px]">
+            Move Beyond Traditional Consulting Retainers
+          </h2>
+          <hr className="border-dark/10 my-8" />
+          <p className="text-dark/50 max-w-[620px]">
+            Most consulting firms sell hours. Platform01 Consulting Group
+            delivers outcomes. P01SOaaS™ (Platform01 Strategy Office as a
+            Service) is a performance-driven strategic execution model designed
+            for companies, investors, family offices, founders, and leadership
+            teams that require continuous strategic support without the
+            inefficiencies of traditional consulting structures.
+          </p>
+          <p className="text-dark/50 max-w-[620px]">
+            P01SOaaS™ is a long-term strategic partnership built around
+            implementation, accountability, business priorities, and measurable
+            value creation.
+          </p>
+        </div>
+        <div>
+          {/* <h4 className="heading-5 mb-4">
+            These Key Strategic Choices for Feasibility Study Specialist
+            include:
+          </h4> */}
+          {/* <hr className="border-dark/10 my-4" /> */}
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {checklistItems.map((item, index) => (
+              <ChecklistItem key={index} text={item} className=" py-3.5" />
+            ))}
+            {/* <ChecklistItem
+              text="Business Model & Strategy"
+              className="py-3.5"
+            />
+            <ChecklistItem text="Target Market" className="py-3.5" />
+            <ChecklistItem
+              text="Value Proposition and USP"
+              className="py-3.5"
+            />
+            <ChecklistItem text="Competitive Positioning" className="py-3.5" /> */}
+          </div>
+        </div>
+      </TeamText>
+      {/* <TeamText>
+        <div>
+          <Header
+            text="P01SOaaS (Platform01 Strategy Office as a Service)"
+            className="mb-12"
+          />
           <h2 className="heading-3 max-w-[450px]">
             A Strategic Foundation for Feasibility Study Saudi Arabia, Not Just
             an Evaluation
@@ -675,7 +835,7 @@ const TurnaroundAdvisory = async () => {
             <ChecklistItem text="Competitive Positioning" className="py-3.5" />
           </div>
         </div>
-      </TeamText>
+      </TeamText> */}
       <div className=" py-16">
         <div className="container grid grid-cols-1 gap-8 gap-y-16">
           <div>
@@ -692,7 +852,7 @@ const TurnaroundAdvisory = async () => {
               follow-through into one unified engagement structure.
             </p>
           </div>
-          <div className="">
+          {/* <div className="">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="bg-surface p-7">
                 <h5 className="heading-5.5">Traditional Consulting</h5>
@@ -721,13 +881,72 @@ const TurnaroundAdvisory = async () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          {/* <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>P01SOaaS™</th>
+                <th>Traditional Consulting</th>
+              </tr>
+            </thead>
+            <tbody>
+              {traditionalVsP01saas.map((row, index) => (
+                <tr key={index}>
+                  <td>{row.title}</td>
+                  <td>{row.p01saas ? <Check /> : <X />}</td>
+                  <td>{row.traditional ? <Check /> : <X />}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table> */}
+          <table className="w-full border-collapse border border-dark/10">
+            <thead>
+              <tr>
+                <th className="border border-dark/10 bg-white p-6"></th>
+
+                <th className="border border-dark/10 bg-white p-6 text-center heading-5">
+                  P01SOaaS™
+                </th>
+
+                <th className="border border-dark/10 bg-white p-6 text-center heading-5">
+                  Traditional Consulting
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {traditionalVsP01saas.map((row, index) => (
+                <tr key={index}>
+                  <td className="border border-dark/10 bg-white p-6 font-medium">
+                    {row.title}
+                  </td>
+
+                  <td className="border border-dark/10 bg-white p-6 text-center">
+                    {row.p01saas ? (
+                      <Check className="mx-auto text-green-500" />
+                    ) : (
+                      <X className="mx-auto text-red-500" />
+                    )}
+                  </td>
+
+                  <td className="border border-dark/10 bg-white p-6 text-center">
+                    {row.traditional ? (
+                      <Check className="mx-auto text-green-500" />
+                    ) : (
+                      <X className="mx-auto text-red-500" />
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <div className="bg-surface py-20">
+      {/* <div className="bg-surface py-20">
         <div className="container">
-          <h2 className="heading-2 max-w-[1010px]">
+          <h2 className="heading-4   max-w-[1010px]">
             Who is P01SOaaS™ Designed For?
           </h2>
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
@@ -809,8 +1028,11 @@ const TurnaroundAdvisory = async () => {
             </div>
           </div>
         </div>
-      </div>
-
+      </div> */}
+      <ServicesSlider
+        heading="Who is P01SOaaS™ Designed For?"
+        displayServiceData={newServiceData}
+      />
       <div className=" py-20">
         <div className="container">
           <h2 className="heading-2 max-w-[1010px]">
@@ -823,7 +1045,6 @@ const TurnaroundAdvisory = async () => {
           </div>
         </div>
       </div>
-
       <div className="bg-surface py-20">
         <div className="container pt-5">
           <h2 className="heading-4 max-w-[1010px] ">
@@ -847,7 +1068,7 @@ const TurnaroundAdvisory = async () => {
                   {index === 4 && <Target size={24} />}
                 </div>
                 <div className="flex flex-col justify-between gap-6">
-                  <h5 className="leading-tight">{item?.title}</h5>
+                  <h5 className="leading-tight min-h-[55px]">{item?.title}</h5>
                   <p className="text-dark/50">{item?.description}</p>
                 </div>
               </div>
@@ -855,8 +1076,8 @@ const TurnaroundAdvisory = async () => {
           </div>
         </div>
       </div>
-
       <FAQSection
+        fullWidthAnswers={true}
         headingFullWidth={true}
         leftAligned={true}
         calendlyButtonVisibility={false}

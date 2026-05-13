@@ -19,12 +19,14 @@ interface FAQSectionProps {
   faqs: FAQItem[];
   heading?: string;
   showCTA?: boolean;
+  fullWidthAnswers?: boolean;
   leftAligned?: boolean;
   headingFullWidth?: boolean;
   calendlyButtonVisibility?: boolean;
 }
 
 export default function FAQSection({
+  fullWidthAnswers = false,
   faqs,
   showCTA,
   heading = "Frequently Asked Questions",
@@ -98,7 +100,9 @@ export default function FAQSection({
                       transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
                       className="overflow-hidden bg-white"
                     >
-                      <div className="pb-4 text-dark/50 text-base max-w-[600px]">
+                      <div
+                        className={`pb-4 text-dark/50 text-base ${fullWidthAnswers ? "max-w-full" : "max-w-[600px]"}`}
+                      >
                         {faq.answer}
                       </div>
                     </motion.div>

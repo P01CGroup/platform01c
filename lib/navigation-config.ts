@@ -91,6 +91,10 @@ export const navigationData: (NavItemData | MegaMenuData)[] = [
           },
         ],
       },
+      {
+        title: "Solutions",
+        links: [{ label: "P01SOaaS", href: "/p01soaas" }],
+      },
     ],
   },
   {
