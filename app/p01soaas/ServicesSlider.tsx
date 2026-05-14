@@ -102,7 +102,9 @@ const ServicesSlider = ({
                     {service.title}
                   </h2>
                 </div>
-                <p className="text-dark/50">{parse(service.description)}</p>
+                <p className="text-dark/50">
+                  {service.description && parse(service.description)}
+                </p>
               </div>
             </SwiperSlide>
           ))}
