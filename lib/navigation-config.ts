@@ -30,6 +30,7 @@ export const navigationData: (NavItemData | MegaMenuData)[] = [
       { label: "The Corporate Team", href: "/corporate-team" },
     ],
   },
+
   {
     label: "Services",
     href: "/services",
@@ -91,11 +92,16 @@ export const navigationData: (NavItemData | MegaMenuData)[] = [
           },
         ],
       },
-      {
-        title: "Solutions",
-        links: [{ label: "P01SOaaS", href: "/p01soaas" }],
-      },
+      // {
+      //   title: "Solutions",
+      //   links: [{ label: "P01SOaaS", href: "/p01soaas" }],
+      // },
     ],
+  },
+  {
+    label: "Solutions",
+    href: "",
+    children: [{ label: "P01SOaaS", href: "/p01soaas" }],
   },
   {
     label: "Insights",

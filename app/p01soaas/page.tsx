@@ -681,19 +681,19 @@ const TurnaroundAdvisory = async () => {
         <div className="grid grid-cols-1 gap-4">
           <h2 className="heading-4 ">
             Most businesses have a vision. Few have the structural capacity to
-            execute it consistently — across every initiative, every quarter,
+            execute it consistently across every initiative, every quarter,
             without losing momentum.
           </h2>
           <p className=" text-dark/50">
             P01SOaaS™ (Platform01 Strategy Office as a Service) bridges that
             gap. It is a continuously embedded, performance-driven strategic
             model that gives companies, investors, family offices, and founders
-            access to a fully integrated strategy office — without the cost,
+            access to a fully integrated strategy office without the cost,
             complexity, or commitment of building one inhouse.
           </p>
           <p className=" text-dark/50">
             From strategic planning and PMO support to financial analysis,
-            fractional leadership, and execution oversight — P01SOaaS™ operates
+            fractional leadership, and execution oversight P01SOaaS™ operates
             as a seamless extension of your leadership team, aligned to your
             goals, accountable to your outcomes.
           </p>
@@ -918,11 +918,11 @@ const TurnaroundAdvisory = async () => {
             <tbody>
               {traditionalVsP01saas.map((row, index) => (
                 <tr key={index}>
-                  <td className="border border-dark/10 bg-white p-6 font-medium">
+                  <td className="border border-dark/10 bg-white p-3 font-medium">
                     {row.title}
                   </td>
 
-                  <td className="border border-dark/10 bg-white p-6 text-center">
+                  <td className="border border-dark/10 bg-white p-3 text-center">
                     {row.p01saas ? (
                       <Check className="mx-auto text-green-500" />
                     ) : (
@@ -930,7 +930,7 @@ const TurnaroundAdvisory = async () => {
                     )}
                   </td>
 
-                  <td className="border border-dark/10 bg-white p-6 text-center">
+                  <td className="border border-dark/10 bg-white p-3 text-center">
                     {row.traditional ? (
                       <Check className="mx-auto text-green-500" />
                     ) : (
@@ -1035,7 +1035,7 @@ const TurnaroundAdvisory = async () => {
       />
       <div className=" py-20">
         <div className="container">
-          <h2 className="heading-2 max-w-[1010px]">
+          <h2 className="heading-3 max-w-[1010px]">
             Included Strategic Support Areas{" "}
           </h2>
           <div className="grid md:grid-cols-5 gap-3 mt-10">
