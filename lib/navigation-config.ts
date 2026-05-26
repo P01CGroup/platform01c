@@ -101,7 +101,10 @@ export const navigationData: (NavItemData | MegaMenuData)[] = [
   {
     label: "Solutions",
     href: "",
-    children: [{ label: "P01SOaaS", href: "/p01soaas" }],
+    children: [
+      { label: "P01SOaaS", href: "/p01soaas" },
+      { label: "P01Gateway", href: "/p01gateway" },
+    ],
   },
   {
     label: "Insights",

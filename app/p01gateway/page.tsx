@@ -762,47 +762,49 @@ const TurnaroundAdvisory = async () => {
               require:
             </p>
           </div>
-          <table className="w-full border-collapse border border-dark/10">
-            <thead>
-              <tr>
-                <th className="border border-dark/10 bg-white p-6"></th>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-dark/10">
+              <thead>
+                <tr>
+                  <th className="border border-dark/10 bg-white p-6"></th>
 
-                <th className="border border-dark/10 bg-white p-6 text-center heading-5">
-                  P01Gateway™
-                </th>
+                  <th className="border border-dark/10 bg-white p-6 text-center heading-5">
+                    P01Gateway™
+                  </th>
 
-                <th className="border border-dark/10 bg-white p-6 text-center heading-5">
-                  Traditional Consulting
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {traditionalVsP01saas.map((row, index) => (
-                <tr key={index}>
-                  <td className="border border-dark/10 bg-white p-3 font-medium">
-                    {row.title}
-                  </td>
-
-                  <td className="border border-dark/10 bg-white p-3 text-center">
-                    {row.p01saas ? (
-                      <Check className="mx-auto text-green-500" />
-                    ) : (
-                      <X className="mx-auto text-red-500" />
-                    )}
-                  </td>
-
-                  <td className="border border-dark/10 bg-white p-3 text-center">
-                    {row.traditional ? (
-                      <Check className="mx-auto text-green-500" />
-                    ) : (
-                      <X className="mx-auto text-red-500" />
-                    )}
-                  </td>
+                  <th className="border border-dark/10 bg-white p-6 text-center heading-5">
+                    Traditional Consulting
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+
+              <tbody>
+                {traditionalVsP01saas.map((row, index) => (
+                  <tr key={index}>
+                    <td className="border border-dark/10 bg-white p-3 font-medium">
+                      {row.title}
+                    </td>
+
+                    <td className="border border-dark/10 bg-white p-3 text-center">
+                      {row.p01saas ? (
+                        <Check className="mx-auto text-green-500" />
+                      ) : (
+                        <X className="mx-auto text-red-500" />
+                      )}
+                    </td>
+
+                    <td className="border border-dark/10 bg-white p-3 text-center">
+                      {row.traditional ? (
+                        <Check className="mx-auto text-green-500" />
+                      ) : (
+                        <X className="mx-auto text-red-500" />
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           <p className="text-md text-dark/50 mt-4">
             P01Gateway™ does not focus on transactional or administrative setup
             activities. Instead, the engagement model is centered around

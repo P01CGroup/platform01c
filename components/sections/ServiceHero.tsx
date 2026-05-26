@@ -35,7 +35,7 @@ const ServiceHero: React.FC<ServiceHeroData> = ({
 
   return (
     <div className="bg-dark text-white relative overflow-hidden z-10">
-      <div className="container h-[100dvh] md:h-[768px]">
+      <div className="container min-h-[100dvh] md:h-[768px]">
         <ParallaxImage
           responsiveImages={backgroundImages}
           alt="Background"
@@ -46,7 +46,7 @@ const ServiceHero: React.FC<ServiceHeroData> = ({
         />
 
         <div className="flex flex-col justify-end items-start h-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-10 md:pb-24 items-end w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:mt-0 mt-22  pb-10 md:pb-24 items-end w-full">
             <div className={`md:col-span-2 ${className}`}>
               {/* Awards Section */}
 
