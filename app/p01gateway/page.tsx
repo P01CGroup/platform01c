@@ -880,29 +880,31 @@ const TurnaroundAdvisory = async () => {
         </div>
       </div>
 
-      <div className="container pt-5">
-        <h2 className="heading-4 max-w-[1010px]">
-          Built for Modern Global Expansion
-        </h2>
-        <p className="text-md text-dark/50 mt-4">
-          Global expansion strategies are evolving.
-          <br />
-          Organizations today require agile market entry models that combine:
-        </p>
+      <div className=" bg-surface">
+        <div className=" container py-5">
+          <h2 className="heading-4 max-w-[1010px]">
+            Built for Modern Global Expansion
+          </h2>
+          <p className="text-md text-dark/50 mt-4">
+            Global expansion strategies are evolving.
+            <br />
+            Organizations today require agile market entry models that combine:
+          </p>
 
-        <div className="flex flex-col gap-0 mt-12 mb-16">
-          {checklistItems2.map((item, index) => (
-            <ChecklistItem
-              key={index}
-              text={item}
-              className="last:border-b-0 border-b border-dark/10 py-6"
-            />
-          ))}
+          <div className="flex flex-col gap-0 mt-12 mb-16">
+            {checklistItems2.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div>
+          <p className="text-md text-dark/50 mt-4">
+            P01Gateway™ is designed to address these evolving requirements
+            through a premium, execution-focused GCC expansion platform.
+          </p>
         </div>
-        <p className="text-md text-dark/50 mt-4">
-          P01Gateway™ is designed to address these evolving requirements
-          through a premium, execution-focused GCC expansion platform.
-        </p>
       </div>
 
       <FAQSection
