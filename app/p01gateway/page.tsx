@@ -486,51 +486,51 @@ const strategicServices = [
       <li>Growth roadmap structuring</li>
     </ul>`,
   },
-  {
-    title: "Industries We Support",
-    description: `<p className="text-dark/50 leading-tight">P01Gateway™ is designed to support companies across multiple industries and sectors.</p>
-     <h6 className="heading-5.5 font-semibold">Technology & Digital Solutions</h6>
-    <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
-      <li>AI companies</li>
-      <li>SaaS businesses</li>
-      <li>Enterprise software providers</li>
-      <li>Cybersecurity firms</li>
-      <li>Cloud solution providers</li>
-      <li>Digital transformation companies</li>
-      <li>Data and analytics firms</li>
-    </ul>
-     <h6 className="heading-5.5 font-semibold">Industrial & Manufacturing</h6>
-    <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
-      <li>Industrial solution providers</li>
-      <li>Engineering firms</li>
-      <li>Manufacturing companies</li>
-      <li>Smart infrastructure businesses</li>
-      <li>Construction technology providers</li>
-    </ul>
-     <h6 className="heading-5.5 font-semibold">Healthcare & Life Sciences</h6>
-    <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
-      <li>Healthtech companies</li>
-      <li>Medical solution providers</li>
-      <li>Wellness businesses</li>
-      <li>Digital healthcare platforms</li>
-    </ul>
-     <h6 className="heading-5.5 font-semibold">Consumer & Retail</h6>
-    <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
-      <li>Consumer brands</li>
-      <li>Retail operators</li>
-      <li>E-commerce businesses</li>
-      <li>Luxury brands</li>
-      <li>Food and beverage companies</li>
-    </ul>
-     <h6 className="heading-5.5 font-semibold">Energy & Sustainability</h6>
-    <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
-      <li>Renewable energy firms</li>
-      <li>ESG solution providers</li>
-      <li>Sustainability-focused businesses</li>
-      <li>Climate technology companies</li>
-    </ul>
-    `,
-  },
+  // {
+  //   title: "Industries We Support",
+  //   description: `<p className="text-dark/50 leading-tight">P01Gateway™ is designed to support companies across multiple industries and sectors.</p>
+  //    <h6 className="heading-5.5 font-semibold">Technology & Digital Solutions</h6>
+  //   <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+  //     <li>AI companies</li>
+  //     <li>SaaS businesses</li>
+  //     <li>Enterprise software providers</li>
+  //     <li>Cybersecurity firms</li>
+  //     <li>Cloud solution providers</li>
+  //     <li>Digital transformation companies</li>
+  //     <li>Data and analytics firms</li>
+  //   </ul>
+  //    <h6 className="heading-5.5 font-semibold">Industrial & Manufacturing</h6>
+  //   <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+  //     <li>Industrial solution providers</li>
+  //     <li>Engineering firms</li>
+  //     <li>Manufacturing companies</li>
+  //     <li>Smart infrastructure businesses</li>
+  //     <li>Construction technology providers</li>
+  //   </ul>
+  //    <h6 className="heading-5.5 font-semibold">Healthcare & Life Sciences</h6>
+  //   <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+  //     <li>Healthtech companies</li>
+  //     <li>Medical solution providers</li>
+  //     <li>Wellness businesses</li>
+  //     <li>Digital healthcare platforms</li>
+  //   </ul>
+  //    <h6 className="heading-5.5 font-semibold">Consumer & Retail</h6>
+  //   <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+  //     <li>Consumer brands</li>
+  //     <li>Retail operators</li>
+  //     <li>E-commerce businesses</li>
+  //     <li>Luxury brands</li>
+  //     <li>Food and beverage companies</li>
+  //   </ul>
+  //    <h6 className="heading-5.5 font-semibold">Energy & Sustainability</h6>
+  //   <ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+  //     <li>Renewable energy firms</li>
+  //     <li>ESG solution providers</li>
+  //     <li>Sustainability-focused businesses</li>
+  //     <li>Climate technology companies</li>
+  //   </ul>
+  //   `,
+  // },
 ];
 
 const bespokeItems = [
@@ -581,6 +581,59 @@ const bespokeItems = [
       <li>Market intelligence</li>
       <li>Stakeholder strategy</li>
       <li>Long-term regional growth</li>
+    </ul>`,
+  },
+];
+
+const supportedIndustries = [
+  {
+    title: "Technology & Digital Solutions",
+    description: `<ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+      <li>AI companies</li>
+      <li>SaaS businesses</li>
+      <li>Enterprise software providers</li>
+      <li>Cybersecurity firms</li>
+      <li>Cloud solution providers</li>
+      <li>Digital transformation companies</li>
+      <li>Data and analytics firms</li>
+    </ul>`,
+  },
+  {
+    title: "Industrial & Manufacturing",
+    description: `<ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+      <li>Industrial solution providers</li>
+      <li>Engineering firms</li>
+      <li>Manufacturing companies</li>
+      <li>Smart infrastructure businesses</li>
+      <li>Construction technology providers</li>
+    </ul>`,
+  },
+  {
+    title: "Healthcare & Life Sciences",
+    description: `<ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+      <li>Healthtech companies</li>
+      <li>Medical solution providers</li>
+      <li>Wellness businesses</li>
+      <li>Digital healthcare platforms</li>
+    </ul>`,
+  },
+  {
+    title: "Consumer & Retail",
+    description: `<ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+      <li>Consumer brands</li>
+      <li>Retail operators</li>
+      <li>E-commerce businesses</li>
+      <li>Luxury brands</li>
+      <li>Food and beverage companies</li>
+    </ul>`,
+  },
+  {
+    title: "Energy & Sustainability",
+    description: `<ul className="mt-3 flex flex-col gap-2 list-disc pl-6">
+      <li>Renewable energy firms</li>
+      <li>ESG solution providers</li>
+      <li>Sustainability-focused businesses</li>
+      <li>Climate technology companies</li>
     </ul>`,
   },
 ];
@@ -652,7 +705,7 @@ Our consulting philosophy is built around delivering practical strategic value r
     description: `<p className="text-dark/50">Clients benefit from direct engagement with senior consulting leadership throughout the project lifecycle.</br>
 This enables:
 </p>
-<ul className="list-disc pl-6 mt-2">
+<ul className="list-disc pl-6 mt-2 text-dark/50">
   <li>Faster decision-making</li>
   <li>Strategic consistency</li>
   <li>Better execution alignment</li>
@@ -730,22 +783,34 @@ const TurnaroundAdvisory = async () => {
         </div>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <ChecklistItem
-              text={"UAE — Access & activation:"}
-              className=" py-3.5"
-            />
-            <ChecklistItem
-              text={"KSA — Vision 2030 aligned:"}
-              className=" py-3.5"
-            />
-            <ChecklistItem
-              text={"Dual-market, one strategy:"}
-              className=" py-3.5"
-            />
-            <ChecklistItem
-              text={"Strategy through execution:"}
-              className=" py-3.5"
-            />
+            <div className="py-3.5">
+              <ChecklistItem text={"UAE — Access & activation:"} />
+              <p className="text-dark/50 md:pl-[45px] pl-[24px] ">
+                Entity setup, free zone navigation, and direct access to Dubai
+                and Abu Dhabi commercial networks.
+              </p>
+            </div>
+            <div className="py-3.5">
+              <ChecklistItem text={"KSA — Vision 2030 aligned:"} />
+              <p className="text-dark/50 md:pl-[45px] pl-[24px] ">
+                On-the-ground presence in Riyadh with access to the right
+                partners and decisionmakers.
+              </p>
+            </div>
+            <div className="py-3.5">
+              <ChecklistItem text={"Dual-market, one strategy:"} />
+              <p className="text-dark/50 md:pl-[45px] pl-[24px] ">
+                Integrated GTM across both markets — no duplication, no gaps,
+                full regional coverage.
+              </p>
+            </div>
+            <div className="py-3.5">
+              <ChecklistItem text={"Strategy through execution:"} />
+              <p className="text-dark/50 md:pl-[45px] pl-[24px] ">
+                From first conversation to market activation — we stay involved
+                beyond the strategy deck.
+              </p>
+            </div>
           </div>
         </div>
       </TeamText>
@@ -843,6 +908,45 @@ const TurnaroundAdvisory = async () => {
         heading="Why Platform01 Consulting?"
         displayServiceData={newConsultingData}
       />
+      <div className=" md:py-20 py-10">
+        <div className="container pt-5">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-2">
+            <h2 className="heading-4 max-w-[1010px] ">Industries We Support</h2>
+            <p className="text-dark/50">
+              P01Gateway™ is designed to support companies across multiple
+              industries and sectors.
+            </p>
+          </div>
+          <hr className="border-dark/10 my-4" />
+
+          <div className="gap-2 grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 mt-12">
+            {supportedIndustries.map((item, index) => (
+              <div
+                key={index + 1}
+                className={`relative py-6 px-4 text-left transition-all duration-200 group border border-dark/10 ${"bg-white text-dark"}`}
+              >
+                {/* <div
+                  className={`w-12 h-12 mb-8 flex items-center justify-center text-dark ${"bg-surface"} group-hover:text-primary transition-colors duration-200`}
+                >
+                  {index === 0 && <TrendingUp size={24} />}
+                  {index === 1 && <Building2 size={24} />}
+                  {index === 2 && <Target size={24} />}
+                  {index === 3 && <RefreshCw size={24} />}
+                  {index === 4 && <Target size={24} />}
+                </div> */}
+                <div className="flex flex-col justify-between gap-6">
+                  <h5 className="leading-tight min-h-[55px]">{item?.title}</h5>
+                  <div className="text-dark/50">
+                    {/* <p className="text-dark/50"> */}
+                    {item?.description && parse(item?.description)}
+                    {/* </p> */}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="bg-surface py-20">
         <div className="container pt-5">
           <h2 className="heading-4 max-w-[1010px] ">Our Engagement Approach</h2>
@@ -865,7 +969,7 @@ const TurnaroundAdvisory = async () => {
                 </div>
                 <div className="flex flex-col justify-between gap-6">
                   <h5 className="leading-tight min-h-[55px]">{item?.title}</h5>
-                  <div>
+                  <div className="text-dark/50">
                     {/* <p className="text-dark/50"> */}
                     {item?.description && parse(item?.description)}
                     {/* </p> */}
