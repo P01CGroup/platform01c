@@ -27,8 +27,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Turnaround Advisory | Platform01 Consulting",
-    description: "Description for Turnaround Advisory page.",
+    title: "Restructuring & Turnaround Consulting Firm | Platform01",
+    description:
+      "Platform01's restructuring and turnaround consulting expertise helps businesses stabilize, recover, and grow. From corporate restructuring advisory to full turnaround management, we deliver",
     keywords: "platform01, Turnaround Advisory",
     og_title: "",
     og_description: "",

@@ -32,8 +32,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Due Diligence | Platform01 Consulting",
-    description: "Description for Due Diligence page.",
+    title: "Trusted Commercial Due Diligence Consulting | Platform01",
+    description:
+      "Backed by decades of advisory experience and billions in deal value, our commercial due diligence services deliver the strategic intelligence investors and acquirers need. Start your commercial due diligence journey today.",
     keywords: "platform01, Due Diligence",
     og_title: "",
     og_description: "",

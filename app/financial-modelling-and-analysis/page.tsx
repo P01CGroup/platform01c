@@ -29,8 +29,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Financial Modelling Services | Platform01 Consulting",
-    description: "Description for Financial Modelling Services page.",
+    title: "Financial Modelling Services | Investor-Grade Models | Platform01",
+    description:
+      "From project finance modeling to complex real estate financial modelling our CFA & FMVA accredited financial modeling consultants build bespoke and institutional grade financial models trusted by investors across UAE, KSA & UK.",
     keywords: "",
     og_title: "",
     og_description: "",

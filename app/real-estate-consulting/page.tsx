@@ -24,8 +24,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Real Estate Strategy | Platform01 Consulting",
-    description: "Description for Real Estate Strategy page.",
+    title: "Hire Real Estate Advisory Firm | Real Estate Experts",
+    description:
+      "Looking for a reliable Real Estate Advisory company? Platform01 provides Real Estate Advisory services (Feasibility, HBU, Financial Modelling, etc.) tailored to your requirements.",
     keywords: "platform01, Real Estate Strategy",
     og_title: "",
     og_description: "",

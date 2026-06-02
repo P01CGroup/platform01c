@@ -49,6 +49,7 @@ export async function generateMetadata() {
 const BusinessValuationData: ServiceHeroData = {
   subheading: "Trusted Business Valuation Services in UAE",
   heading: "Bespoke. Accurate. <br/> Reliable.",
+  smallHeading: "Business Valuation Services in Dubai and UAE",
   backgroundImages: {
     mobile: "/services/mobile/business-valuation.png",
     tablet: "/services/tablet/business-valuation.png",
@@ -76,7 +77,7 @@ const BusinessValuationData: ServiceHeroData = {
 };
 
 const teamData = {
-  heading: "Accredited and <br/> Qualified Business Valuation Team in Dubai",
+  heading: "Accredited and Qualified Business Valuation Team in Dubai",
   supportingText:
     "Our Business Valuation team includes professionals with CFA, FRM, CIPM, FMVA, and ACCA qualifications, with experience at Big 4 and other reputable advisory firms.",
   team: getTeamDataForPage("business-valuation"),
@@ -246,7 +247,7 @@ const BusinessValuation = async () => {
         />
       </div>
 
-      <TeamText>
+      {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[810px]">
             Exploring Business Valuation Services in UAE with Precision and
@@ -263,9 +264,11 @@ const BusinessValuation = async () => {
           strategic insights. If you seek a business valuation partner that
           prioritizes accuracy and reliability, we are here to help.
         </p>
-      </TeamText>
+      </TeamText> */}
 
       <TeamShowcase
+        headingFullWidth={true}
+        FourColumn={true}
         title="Our Business Valuation Dubai Team"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -277,7 +280,7 @@ const BusinessValuation = async () => {
       </TeamShowcase>
 
       <Credentials
-        showCalendly={true}
+        showCalendly={false}
         slides={slides}
         bgSurface={true}
         disableTabs={true}
@@ -289,7 +292,8 @@ const BusinessValuation = async () => {
       />
 
       <ServicesSection
-        showCTA={true}
+        fullWidth={true}
+        showCTA={false}
         services={servicesData}
         bgSurface={false}
         heading="Our Business Valuation Services UAE"
@@ -297,6 +301,7 @@ const BusinessValuation = async () => {
       />
 
       <OurValuesSlider
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={true}
         {...(valuesData.heading && { heading: valuesData.heading })}

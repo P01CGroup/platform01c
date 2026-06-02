@@ -7,8 +7,9 @@ import { supabaseAdmin } from "@/lib/supabase/admin";
 
 export async function generateMetadata() {
   let seo = {
-    title: "Corporate Team | Platform01 Consulting",
-    description: "Description for Corporate Team page.",
+    title: "Meet the Administration | Our Corporate Team",
+    description:
+      "Meet the Corporate Team driving Platform01's administrative affairs. A corporate team with deep expertise across management, client success and corporate relationships.",
     keywords: "platform01, Corporate Team",
     og_title: "",
     og_description: "",

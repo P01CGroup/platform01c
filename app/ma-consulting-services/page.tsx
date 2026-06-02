@@ -30,9 +30,9 @@ export const revalidate = 60; // Revalidate every minute for faster updates
 
 export async function generateMetadata() {
   let seo = {
-    title: "M&A Advisory Firm in UAE | M&A Consulting Services | Platform01",
+    title: "Premium M&A Advisory & Consulting Firm | Platform01",
     description:
-      "Leading M&A advisory firm in UAE providing premium M&A consulting services. Expert M&A advisory company specializing in mergers and acquisitions in UAE and Dubai.",
+      "Platform01's M&A advisors deliver proven merger & acquisition services across industries. Whether buying, selling, or merging businesses, our M&A consulting expertise is positioned to drive deal success.",
     keywords:
       "M&A advisory firm, M&A firm in UAE, M&A advisory company, M&A consulting, mergers and acquisitions UAE, mergers and acquisitions Dubai, M&A services, M&A specialist, M&A business advisors, M&A transaction advisory services Dubai, business valuation UAE, transaction advisory",
     og_title: "M&A Advisory Firm in UAE | Premium M&A Consulting Services",
@@ -68,8 +68,9 @@ export async function generateMetadata() {
 }
 
 const MaConsultingData: ServiceHeroData = {
-  subheading: "Leading M&A Advisory Firm in UAE",
+  subheading: "M&A Advisory services in UAE",
   heading: "Expert M&A Advisory Services",
+  smallHeading: "From Strategy to Execution: End-to-End M&A Advisory",
   backgroundImages: {
     mobile: "/services/mobile/ma-consulting.png",
     tablet: "/services/tablet/ma-consulting.png",
@@ -78,19 +79,19 @@ const MaConsultingData: ServiceHeroData = {
   },
   awards: [
     {
-      image: "/awards/ma-award-1.png",
-      text: "Top M&A Boutique <br/> UAE - 2025",
-      alt: "Top M&A Boutique UAE - 2025",
+      image: "/awards/top-consulting-firm-middle-east.png",
+      text: "Top Consulting Firm <br/> ConsultancyME",
+      alt: "Top Consulting Firm 2025 Middle East 2025",
+    },
+    {
+      image: "/awards/strategist-award.png",
+      text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
+      alt: "Top Strategist - 2026",
     },
     {
       image: "/awards/ma-award-1.png",
       text: "Top M&A Advisory <br/> Boutique 2025",
       alt: "Top M&A Advisory Boutique 2025",
-    },
-    {
-      image: "/awards/top-consulting-firm-middle-east.png",
-      text: "Top Consulting Firm <br/> ConsultancyME",
-      alt: "Top Consulting Firm 2025 Middle East 2025",
     },
   ],
   showContactForm: true,
@@ -348,6 +349,8 @@ const MaConsultingServices = async () => {
      </div> */}
 
       <TeamShowcase
+        FourColumn={true}
+        headingFullWidth={true}
         title="Our M&A Consulting Team"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -359,7 +362,7 @@ const MaConsultingServices = async () => {
       </TeamShowcase>
 
       <Credentials
-        showCalendly={true}
+        showCalendly={false}
         calendlyMobileView={false}
         slides={slides}
         bgSurface={false}
@@ -371,13 +374,15 @@ const MaConsultingServices = async () => {
       />
 
       <ServicesSection
-        showCTA={true}
+        fullWidth={true}
+        showCTA={false}
         services={servicesData}
         bgSurface={true}
         heading="M&A Advisory Firm Services in UAE"
       />
       <MAProcess />
       <OurValuesSlider
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={true}
         {...(valuesData.heading && { heading: valuesData.heading })}
@@ -386,12 +391,12 @@ const MaConsultingServices = async () => {
         })}
       />
 
-      <LazyInsightsSlider bgSurface={false} />
+      {/* <LazyInsightsSlider bgSurface={false} /> */}
       <CallToAction
         heading="Ready to Work with a Leading M&A Advisory Firm?"
         description="We'd love to hear about your M&A ambitions. Whether you're aiming to sell your business, raise capital, or make strategic investments, our team is here to guide you through every step."
       />
-      <FAQSection showCTA={true} faqs={faqData} />
+      <FAQSection leftAligned={true} showCTA={false} faqs={faqData} />
     </>
   );
 };

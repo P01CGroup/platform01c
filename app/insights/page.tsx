@@ -1,25 +1,26 @@
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { supabaseAdmin } from "@/lib/supabase/admin";
 export async function generateMetadata() {
   let seo = {
-    title: 'Insights | Platform01 Consulting',
-    description: 'Explore the latest insights and thought leadership from Platform01.',
-    keywords: '',
-    og_title: '',
-    og_description: '',
-    og_image: '',
-    twitter_title: '',
-    twitter_description: '',
-    twitter_image: '',
-    canonical_url: '',
+    title: "Expert Consulting Insights & Strategic Analysis | Platform01",
+    description:
+      "Access Platform01's library of business consulting insights covering growth strategy, M&A, brand, turnaround advisory, and real estate. Perspectives from advisors trusted by global corporations and investors.",
+    keywords: "",
+    og_title: "",
+    og_description: "",
+    og_image: "",
+    twitter_title: "",
+    twitter_description: "",
+    twitter_image: "",
+    canonical_url: "",
   };
   try {
     const { data } = await supabaseAdmin
-      .from('static_pages')
-      .select('seo')
-      .eq('slug', '/insights')
+      .from("static_pages")
+      .select("seo")
+      .eq("slug", "/insights")
       .single();
     if (data?.seo) {
-      seo = { ...seo, ...data.seo, keywords: data.seo.keywords || '' };
+      seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
   } catch (e) {}
   return {
@@ -36,16 +37,16 @@ export async function generateMetadata() {
       title: seo.twitter_title || seo.title,
       description: seo.twitter_description || seo.description,
       images: seo.twitter_image ? [seo.twitter_image] : [],
-      card: 'summary_large_image',
+      card: "summary_large_image",
     },
     alternates: {
       canonical: seo.canonical_url || undefined,
     },
   };
 }
-import InsightsClientPage from './client-page';
+import InsightsClientPage from "./client-page";
 
 // Use client-side rendering for better real-time updates
 export default function InsightsPage() {
   return <InsightsClientPage />;
-} 
+}

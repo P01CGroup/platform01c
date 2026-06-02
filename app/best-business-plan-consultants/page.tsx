@@ -24,8 +24,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Business Plan | Platform01 Consulting",
-    description: "Description for Business Plan page.",
+    title: "Bespoke Business Plan Consultant Services | Platform01",
+    description:
+      "Platform01's expert business plan consultants craft investor-ready business plans for startups, ecommerce, and online businesses. From business growth plans to full spectrum strategy consulting services; bespoke, data-backed, and EMEA-focused.",
     keywords: "",
     og_title: "",
     og_description: "",

@@ -25,8 +25,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Feasibility Study | Platform01 Consulting",
-    description: "Description for Feasibility Study page.",
+    title: "Expert Feasibility Study Consulting Services | Platform01",
+    description:
+      "Need a bankable or commercial feasibility study for your next project? Our qualified consulting team has succesfully delivered 250+ feasibility studies for reputable corporations & investors. Trusted for Equity Investment, Bank Loan, DFI Financing, Grants & more.",
     keywords: "",
     og_title: "",
     og_description: "",
@@ -457,7 +458,7 @@ const FeasibilityStudyGeneric = async () => {
         FourColumn={true}
       >
         {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null
+          item ? <TeamCard key={item.id || index} member={item} /> : null,
         )}
       </TeamShowcase>
       <Credentials

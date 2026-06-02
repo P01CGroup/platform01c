@@ -423,7 +423,7 @@ const SimpleDropdownContent = ({
   title: string;
 }) => (
   <div className="w-80 p-6 h-full">
-    <h5 className="font-canela text-2xl text-dark">{title}</h5>
+    {/* <h5 className="font-canela text-2xl text-dark">{title}</h5> */}
     <ul>
       {items.map((item, i) => (
         <li key={i}>

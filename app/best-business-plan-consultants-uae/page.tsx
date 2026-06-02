@@ -69,8 +69,9 @@ export async function generateMetadata() {
 }
 
 const BusinessPlanData: ServiceHeroData = {
-  subheading: "Business Plan Development Services ",
-  heading: "Strategy. Structure. <br/> Success.",
+  subheading: "Business Plan Development Services in UAE",
+  heading: "Strategic Business Plans",
+  smallHeading: "For Growth, Funding & Expansion",
   backgroundImages: {
     mobile: "/services/mobile/business-plan.png",
     tablet: "/services/tablet/business-plan.png",
@@ -356,7 +357,7 @@ const BusinessPlan = async () => {
 
       <div className="container pt-5">
         <Header text="Business Plan Development Services" className="mb-26" />
-        <h2 className="heading-4 max-w-[1010px]">
+        <h2 className="heading-4 ">
           At Platform01 Consulting, we craft investor-ready, insight-rich
           Business Plans that empower founders, boards, and corporate leaders to
           pursue growth, raise capital, and align internal strategy. Whether
@@ -365,13 +366,24 @@ const BusinessPlan = async () => {
           and financial depth to your vision.
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 my-20">
-          <div className="md:col-start-2 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5">
             {teamData.map((item, index) => (
               <TeamCard key={index} member={item} />
             ))}
           </div>
         </div>
       </div>
+      <Credentials
+        showCalendly={false}
+        slides={slides}
+        bgSurface={true}
+        disableTabs={true}
+        heading={"Decades of experience. Billions in advisory value."}
+        supportingText={
+          "We've developed business plans across industries including tech, F&B, fintech, logistics, real estate, and industrials—covering diversification, EMEA expansion, joint ventures, and debt financing."
+        }
+        calendlyMobileView={false}
+      />
       <div className="bg-surface py-16">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-16">
           <div>
@@ -422,7 +434,12 @@ const BusinessPlan = async () => {
           </div>
         </div>
       </div>
-      <ServicesSection services={servicesData} showCTA={true} />
+
+      <ServicesSection
+        fullWidth={true}
+        services={servicesData}
+        showCTA={false}
+      />
       <div className="bg-surface py-20">
         <div className="container">
           <h2 className="heading-2 max-w-[1010px]">Our Process</h2>
@@ -434,8 +451,8 @@ const BusinessPlan = async () => {
             region.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10">
-            <div className="md:col-start-2 md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5">
-              <div className="p-8 bg-white flex flex-col gap-15">
+            <div className=" md:col-span-4 grid grid-cols-1 md:grid-cols-5 gap-5">
+              <div className="p-8 bg-white flex flex-col gap-6">
                 <div>
                   <h3 className="heading-3 text-dark/20">01.</h3>
                   <h2 className="heading-5 max-w-[177px]">
@@ -446,7 +463,7 @@ const BusinessPlan = async () => {
                   We understand your business inside-out
                 </p>
               </div>
-              <div className="p-8 bg-white flex flex-col gap-15">
+              <div className="p-8 bg-white flex flex-col gap-6">
                 <div>
                   <h3 className="heading-3 text-dark/20">02.</h3>
                   <h2 className="heading-5 max-w-[177px]">
@@ -457,7 +474,7 @@ const BusinessPlan = async () => {
                   We In-house and secondary research
                 </p>
               </div>
-              <div className="p-8 bg-white flex flex-col gap-15">
+              <div className="p-8 bg-white flex flex-col gap-6">
                 <div>
                   <h3 className="heading-3 text-dark/20">03.</h3>
                   <h2 className="heading-5 max-w-[177px]">
@@ -468,7 +485,7 @@ const BusinessPlan = async () => {
                   Custom models grounded in commercial logic
                 </p>
               </div>
-              <div className="p-8 bg-white flex flex-col gap-15">
+              <div className="p-8 bg-white flex flex-col gap-6">
                 <div>
                   <h3 className="heading-3 text-dark/20">04.</h3>
                   <h2 className="heading-5 max-w-[177px]">
@@ -479,7 +496,7 @@ const BusinessPlan = async () => {
                   Structured narrative development with client feedback
                 </p>
               </div>
-              <div className="p-8 bg-white flex flex-col gap-15">
+              <div className="p-8 bg-white flex flex-col gap-6">
                 <div>
                   <h3 className="heading-3 text-dark/20">05.</h3>
                   <h2 className="heading-5 max-w-[177px]">
@@ -495,6 +512,7 @@ const BusinessPlan = async () => {
         </div>
       </div>
       <OurValuesSlider
+        calendlyButtonVisibility={false}
         values={valuesData.values}
         bgSurface={false}
         {...(valuesData.heading && { heading: valuesData.heading })}
@@ -502,20 +520,15 @@ const BusinessPlan = async () => {
           supportingText: valuesData.supportingText,
         })}
       />
-      <Credentials
-        showCalendly={true}
-        slides={slides}
-        bgSurface={true}
-        disableTabs={true}
-        heading={"Decades of experience. Billions in advisory value."}
-        supportingText={
-          "We've developed business plans across industries including tech, F&B, fintech, logistics, real estate, and industrials—covering diversification, EMEA expansion, joint ventures, and debt financing."
-        }
-        calendlyMobileView={false}
-      />
+
       {/* <DynamicInsightsSlider bgSurface={false} /> */}
       <CallToAction />
-      <FAQSection faqs={faqData} showCTA={true} />
+      <FAQSection
+        calendlyButtonVisibility={false}
+        leftAligned={true}
+        faqs={faqData}
+        showCTA={false}
+      />
     </>
   );
 };

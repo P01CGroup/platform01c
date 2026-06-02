@@ -27,8 +27,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Growth Strategy | Platform01 Consulting",
-    description: "Description for Growth Strategy page.",
+    title: "Grow Faster | Hire Business Growth Strategy Consultants",
+    description:
+      "Looking to develop a winning business development strategy? Platform01's growth strategy consultants specialize in company growth strategies for Corporations, SMEs, & new ventures",
     keywords: "platform01, Growth Strategy",
     og_title: "",
     og_description: "",

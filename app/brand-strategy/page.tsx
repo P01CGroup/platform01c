@@ -34,8 +34,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Brand Strategy | Platform01 Consulting",
-    description: "Description for Brand Strategy page.",
+    title: "Hire a Brand Strategy Consultant | Platform01 Consulting",
+    description:
+      "Need a brand strategy consultant with global expertise? Platform01 offers full-scale brand marketing consulting services for B2B, B2C and more.",
     keywords: "platform01, Brand Strategy",
     og_title: "",
     og_description: "",

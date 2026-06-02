@@ -38,10 +38,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title:
-      "Strategy Office as a Service | PMO, Strategy Implementation & Fractional Strategic Support",
+    title: "Strategic Growth & Advisory Solutions | Platform01 Consulting",
     description:
-      "P01SOaaS™ by Platform01 Consulting is a performance-driven Strategy Office as a Service model providing PMO support, strategy implementation, outsourced analysts, business transformation, fractional strategic support, management reporting, financial analysis, and execution-focused consulting for businesses and investors.",
+      "P01Gateway offers strategic advisory, business transformation, and execution support to drive sustainable growth and long-term value.",
     keywords: "platform01, P01SOaaS",
     og_title: "",
     og_description: "",
@@ -593,7 +592,7 @@ const newServiceData = [
 P01Gateway™ is designed to support organizations from strategic planning to real commercial execution.</br>
 We help clients:
 </p>
-<ul className="list-disc pl-6 mt-2">
+<ul className="list-disc pl-6 mt-2 text-dark/50">
   <li>Define market expansion strategy</li>
   <li>Build GTM frameworks</li>
   <li>Identify growth opportunities</li>
@@ -610,7 +609,7 @@ Clients work directly with senior leadership and experienced practitioners rathe
 This enables:
 
 </p>
-<ul className="list-disc pl-6 mt-2">
+<ul className="list-disc pl-6 mt-2 text-dark/50">
   <li>Faster execution</li>
   <li>More strategic alignment</li>
   <li>Higher engagement quality</li>
@@ -626,7 +625,7 @@ This enables:
     title: "P01Gateway™ Value Proposition",
     description: `<h5 className="heading-6 font-semibold">Built for Organizations Expanding Into the GCC</h5><p className="text-dark/50">P01Gateway™ helps companies enter and scale within Gulf markets through a combination of:
 </p>
-<ul className="list-disc pl-6 mt-2">
+<ul className="list-disc pl-6 mt-2 text-dark/50">
   <li>Strategic market entry advisory</li>
   <li>Go-to-market execution support</li>
   <li>Commercial growth planning</li>
@@ -730,11 +729,24 @@ const TurnaroundAdvisory = async () => {
           </p> */}
         </div>
         <div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2">
-            {checklistItems.map((item, index) => (
-              <ChecklistItem key={index} text={item} className=" py-3.5" />
-            ))}
-          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <ChecklistItem
+              text={"UAE — Access & activation:"}
+              className=" py-3.5"
+            />
+            <ChecklistItem
+              text={"KSA — Vision 2030 aligned:"}
+              className=" py-3.5"
+            />
+            <ChecklistItem
+              text={"Dual-market, one strategy:"}
+              className=" py-3.5"
+            />
+            <ChecklistItem
+              text={"Strategy through execution:"}
+              className=" py-3.5"
+            />
+          </div>
         </div>
       </TeamText>
       <div className=" py-16">

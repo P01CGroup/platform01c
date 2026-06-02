@@ -174,6 +174,16 @@ export const teamMembers: Record<string, TeamMember> = {
     professionalQualifications:
       "Financial Modeling & Valuation Analyst (FMVA®) and Investment Banking & Private Equity Modeling Specialization from Corporate Finance Institute, Canada",
   },
+  "mariyam-akhund": {
+    id: "mariyam-akhund",
+    name: "Mariyam Akhund",
+    image: {
+      src: "/consulting-team/20.png",
+      alt: "Mariyam Akhund",
+    },
+    text1: "Sr. Consultant",
+    text2: "Strategy & Advisory",
+  },
   "mohammed-ashir": {
     id: "mohammed-ashir",
     name: "Muhammed Ashir, FMVA, ACCA",
@@ -362,15 +372,15 @@ export const corporateTeamMembers: Record<string, TeamMember> = {
     },
     text1: "Marketing Manager",
   },
-  "mariyam-akhund": {
-    id: "mariyam-akhund",
-    name: "Mariyam Akhund",
-    image: {
-      src: "/corporate-team/16.png",
-      alt: "Mariyam Akhund",
-    },
-    text1: "Sr. Consultant",
-  },
+  // "mariyam-akhund": {
+  //   id: "mariyam-akhund",
+  //   name: "Mariyam Akhund",
+  //   image: {
+  //     src: "/corporate-team/16.png",
+  //     alt: "Mariyam Akhund",
+  //   },
+  //   text1: "Sr. Consultant",
+  // },
   "maha-tauqeer": {
     id: "maha-tauqeer",
     name: "Maha Tauqeer",
@@ -590,7 +600,12 @@ export const teamConfigs = {
     "ali-shah-khawaja",
     "shafi-akhund",
   ],
-  "business-valuation": ["shwetabh-sameer", "ali-shah-khawaja", "shafi-akhund"],
+  "business-valuation": [
+    "mustafa-nadeem",
+    "shwetabh-sameer",
+    "ali-shah-khawaja",
+    "shafi-akhund",
+  ],
   "business-valuation-uk": [
     "mustafa-nadeem",
     "shwetabh-sameer",
@@ -635,6 +650,7 @@ export const teamConfigs = {
     "ali-shah-khawaja",
     "sharan-raza",
     "shammaas-abdullah",
+    "mariyam-akhund",
     "mohammed-ashir",
     "muhammad-aizaz",
     "muhammad-hasnain",
@@ -653,7 +669,6 @@ export const teamConfigs = {
     "omar-abedin",
     "ahsen-aghai",
     "aruha-khan",
-    "mariyam-akhund",
     "maha-tauqeer",
     "mirta-khan",
     "esha-sachdev",

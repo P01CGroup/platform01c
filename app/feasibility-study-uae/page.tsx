@@ -82,6 +82,7 @@ export async function generateMetadata() {
 const feasibilityStudyData: ServiceHeroData = {
   subheading: "Feasibility Study Services in UAE",
   heading: "Building Solid Foundations for Business Success",
+  smallHeading: "Strategic Feasibility for Investors and Business Leaders",
   backgroundImages: {
     mobile: "/services/mobile/feasibility-study.png",
     tablet: "/services/tablet/feasibility-study.png",
@@ -268,11 +269,11 @@ const FeasibilityStudyUAE = async () => {
       <div className="container pt-5">
         <Header text="Feasibility Study Dubai & UAE" className="mb-26" />
         <h2 className="heading-4 max-w-[1010px]">
-          Our <strong>Feasibility Study Services in Dubai</strong> are designed
-          for clients seeking premium, bespoke consulting delivered by industry
-          practitioners. As a trusted <strong>feasibility study firm</strong>,
-          we combine market intelligence and financial expertise to deliver
-          high-quality, actionable insights.
+          Our Feasibility Study Services in Dubai are designed for clients
+          seeking premium, bespoke consulting delivered by industry
+          practitioners. As a trusted feasibility study firm, we combine market
+          intelligence and financial expertise to deliver high-quality,
+          actionable insights.
         </h2>
 
         <div className="flex flex-col gap-0 mt-12 mb-16">
@@ -286,7 +287,7 @@ const FeasibilityStudyUAE = async () => {
         </div>
       </div>
 
-      <TeamText>
+      {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[450px]">
             A Strategic Foundation, Not Just an Evaluation
@@ -319,9 +320,10 @@ const FeasibilityStudyUAE = async () => {
             <ChecklistItem text="Competitive Positioning" className="py-3.5" />
           </div>
         </div>
-      </TeamText>
+      </TeamText> */}
 
       <TeamShowcase
+        headingFullWidth={true}
         title="Our Consulting Team"
         heading={teamData.heading}
         supportingText={teamData.supportingText}
@@ -340,11 +342,12 @@ const FeasibilityStudyUAE = async () => {
         supportingText={
           "We bring a legacy of performance across corporate strategy, project finance, and investment advisory—built on precision and delivered by top feasibility study professionals."
         }
-        showCalendly={true}
+        showCalendly={false}
         calendlyMobileView={false}
       />
 
       <ServicesSection
+        fullWidth={true}
         services={servicesData}
         heading="Tailored Scope for Maximum Value"
         supportingText="Every project is unique. Our feasibility study specialists customize each scope to your vision, ensuring optimal efficiency and investment readiness."
@@ -357,7 +360,11 @@ const FeasibilityStudyUAE = async () => {
         description="Looking for the best feasibility study consultants in Dubai or the UAE? Let's discuss your project goals and how our feasibility study professionals can help."
       />
 
-      <FAQSection faqs={faqData} />
+      <FAQSection
+        calendlyButtonVisibility={false}
+        leftAligned={true}
+        faqs={faqData}
+      />
     </>
   );
 };
