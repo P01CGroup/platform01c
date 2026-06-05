@@ -23,9 +23,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Business Valuation | Platform01 Consulting",
+    title: " Business Valuation Services in UAE | Platform01 Consulting",
     description:
-      "Professional business valuation services in UAE and Dubai by Platform01 Consulting.",
+      "Platform01 provides bespoke business valuation services in UAE, covering standard, distressed, startup & portfolio valuations. CFA-qualified team. Institutional-grade reports. Book a consultation today.",
     keywords:
       "business valuation services in uae, business valuation in dubai, business valuation Dubai, business valuation uae",
   };

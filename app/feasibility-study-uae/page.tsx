@@ -26,9 +26,9 @@ export const revalidate = 0;
 export async function generateMetadata() {
   let seo = {
     title:
-      "Feasibility Study Dubai & UAE | Market Feasibility Experts | Platform01 Consulting",
+      "Top Feasibility Study Firm in UAE & Dubai | Award-Winning — Platform01",
     description:
-      "Leading feasibility study company in Dubai and UAE. Our feasibility study specialists deliver market research, financial analysis, and strategy consulting for projects across sectors.",
+      "Platform01 delivers institutional-grade feasibility studies in UAE, covering market research, financial modelling & business strategy. 250+ projects. Licensed firm. Talk to an expert today.",
     keywords:
       "market feasibility study, feasibility study companies, feasibility study firm, feasibility study expert, feasibility study specialist, feasibility study professional, feasibility study services in dubai, feasibility study consultant dubai, feasibility study dubai",
     og_title: "Feasibility Study Experts in UAE",
@@ -329,9 +329,11 @@ const FeasibilityStudyUAE = async () => {
         supportingText={teamData.supportingText}
         FourColumn={true}
       >
-        {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null,
-        )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:col-span-4">
+          {teamData.team.map((item, index) =>
+            item ? <TeamCard key={item.id || index} member={item} /> : null,
+          )}
+        </div>
       </TeamShowcase>
 
       <Credentials

@@ -579,6 +579,7 @@ export const teamConfigs = {
     "ali-shah-khawaja",
   ],
   "feasibility-study": [
+    "mustafa-nadeem",
     "saad-jilani",
     "shwetabh-sameer",
     "shafi-akhund",

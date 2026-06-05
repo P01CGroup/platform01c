@@ -25,8 +25,10 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Business Plan | Platform01 Consulting",
-    description: "Description for Business Plan page.",
+    title:
+      "Expert Business Plan Consultants UAE | Award-Winning Advisory — Platform01",
+    description:
+      "No templates. No shortcuts. Platform01 builds bespoke business plans trusted by founders, boards & investors across UAE. Award-winning firm & strategy consultants.",
     keywords: "",
     og_title: "",
     og_description: "",
@@ -384,7 +386,7 @@ const BusinessPlan = async () => {
         }
         calendlyMobileView={false}
       />
-      <div className="bg-surface py-16">
+      <div className=" py-16">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-16">
           <div>
             <h2 className="heading-4">
