@@ -363,6 +363,20 @@ export const corporateTeamMembers: Record<string, TeamMember> = {
     education:
       "MBA from the Institute of Business Administration (AACSB accredited)",
   },
+  "abdulaziz-alkhaldi": {
+    id: "abdulaziz-alkhaldi",
+    name: "Abdulaziz AlKhaldi",
+    image: {
+      src: "/corporate-team/20.png",
+      alt: "Abdulaziz AlKhaldi",
+    },
+    text1: "Associate, Corporate Division - Saudi Arabia",
+    background:
+      "Corporate Finance, Investments, Laws & Regulatory Compliance, Deal Structuring",
+    sectorsOfExpertise: "Law & Business",
+    priorExperience: "AS&H Clifford Chance",
+    education: "LLB (Hons) Law & Business",
+  },
   "ahsen-aghai": {
     id: "ahsen-aghai",
     name: "Ahsen Aghai",
@@ -649,8 +663,8 @@ export const teamConfigs = {
     // "shafi-akhund",
     "ali-shah-khawaja",
     "sharan-raza",
-    "shammaas-abdullah",
     "mariyam-akhund",
+    "shammaas-abdullah",
     "mohammed-ashir",
     "muhammad-aizaz",
     "muhammad-hasnain",
@@ -658,17 +672,24 @@ export const teamConfigs = {
     // "mohammad-misaad",
     // "abdul-moiz",
     // "hamna-asghar",
-    "yusra-amjad",
     "zoha-ayaz",
+    "yusra-amjad",
     // "alishba-nasim",
   ],
   "consulting-managing-director": ["mustafa-nadeem"],
+  "feasibility-corporate-team": [
+    "omar-abedin",
+    "abdulaziz-alkhaldi",
+    "mirta-khan",
+    "maha-tauqeer",
+  ],
 
   // Corporate team page
   "corporate-team": [
     "omar-abedin",
-    "ahsen-aghai",
+    "abdulaziz-alkhaldi",
     "aruha-khan",
+    "ahsen-aghai",
     "maha-tauqeer",
     "mirta-khan",
     "esha-sachdev",

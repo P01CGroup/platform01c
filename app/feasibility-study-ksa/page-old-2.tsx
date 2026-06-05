@@ -17,7 +17,7 @@ import { getTeamDataForPage } from "@/lib/data/team-data";
 import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
-import TeamTab from "./TeamTab";
+import ServiceHeroFeasibilityLanding from "@/components/sections/ServiceHeroFeasibilityLandingPage";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -70,21 +70,14 @@ export async function generateMetadata() {
 
 const feasibilityStudyData: ServiceHeroData = {
   subheading: "Feasibility Study Services",
-  heading: "Building Solid Foundations for Success",
-  smallHeading: "Licensed Management Consulting firm in Saudi Arabia",
+  heading:
+    "Building Solid Foundations for Success </br>- Licensed Consulting Firm In Saudi Arabia",
   backgroundImages: {
     mobile: "/services/mobile/feasibility-study.png",
     tablet: "/services/tablet/feasibility-study.png",
     desktop: "/services/desktop/feasibility-study.png",
     ultrawide: "/services/ultrawide/feasibility-study.png",
   },
-  // awards: [
-  //   {
-  //     image: "/awards/strategist-award.png",
-  //     text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
-  //     alt: "Top M&A Boutique UAE - 2025",
-  //   },
-  // ],
   awards: [
     {
       image: "/awards/top-consulting-firm-middle-east.png",
@@ -94,13 +87,13 @@ const feasibilityStudyData: ServiceHeroData = {
     {
       image: "/awards/strategist-award.png",
       text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
-      alt: "Top Strategist - 2026",
+      alt: "Top M&A Boutique UAE - 2025",
     },
-    {
-      image: "/awards/ma-award-1.png",
-      text: "Top M&A Advisory <br/> Boutique 2025",
-      alt: "Top M&A Advisory Boutique 2025",
-    },
+    // {
+    //   image: "/awards/strategist-award.png",
+    //   text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
+    //   alt: "Top M&A Boutique UAE - 2025",
+    // },
   ],
   showContactForm: true,
 };
@@ -111,22 +104,13 @@ const checklistItems = [
   "250+ Projects successfully delivered by Team Members for projects worth above SAR 100 billion",
   "Accredited Team from Top Business Schools and with Global Professional Qualifications",
   "Experienced Team from Global Financial Institutions, Fortune 500 Companies, Big 4 Advisory, and other Reputable Firms",
-  "We deliver investment-grade insights that align with Vision 2030 and institutional financing requirements",
 ];
 
 const teamData = {
-  heading:
-    'Our Unique "Practitioner-Driven" Approach </br>Feasibility Study Consulting Services',
+  heading: 'Our Unique "Practitioner-Driven" Approach',
   supportingText:
     'Our Feasibility Study practice is based on our unique model of "Practitioner-Driven" approach that brings together Relevant Sector Experience from Global Fortune 500 Corporations and Global Financial Institutions with years of Financial Expertise of consulting in the region.',
   team: getTeamDataForPage("feasibility-study"),
-};
-
-const corporateTeamData = {
-  heading: "Our Saudi Arabia Corporate Team",
-  supportingText:
-    "Our KSA Corporate Team plays a critical role in delivering a seamless client experience by overseeing all matters related to Commercial and Corporate affairs. With a strong focus on process integrity and operational discipline, it empowers our Consulting Team to focus on delivering exceptional value to clients.",
-  team: getTeamDataForPage("feasibility-corporate-team"),
 };
 
 const faqData: FAQItem[] = [
@@ -138,7 +122,7 @@ const faqData: FAQItem[] = [
   },
   {
     question:
-      "What types of feasibility studies does Platform01 Consulting provide in the Saudi Arabia?",
+      "What types of feasibility studies does Platform01 Consulting provide in the UAE and Saudi Arabia?",
     answer:
       "We offer fully integrated feasibility studies for: Industrial Projects (manufacturing, logistics, agri-processing), Infrastructure (transport, utilities, PPPs), Healthcare (hospitals, specialty clinics, diagnostics), Education (K-12 schools, universities, training centers), Energy (renewables, clean tech, district cooling), Real Estate (residential, commercial, hospitality, retail, mixed-use), and other sectors. As a leading feasibility study firm, we ensure each study is grounded in both market realism and financial rigor.",
   },
@@ -259,8 +243,7 @@ const servicesData = [
     ),
   },
 ];
-
-const FeasibilityStudySceondary = async () => {
+const FeasibilityStudy = async () => {
   // Fetch credentials with the relevant service tag
   const { data: credentials, error } = await credentialsService.getCredentials({
     service_tags: ["Feasibility Study"],
@@ -286,23 +269,37 @@ const FeasibilityStudySceondary = async () => {
         showContactForm={true}
         showContactFormMobileView={true}
       />
-      <div className="container pt-5">
-        <Header text="Feasibility Study Consultant" className="mb-26" />
+      <Credentials
+        showCalendly={false}
+        slides={slides}
+        bgSurface={true}
+        disableTabs={true}
+        heading={"Decades of experience. Billions in advisory value."}
+        supportingText={
+          "We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision."
+        }
+      />
+      <TeamShowcase
+        title="Our Consulting Team"
+        heading={teamData.heading}
+        supportingText={teamData.supportingText}
+        FourColumn={true}
+      >
+        {teamData.team.map((item, index) =>
+          item ? <TeamCard key={item.id || index} member={item} /> : null
+        )}
+      </TeamShowcase>
+      {/* <div className="container pt-5">
+        <Header text="Feasibility Study" className="mb-26" />
         <h2 className="heading-4 max-w-[1010px]">
-          Our Feasibility Study Expert service has been designed for clients
-          looking for Premium and Bespoke Consulting services delivered through
-          our unique "Practitioner-Driven" approach.
-        </h2>
-        {/* <h2 className="heading-4 max-w-[1010px]">
-          Our Feasibility Study Expert service has been designed for clients
-          looking for Premium and Bespoke Consulting services delivered through
-          our unique "Practitioner-Driven" approach that brings deep Industry
+          Our Feasibility Study service has been designed for clients looking
+          for Premium and Bespoke Consulting services delivered through our
+          unique “Practitioner-Driven” approach that brings deep Industry
           Expertise with Financial Acumen to deliver High-Quality strategic
           insights. Through our feasibility study consulting services in Saudi
           Arabia, we deliver investment-grade insights that align with Vision
           2030 and institutional financing requirements.
-        </h2> */}
-
+        </h2>
         <div className="flex flex-col gap-0 mt-12 mb-16">
           {checklistItems.map((item, index) => (
             <ChecklistItem
@@ -312,12 +309,11 @@ const FeasibilityStudySceondary = async () => {
             />
           ))}
         </div>
-      </div>
-      <TeamText>
+      </div> */}
+      {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[450px]">
-            A Strategic Foundation for Feasibility Study Saudi Arabia, Not Just
-            an Evaluation
+            A Strategic Foundation, Not Just an Evaluation
           </h2>
           <hr className="border-dark/10 my-8" />
           <p className="text-dark/50 max-w-[620px]">
@@ -332,8 +328,7 @@ const FeasibilityStudySceondary = async () => {
         </div>
         <div>
           <h4 className="heading-5 mb-4">
-            These Key Strategic Choices for Feasibility Study Specialist
-            include:
+            These Key Strategic Choices include:
           </h4>
           <hr className="border-dark/10 my-4" />
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -349,54 +344,23 @@ const FeasibilityStudySceondary = async () => {
             <ChecklistItem text="Competitive Positioning" className="py-3.5" />
           </div>
         </div>
-      </TeamText>
-      <TeamTab
-        corporateTeamData={corporateTeamData}
-        consultingTeamData={teamData}
-      />
-      {/* <TeamShowcase
-        headingFullWidth={true}
-        title="Our Feasibility Study Firm Consulting Team"
-        heading={teamData.heading}
-        supportingText={teamData.supportingText}
-        FourColumn={true}
-      >
-        {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null,
-        )}
-      </TeamShowcase> */}
-      <Credentials
-        showCalendly={false}
-        slides={slides}
-        bgSurface={true}
-        disableTabs={true}
-        heading={"Decades of experience. Billions in advisory value."}
-        supportingText={
-          "We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision as a Feasibility Study Professional."
-        }
-        calendlyMobileView={false}
-      />
+      </TeamText> */}
 
-      <ServicesSection
-        fullWidth={true}
+      {/* <ServicesSection
         showCTA={false}
         services={servicesData}
-        heading="Tailored Scope for Optimal Value - Feasibility Study Company"
-        supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to Feasibility Studies. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
+        heading="Tailored Scope for Optimal Value"
+        supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to Feasibility Studies. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation.'
       />
 
-      {/* <DynamicInsightsSlider bgSurface={true} /> */}
+      <DynamicInsightsSlider bgSurface={true} />
       <CallToAction
-        heading="Let' Talk - Feasibility Report of a Project"
-        description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you with Bankable Feasibility Study expertise."
+        heading="Let' Talk"
+        description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you."
       />
-      <FAQSection
-        calendlyButtonVisibility={false}
-        faqs={faqData}
-        showCTA={false}
-      />
+      <FAQSection faqs={faqData} showCTA={false} /> */}
     </>
   );
 };
 
-export default FeasibilityStudySceondary;
+export default FeasibilityStudy;
