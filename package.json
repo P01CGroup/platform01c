@@ -85,6 +85,7 @@
     "eslint-config-next": "^16.0.10",
     "jsdom": "^24.1.0",
     "storybook": "^8.2.6",
+    "supabase": "^2.105.0",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^2.1.4"
