@@ -119,7 +119,7 @@ const teamData = {
     'Our Unique "Practitioner-Driven" Approach </br>Feasibility Study Consulting Services',
   supportingText:
     'Our Feasibility Study practice is based on our unique model of "Practitioner-Driven" approach that brings together Relevant Sector Experience from Global Fortune 500 Corporations and Global Financial Institutions with years of Financial Expertise of consulting in the region.',
-  team: getTeamDataForPage("feasibility-study"),
+  team: getTeamDataForPage("feasibility-study-ksa-main"),
 };
 
 const corporateTeamData = {
@@ -313,7 +313,7 @@ const FeasibilityStudySceondary = async () => {
           ))}
         </div>
       </div>
-      {/* <TeamText>
+      <TeamText>
         <div>
           <h2 className="heading-3 max-w-[450px]">
             A Strategic Foundation for Feasibility Study Saudi Arabia, Not Just
@@ -349,7 +349,7 @@ const FeasibilityStudySceondary = async () => {
             <ChecklistItem text="Competitive Positioning" className="py-3.5" />
           </div>
         </div>
-      </TeamText> */}
+      </TeamText>
       <TeamTab
         corporateTeamData={corporateTeamData}
         consultingTeamData={teamData}

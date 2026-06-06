@@ -586,6 +586,13 @@ export const teamConfigs = {
     // "ali-shah-khawaja",
     // "mohammad-ovais",
   ],
+  "feasibility-study-ksa-main": [
+    "saad-jilani",
+    "shwetabh-sameer",
+    "shafi-akhund",
+    "ali-shah-khawaja",
+    // "mohammad-ovais",
+  ],
   "business-plan": ["mustafa-nadeem", "saad-jilani", "shwetabh-sameer"],
   "business-plan-uk": [
     "mustafa-nadeem",
