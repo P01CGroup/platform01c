@@ -267,8 +267,8 @@ const FeasibilityStudySceondary = async () => {
     is_active: true,
   });
 
-  const response = await fetch("/api/admin/setup-admin");
-  console.log("response", response);
+  // const response = await fetch("/api/admin/setup-admin");
+  // console.log("response", response);
 
   // Map to CredentialSlide
   const slides = credentials.map((c: Credential) => ({
