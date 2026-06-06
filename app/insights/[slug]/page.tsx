@@ -54,7 +54,7 @@ export default async function InsightPage({ params }: InsightPageProps) {
           } ${insight.co_author && `, Co-Author: <span className="text-dark/50">${insight.co_author}</span>`}`}
         />
         <div
-          className="prose prose-md max-w-none mt-20 [&_table]:border! [&_table]:border-black! [&_table_td]:border! [&_table_td]:border-black! "
+          className="prose prose-md max-w-none mt-20 [&_table]:overflow-x-auto [&_table]:border! [&_table]:border-black! [&_table_td]:border! [&_table_td]:border-black! "
           dangerouslySetInnerHTML={{ __html: insight.content || "No Content" }}
         />
         <div className="mt-8 text-xs text-dark/40 py-10">

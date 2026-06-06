@@ -19,21 +19,21 @@ interface TeamTabProps {
 }
 
 const TeamTab = ({ corporateTeamData, consultingTeamData }: TeamTabProps) => {
-  const [activeTab, setActiveTab] = useState("consulting");
+  const [activeTab, setActiveTab] = useState("corporate");
   return (
     <div className="container pt-16">
       <div className="flex gap-8 md:col-span-3">
-        <button
-          className={`cursor-pointer heading-2 transition-colors ${activeTab === "consulting" ? "border-primary text-dark" : "border-transparent text-dark/50 hover:text-dark"}`}
-          onClick={() => setActiveTab("consulting")}
-        >
-          Consulting
-        </button>
         <button
           className={`cursor-pointer heading-2 transition-colors ${activeTab === "corporate" ? "border-primary text-dark" : "border-transparent text-dark/50 hover:text-dark"}`}
           onClick={() => setActiveTab("corporate")}
         >
           Corporate
+        </button>
+        <button
+          className={`cursor-pointer heading-2 transition-colors ${activeTab === "consulting" ? "border-primary text-dark" : "border-transparent text-dark/50 hover:text-dark"}`}
+          onClick={() => setActiveTab("consulting")}
+        >
+          Consulting
         </button>
       </div>
       {activeTab === "corporate" && (

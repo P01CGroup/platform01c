@@ -17,6 +17,7 @@ import { getTeamDataForPage } from "@/lib/data/team-data";
 import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
+import TeamTab from "./TeamTab";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -119,6 +120,13 @@ const teamData = {
   supportingText:
     'Our Feasibility Study practice is based on our unique model of "Practitioner-Driven" approach that brings together Relevant Sector Experience from Global Fortune 500 Corporations and Global Financial Institutions with years of Financial Expertise of consulting in the region.',
   team: getTeamDataForPage("feasibility-study"),
+};
+
+const corporateTeamData = {
+  heading: "Our Saudi Arabia Corporate Team",
+  supportingText:
+    "Our KSA Corporate Team plays a critical role in delivering a seamless client experience by overseeing all matters related to Commercial and Corporate affairs. With a strong focus on process integrity and operational discipline, it empowers our Consulting Team to focus on delivering exceptional value to clients.",
+  team: getTeamDataForPage("feasibility-corporate-team"),
 };
 
 const faqData: FAQItem[] = [
@@ -305,7 +313,7 @@ const FeasibilityStudySceondary = async () => {
           ))}
         </div>
       </div>
-      <TeamText>
+      {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[450px]">
             A Strategic Foundation for Feasibility Study Saudi Arabia, Not Just
@@ -341,8 +349,12 @@ const FeasibilityStudySceondary = async () => {
             <ChecklistItem text="Competitive Positioning" className="py-3.5" />
           </div>
         </div>
-      </TeamText>
-      <TeamShowcase
+      </TeamText> */}
+      <TeamTab
+        corporateTeamData={corporateTeamData}
+        consultingTeamData={teamData}
+      />
+      {/* <TeamShowcase
         headingFullWidth={true}
         title="Our Feasibility Study Firm Consulting Team"
         heading={teamData.heading}
@@ -352,7 +364,7 @@ const FeasibilityStudySceondary = async () => {
         {teamData.team.map((item, index) =>
           item ? <TeamCard key={item.id || index} member={item} /> : null,
         )}
-      </TeamShowcase>
+      </TeamShowcase> */}
       <Credentials
         showCalendly={false}
         slides={slides}

@@ -52,7 +52,10 @@ const TeamCard: React.FC<TeamCardProps> = ({
         </div>
         <div>
           <h5 className="leading-tight">{member.name}</h5>
-          <p className="text-dark/50 leading-tight capitalize">
+          <p
+            className="text-dark/50 leading-tight capitalize min-h-[40px]"
+            style={{ minHeight: "40px" }}
+          >
             {member.text1}
             <br />
             {member.text2 && member.text2}

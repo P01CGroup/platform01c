@@ -23,7 +23,7 @@ const HeroInsight: React.FC<HeroInsightProps> = ({
     <div
       className={`bg-dark text-white relative overflow-hidden z-10 ${className}`}
     >
-      <div className="container h-[100dvh] md:h-[768px] flex justify-between items-end pb-10">
+      <div className="container min-h-[100dvh] md:min-h-[768px] pt-24 flex md:flex-row flex-col justify-between items-end pb-10">
         {backgroundImage && (
           <ParallaxImage
             src={backgroundImage}

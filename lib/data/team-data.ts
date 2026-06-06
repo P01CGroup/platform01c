@@ -583,7 +583,7 @@ export const teamConfigs = {
     "saad-jilani",
     "shwetabh-sameer",
     "shafi-akhund",
-    "ali-shah-khawaja",
+    // "ali-shah-khawaja",
     // "mohammad-ovais",
   ],
   "business-plan": ["mustafa-nadeem", "saad-jilani", "shwetabh-sameer"],
