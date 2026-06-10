@@ -149,7 +149,8 @@ const faqData: FAQItem[] = [
       "Our studies are led by senior practitioners with real-world experience in investments, development, and operations. We emphasize commercial logic, market realism, and investment readiness—not just academic templates. This unique approach reflects the expertise of a dedicated feasibility study strategist rather than a generalist consultant.",
   },
   {
-    question: "What does a typical feasibility study from Platform01 include?",
+    question:
+      "What does a typical feasibility study from Platform01 Consulting include?",
     answer:
       "Our feasibility studies typically cover: Market & demand analysis, Competitive landscape & pricing intelligence, Technical feasibility (infrastructure, land, utilities, access), Financial modelling & project IRR/NPV, Sensitivity & risk analysis, Business model & commercialization strategy, Regulatory framework & location-specific policy insights, Exit scenarios & investor return perspectives.",
   },
@@ -209,6 +210,74 @@ const faqData: FAQItem[] = [
       "How do I get started with a feasibility study from Platform01 Consulting?",
     answer:
       "Get in touch through our Contact Page, and we will schedule a scoping call to understand your project objectives, timeline, and deliverables. Our feasibility study consulting services ensure you receive tailored, investment-grade insights aligned with your specific needs.",
+  },
+  {
+    question:
+      "Why is Platform01 Consulting the best feasibility study firm in Saudi Arabia?",
+    answer: (
+      <span>
+        <p>
+          Platform01 Consulting Group is a leading independent feasibility study
+          firm in Saudi Arabia. Our role is to present a project's true
+          fundamentals accurately, objectively, and to the standard
+          institutional reviewers expect. Here's what sets us apart:
+        </p>
+        <ul>
+          <li>
+            - Locally licensed, on-ground in Riyadh: We operate as Platform01
+            Consulting Arabia, a licensed management consulting entity,
+            combining global financial standards with a real-time local
+            presence.
+            <br />
+          </li>
+          <li>
+            - Elite academic pedigree: Core leadership is qualified at the
+            world's top five business schools, including London Business School
+            and Columbia Business School, with team members from McGill
+            University and Oxford Brookes University.
+            <br />
+          </li>
+          <li>
+            - Premier global credentials and qualifications: Our consulting team
+            hold the field's leading professional designations: CFA, FRM, CIPM,
+            FMVA, and ACCA.
+            <br />
+          </li>
+          <li>
+            - Hands-on institutional experience: Built on careers at Fortune 500
+            industrial leaders like General Electric and Baker Hughes, global
+            financial institutions including British International Investment
+            and Molten Ventures, and tier-1 advisory firms such as KPMG and BDO.
+            <br />
+          </li>
+          <li>
+            - Award-winning work: Recognized at the Consultancy Middle East
+            Awards 2025 with Gold in Corporate Finance and Gold in Industrial,
+            plus Silver in Management Consulting, Strategy, Healthcare, and Real
+            Estate.
+            <br />
+          </li>
+          <li>
+            - Trusted by Global institutions: This blend of pedigree,
+            independence, and recognition is precisely what SIDF, ADF, TDF, REDF
+            and other development finance institutions and commercial banks look
+            for.
+            <br />
+          </li>
+          <li>
+            - An unblemished track record: Studies compiled by Platform01
+            maintain a record of zero rejections based on study quality or
+            analytical integrity globally.
+            <br />
+            <br />
+          </li>
+        </ul>
+        <p>
+          A viable project, documented to this standard, speaks for itself, and
+          that is the difference Platform01 delivers.
+        </p>
+      </span>
+    ),
   },
 ];
 
@@ -286,14 +355,15 @@ const FeasibilityStudySceondary = async () => {
         showContactForm={true}
         showContactFormMobileView={true}
       />
-      <div className="container pt-5">
-        <Header text="Feasibility Study Consultant" className="mb-26" />
-        <h2 className="heading-4 max-w-[1010px]">
-          Our Feasibility Study Expert service has been designed for clients
-          looking for Premium and Bespoke Consulting services delivered through
-          our unique "Practitioner-Driven" approach.
-        </h2>
-        {/* <h2 className="heading-4 max-w-[1010px]">
+      <section className="bg-surface">
+        <div className="container pt-5">
+          <Header text="Feasibility Study Consultant" className="mb-26" />
+          <h2 className="heading-4 max-w-[1010px]">
+            Our Feasibility Study Expert service has been designed for clients
+            looking for Premium and Bespoke Consulting services delivered
+            through our unique "Practitioner-Driven" approach.
+          </h2>
+          {/* <h2 className="heading-4 max-w-[1010px]">
           Our Feasibility Study Expert service has been designed for clients
           looking for Premium and Bespoke Consulting services delivered through
           our unique "Practitioner-Driven" approach that brings deep Industry
@@ -303,16 +373,17 @@ const FeasibilityStudySceondary = async () => {
           2030 and institutional financing requirements.
         </h2> */}
 
-        <div className="flex flex-col gap-0 mt-12 mb-16">
-          {checklistItems.map((item, index) => (
-            <ChecklistItem
-              key={index}
-              text={item}
-              className="last:border-b-0 border-b border-dark/10 py-6"
-            />
-          ))}
+          <div className="flex flex-col gap-0 mt-12 mb-16">
+            {checklistItems.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[450px]">
@@ -325,7 +396,7 @@ const FeasibilityStudySceondary = async () => {
             Viability—it&apos;s the Bedrock of your Project&apos;s Strategy.
             It&apos;s where Critical Strategic Choices are made, ensuring your
             project is built on Solid Foundations to Maximize chances of Success
-            and Avoid Costly Mistakes. . Engaging a trusted feasibility study
+            and Avoid Costly Mistakes. Engaging a trusted feasibility study
             consultant ensures these choices are guided by real market and
             financial insights.
           </p>
@@ -387,10 +458,11 @@ const FeasibilityStudySceondary = async () => {
 
       {/* <DynamicInsightsSlider bgSurface={true} /> */}
       <CallToAction
-        heading="Let' Talk - Feasibility Report of a Project"
+        heading="Let's Talk - Feasibility Report of a Project"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you with Bankable Feasibility Study expertise."
       />
       <FAQSection
+        leftAligned={true}
         calendlyButtonVisibility={false}
         faqs={faqData}
         showCTA={false}

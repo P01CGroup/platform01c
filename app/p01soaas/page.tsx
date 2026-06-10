@@ -37,10 +37,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title:
-      "Strategy Office as a Service | PMO, Strategy Implementation & Fractional Strategic Support",
+    title: "P01SOaaS | Strategy Office as a Service | Platform01 Consulting",
     description:
-      "P01SOaaS™ by Platform01 Consulting is a performance-driven Strategy Office as a Service model providing PMO support, strategy implementation, outsourced analysts, business transformation, fractional strategic support, management reporting, financial analysis, and execution-focused consulting for businesses and investors.",
+      "Access a fully embedded strategy office with P01SOaaS by Platform01 Consulting. Ongoing support across strategy, M&A, corporate finance, restructuring, and execution for ambitious organizations.",
     keywords: "platform01, P01SOaaS",
     og_title: "",
     og_description: "",
@@ -48,7 +47,7 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url: "https://www.platform01consulting.com/p01soaas",
   };
   try {
     const { data } = await supabaseAdmin
@@ -811,7 +810,7 @@ const TurnaroundAdvisory = async () => {
             Viability—it&apos;s the Bedrock of your Project&apos;s Strategy.
             It&apos;s where Critical Strategic Choices are made, ensuring your
             project is built on Solid Foundations to Maximize chances of Success
-            and Avoid Costly Mistakes. . Engaging a trusted feasibility study
+            and Avoid Costly Mistakes. Engaging a trusted feasibility study
             consultant ensures these choices are guided by real market and
             financial insights.
           </p>

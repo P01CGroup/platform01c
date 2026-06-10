@@ -232,8 +232,10 @@ const faqData: FAQItem[] = [
 
 export async function generateMetadata() {
   let seo = {
-    title: "Value Creation | Platform01 Consulting",
-    description: "Description for Value Creation page.",
+    title:
+      "Value Creation Strategy Consulting UAE & KSA | Business Growth Advisory | Platform01",
+    description:
+      "Platform01 Consulting delivers value creation strategy services across UAE and Saudi Arabia, helping businesses drive EBITDA growth, optimize operations, and unlock long-term enterprise value through strategic transformation.",
     keywords: "platform01, Value Creation",
     og_title: "",
     og_description: "",
@@ -241,7 +243,8 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/value-creation-strategy-services",
   };
   try {
     const { data } = await supabaseAdmin

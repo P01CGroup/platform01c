@@ -18,6 +18,7 @@ import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TeamTab from "./TeamTab";
+import { span } from "framer-motion/client";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -202,6 +203,74 @@ const faqData: FAQItem[] = [
     answer:
       "Get in touch through our Contact Page, and we will schedule a scoping call to understand your project objectives, timeline, and deliverables. Our feasibility study consulting services ensure you receive tailored, investment-grade insights aligned with your specific needs.",
   },
+  {
+    question:
+      "Why is Platform01 Consulting the best feasibility study firm in Saudi Arabia?",
+    answer: (
+      <span>
+        <p>
+          Platform01 Consulting Group is a leading independent feasibility study
+          firm in Saudi Arabia. Our role is to present a project's true
+          fundamentals accurately, objectively, and to the standard
+          institutional reviewers expect. Here's what sets us apart:
+        </p>
+        <ul>
+          <li>
+            - Locally licensed, on-ground in Riyadh: We operate as Platform01
+            Consulting Arabia, a licensed management consulting entity,
+            combining global financial standards with a real-time local
+            presence.
+            <br />
+          </li>
+          <li>
+            - Elite academic pedigree: Core leadership is qualified at the
+            world's top five business schools, including London Business School
+            and Columbia Business School, with team members from McGill
+            University and Oxford Brookes University.
+            <br />
+          </li>
+          <li>
+            - Premier global credentials and qualifications: Our consulting team
+            hold the field's leading professional designations: CFA, FRM, CIPM,
+            FMVA, and ACCA.
+            <br />
+          </li>
+          <li>
+            - Hands-on institutional experience: Built on careers at Fortune 500
+            industrial leaders like General Electric and Baker Hughes, global
+            financial institutions including British International Investment
+            and Molten Ventures, and tier-1 advisory firms such as KPMG and BDO.
+            <br />
+          </li>
+          <li>
+            - Award-winning work: Recognized at the Consultancy Middle East
+            Awards 2025 with Gold in Corporate Finance and Gold in Industrial,
+            plus Silver in Management Consulting, Strategy, Healthcare, and Real
+            Estate.
+            <br />
+          </li>
+          <li>
+            - Trusted by Global institutions: This blend of pedigree,
+            independence, and recognition is precisely what SIDF, ADF, TDF, REDF
+            and other development finance institutions and commercial banks look
+            for.
+            <br />
+          </li>
+          <li>
+            - An unblemished track record: Studies compiled by Platform01
+            maintain a record of zero rejections based on study quality or
+            analytical integrity globally.
+            <br />
+            <br />
+          </li>
+        </ul>
+        <p>
+          A viable project, documented to this standard, speaks for itself, and
+          that is the difference Platform01 delivers.
+        </p>
+      </span>
+    ),
+  },
 ];
 
 const servicesData = [
@@ -311,7 +380,7 @@ const FeasibilityStudySceondary = async () => {
             Viability—it&apos;s the Bedrock of your Project&apos;s Strategy.
             It&apos;s where Critical Strategic Choices are made, ensuring your
             project is built on Solid Foundations to Maximize chances of Success
-            and Avoid Costly Mistakes. . Engaging a trusted feasibility study
+            and Avoid Costly Mistakes. Engaging a trusted feasibility study
             consultant ensures these choices are guided by real market and
             financial insights.
           </p>

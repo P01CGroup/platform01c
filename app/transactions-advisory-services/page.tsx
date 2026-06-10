@@ -26,8 +26,10 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Transaction Support | Platform01 Consulting",
-    description: "Description for Transaction Support page.",
+    title:
+      "Transaction Advisory Services UAE & KSA | M&A & Deal Support | Platform01 Consulting",
+    description:
+      "Platform01 Consulting provides end-to-end transaction advisory services across UAE and Saudi Arabia, including M&A support, financial modelling, investor documentation, and deal execution for corporates and investors.",
     keywords: "platform01, Transaction Support",
     og_title: "",
     og_description: "",
@@ -35,7 +37,8 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/transactions-advisory-services",
   };
   try {
     const { data } = await supabaseAdmin

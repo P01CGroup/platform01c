@@ -35,7 +35,7 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url: "https://www.platform01consulting.com/feasibility-study",
   };
   try {
     const { data } = await supabaseAdmin

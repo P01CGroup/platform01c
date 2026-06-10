@@ -28,6 +28,8 @@ export async function generateMetadata() {
       "Whether it's a small business valuation, company valuation for sale, or corporate valuation for investors, Platform01's accredited consultants go beyond numbers to deliver strategic clarity. 250+ projects delivered. Talk now",
     keywords:
       "business valuation services in uae, business valuation in dubai, business valuation Dubai, business valuation uae",
+    canonical_url:
+      "https://www.platform01consulting.com/business-valuation-services",
   };
   try {
     const { data } = await supabaseAdmin

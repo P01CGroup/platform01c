@@ -459,7 +459,7 @@ const FeasibilityStudyGenericSecondary = async () => {
         FourColumn={true}
       >
         {teamData.team.map((item, index) =>
-          item ? <TeamCard key={item.id || index} member={item} /> : null
+          item ? <TeamCard key={item.id || index} member={item} /> : null,
         )}
       </TeamShowcase>
       <Credentials
@@ -486,7 +486,7 @@ const FeasibilityStudyGenericSecondary = async () => {
         heading="Let' Talk"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you."
       />
-      <FAQSection faqs={faqData} showCTA={true} />
+      <FAQSection leftAligned={true} faqs={faqData} showCTA={true} />
 
       {/* Explore More Section */}
       <div className="bg-surface py-20">

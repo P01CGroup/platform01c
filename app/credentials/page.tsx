@@ -7,7 +7,7 @@ export async function generateMetadata() {
   let seo = {
     title: "Our Consulting Credentials & Track Record | Platform01",
     description:
-      "Platform01 has delivered 70+ advisory and consulting engagements globally. Explore our credentials, built across years of combined experience with worldrenowned corporations and investors.",
+      "Platform01 has delivered 70+ advisory and consulting engagements globally. Explore our credentials, built across years of combined experience with world-renowned corporations and investors.",
     keywords: "",
     og_title: "",
     og_description: "",
@@ -15,7 +15,7 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url: "https://www.platform01consulting.com/credentials",
   };
   try {
     const { data } = await supabaseAdmin

@@ -28,9 +28,9 @@ export const revalidate = 60; // Revalidate every minute for faster updates
 
 export async function generateMetadata() {
   let seo = {
-    title: "M&A Advisory Firm in UAE | M&A Consulting Services | Platform01",
+    title: "Premium M&A Advisory & Consulting Firm | Platform01 ",
     description:
-      "Leading M&A advisory firm in UAE providing premium M&A consulting services. Expert M&A advisory company specializing in mergers and acquisitions in UAE and Dubai.",
+      "Platform01's M&A advisors deliver proven merger & acquisition services across industries. Whether buying, selling, or merging businesses, our M&A consulting expertise is positioned to drive deal success.",
     keywords:
       "M&A advisory firm, M&A firm in UAE, M&A advisory company, M&A consulting, mergers and acquisitions UAE, mergers and acquisitions Dubai, M&A services, M&A specialist, M&A business advisors, M&A transaction advisory services Dubai, business valuation UAE, transaction advisory",
     og_title: "M&A Advisory Firm in UAE | Premium M&A Consulting Services",
@@ -41,7 +41,7 @@ export async function generateMetadata() {
     twitter_description:
       "Expert M&A advisory company in UAE specializing in mergers and acquisitions in UAE and Dubai.",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url: "https://www.platform01consulting.com/ma-advisory",
   };
   try {
     const { data } = await supabaseAdmin

@@ -26,8 +26,10 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Restructuring Consulting | Platform01 Consulting",
-    description: "Description for Restructuring Consulting page.",
+    title:
+      "Restructuring Consulting Services UAE & KSA | Business Turnaround Experts | Platform01",
+    description:
+      "Platform01 Consulting provides restructuring consulting services across UAE and Saudi Arabia, helping businesses stabilize operations, manage financial distress, and execute turnaround strategies to restore long-term value and performance.",
     keywords: "platform01, Restructuring Consulting",
     og_title: "",
     og_description: "",
@@ -35,7 +37,8 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/restructuring-consulting",
   };
   try {
     const { data } = await supabaseAdmin

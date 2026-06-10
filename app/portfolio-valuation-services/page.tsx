@@ -27,8 +27,10 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Portfolio Valuation | Platform01 Consulting",
-    description: "Description for Portfolio Valuation page.",
+    title:
+      "Portfolio Valuation Services UAE & KSA | Fund & NAV Valuations | Platform01 Consulting",
+    description:
+      "Platform01 Consulting provides independent portfolio valuation services for private equity, venture capital, and institutional investors across UAE and Saudi Arabia.",
     keywords: "platform01, Portfolio Valuation",
     og_title: "",
     og_description: "",
@@ -36,7 +38,8 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/portfolio-valuation-services",
   };
   try {
     const { data } = await supabaseAdmin

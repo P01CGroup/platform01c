@@ -7,7 +7,7 @@ import { supabaseAdmin } from "@/lib/supabase/admin";
 
 export async function generateMetadata() {
   let seo = {
-    title: "Meet the Administration | Our Corporate Team",
+    title: "Meet the Administration | Our Corporate Team ",
     description:
       "Meet the Corporate Team driving Platform01's administrative affairs. A corporate team with deep expertise across management, client success and corporate relationships.",
     keywords: "platform01, Corporate Team",
@@ -17,7 +17,7 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url: "https://www.platform01consulting.com/corporate-team",
   };
   try {
     const { data } = await supabaseAdmin

@@ -18,9 +18,10 @@ import {
 export async function generateMetadata() {
   // Fetch SEO data for homepage
   let seo = {
-    title: "Platform01 Consulting - Your Platform for Strategic Success",
+    title:
+      "Platform01 Consulting | Strategy, M&A & Feasibility Advisory in UAE & KSA",
     description:
-      "Platform01 is providing We serve as consultants to some of the world's fastest-growing companies and renowned investors.",
+      "We deliver bespoke consulting solutions in strategy, corporate finance, M&A, feasibility studies, and business transformation for corporations, investors, and institutions across UAE and Saudi Arabia.",
     keywords: "",
     og_title: "",
     og_description: "",
@@ -28,7 +29,7 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url: "https://www.platform01consulting.com/",
   };
   try {
     const { data } = await supabaseAdmin

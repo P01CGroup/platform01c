@@ -28,13 +28,13 @@ const TeamTab = ({ corporateTeamData, consultingTeamData }: TeamTabProps) => {
             className={`cursor-pointer heading-2 transition-colors ${activeTab === "corporate" ? "border-primary text-dark" : "border-transparent text-dark/50 hover:text-dark"}`}
             onClick={() => setActiveTab("corporate")}
           >
-            Corporate
+            Corporate Team
           </button>
           <button
             className={`cursor-pointer heading-2 transition-colors ${activeTab === "consulting" ? "border-primary text-dark" : "border-transparent text-dark/50 hover:text-dark"}`}
             onClick={() => setActiveTab("consulting")}
           >
-            Consulting
+            Consulting Team
           </button>
         </div>
         {activeTab === "corporate" && (

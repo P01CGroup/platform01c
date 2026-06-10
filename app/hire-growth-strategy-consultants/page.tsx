@@ -37,7 +37,8 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/hire-growth-strategy-consultants",
   };
   try {
     const { data } = await supabaseAdmin
