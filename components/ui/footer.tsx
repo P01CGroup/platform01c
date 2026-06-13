@@ -287,7 +287,7 @@ const Footer = ({
       </div>
       {/* Bottom row */}
       <div className="container flex flex-col md:flex-row justify-between items-center mt-6 text-xs text-gray-400 gap-2">
-        <div>© 2023-2025 Platform01 Consulting Group</div>
+        <div>© 2023-2026 Platform01 Consulting Group</div>
         <div className="space-x-4">
           <Link href="/terms-of-use" className="hover:underline">
             Terms of Use
