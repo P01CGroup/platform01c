@@ -34,13 +34,14 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/feasibility-study-ksa-2",
   };
   try {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/feasibility-study-ksa")
+      .eq("slug", "/feasibility-study-ksa-2")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };

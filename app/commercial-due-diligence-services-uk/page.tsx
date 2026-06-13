@@ -41,13 +41,14 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/commercial-due-diligence-services-uk",
   };
   try {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/commercial-due-diligence-services")
+      .eq("slug", "/commercial-due-diligence-services-uk")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -57,6 +58,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
   };
 }
 
@@ -277,7 +281,7 @@ const faqData: FAQItem[] = [
     answer: (
       <span>
         Let's have a conversation about your next transaction. We'll help you
-        ask the right questions — and find the right answers. 
+        ask the right questions — and find the right answers.
       </span>
     ),
   },

@@ -30,7 +30,8 @@ export const revalidate = 60; // Revalidate every minute for faster updates
 
 export async function generateMetadata() {
   let seo = {
-    title: "Expert M&A Advisory in UAE | Award-Winning Boutique Firm — Platform01",
+    title:
+      "Expert M&A Advisory in UAE | Award-Winning Boutique Firm — Platform01",
     description:
       "Platform01 is a leading M&A advisory firm in UAE offering sell-side advisory, business valuation, divestments & deal support. Talk to an expert today",
     keywords:
@@ -43,7 +44,8 @@ export async function generateMetadata() {
     twitter_description:
       "Expert M&A advisory company in UAE specializing in mergers and acquisitions in UAE and Dubai.",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/ma-consulting-services",
   };
   try {
     const { data } = await supabaseAdmin
@@ -59,6 +61,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
     other: {
       preload: "/services/mobile/ma-consulting.png",
       "dns-prefetch": "https://vsqfvsosprmjdktwilrj.supabase.co",

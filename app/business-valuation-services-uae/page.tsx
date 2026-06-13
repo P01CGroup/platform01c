@@ -28,12 +28,14 @@ export async function generateMetadata() {
       "Platform01 provides bespoke business valuation services in UAE, covering standard, distressed, startup & portfolio valuations. CFA-qualified team. Institutional-grade reports. Book a consultation today.",
     keywords:
       "business valuation services in uae, business valuation in dubai, business valuation Dubai, business valuation uae",
+    canonical_url:
+      "https://www.platform01consulting.com/business-valuation-services-uae",
   };
   try {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/business-valuation-services")
+      .eq("slug", "/business-valuation-services-uae")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -43,6 +45,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
   };
 }
 

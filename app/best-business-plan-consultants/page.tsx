@@ -66,6 +66,7 @@ export async function generateMetadata() {
     alternates: {
       canonical: seo.canonical_url || undefined,
     },
+    
   };
 }
 

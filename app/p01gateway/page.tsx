@@ -54,7 +54,7 @@ export async function generateMetadata() {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/p01soaas")
+      .eq("slug", "/p01gateway")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -64,6 +64,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
   };
 }
 

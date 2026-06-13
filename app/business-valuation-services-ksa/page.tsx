@@ -28,12 +28,14 @@ export async function generateMetadata() {
       "Professional business valuation services in ksa and KSA by Platform01 Consulting.",
     keywords:
       "business valuation services in ksa, business valuation in KSA, business valuation KSA, business valuation ksa",
+    canonical_url:
+      "https://www.platform01consulting.com/business-valuation-services-ksa",
   };
   try {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/business-valuation-services")
+      .eq("slug", "/business-valuation-services-ksa")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -43,6 +45,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
   };
 }
 

@@ -26,12 +26,14 @@ export async function generateMetadata() {
       "Leading Mergers and Acquisitions firms in Dubai and UAE offering professional consulting and advisory services. Trusted experts in Merger Acquisition Consulting and M&A transactions.",
     keywords:
       "Mergers and acquisitions in Dubai, Mergers and acquisitions in UAE, Mergers and acquisitions firms, Mergers and acquisitions consulting services, Mergers & acquisitions services, Merger acquisition consulting, Merger acquisition company, Mergers and acquisitions advisory services",
+    canonical_url:
+      "https://www.platform01consulting.com/ma-consulting-services-2",
   };
   try {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/ma-consulting-services")
+      .eq("slug", "/ma-consulting-services-2")
       .single();
     if (data?.seo)
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -40,6 +42,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
   };
 }
 

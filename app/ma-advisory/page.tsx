@@ -47,7 +47,7 @@ export async function generateMetadata() {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
-      .eq("slug", "/ma-consulting-services")
+      .eq("slug", "/ma-advisory")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -57,6 +57,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
     other: {
       preload: "/services/mobile/ma-consulting.png",
       "dns-prefetch": "https://vsqfvsosprmjdktwilrj.supabase.co",

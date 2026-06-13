@@ -381,14 +381,15 @@ export async function generateMetadata() {
     twitter_title: "",
     twitter_description: "",
     twitter_image: "",
-    canonical_url: "",
+    canonical_url:
+      "https://www.platform01consulting.com/smb-advisory-services-uae",
   };
   try {
     const { data } = await supabaseAdmin
       .from("static_pages")
       .select("seo")
       // NOTE: Updated slug reference to reflect the new market
-      .eq("slug", "/uae-sme-advisory-services")
+      .eq("slug", "/smb-advisory-services-uae")
       .single();
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
@@ -398,6 +399,9 @@ export async function generateMetadata() {
     title: seo.title,
     description: seo.description,
     keywords: seo.keywords,
+    alternates: {
+      canonical: seo.canonical_url,
+    },
   };
 }
 
