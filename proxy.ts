@@ -2,6 +2,26 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 export async function proxy(req: NextRequest) {
+  const host = req.headers.get("host") || "";
+  const isLocalhost = host.includes("localhost") || host.includes("127.0.0.1");
+
+  if (!isLocalhost) {
+    const proto = req.headers.get("x-forwarded-proto") || "";
+    const primaryProto = proto.split(",")[0].trim();
+    const isWWW = host.startsWith("www.");
+    const isHTTPS = primaryProto === "https";
+
+    if (!isWWW || !isHTTPS) {
+      const correctHost = isWWW ? host : `www.${host}`;
+      const redirectUrl = `https://${correctHost}${req.nextUrl.pathname}${req.nextUrl.search}`;
+      return NextResponse.redirect(redirectUrl, { status: 301 });
+    }
+  }
+
+  if (!req.nextUrl.pathname.startsWith("/admin")) {
+    return NextResponse.next();
+  }
+
   let res = NextResponse.next({
     request: {
       headers: req.headers,
@@ -10,7 +30,7 @@ export async function proxy(req: NextRequest) {
   console.log("Middleware running for:", req.nextUrl.pathname);
   console.log(
     "Cookies:",
-    req.cookies.getAll().map((c) => c.name)
+    req.cookies.getAll().map((c) => c.name),
   );
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -21,13 +41,13 @@ export async function proxy(req: NextRequest) {
           const cookie = req.cookies.get(name);
           console.log(
             `Getting cookie ${name}:`,
-            cookie?.value ? "exists" : "not found"
+            cookie?.value ? "exists" : "not found",
           );
           if (cookie?.value) {
             console.log(`Cookie ${name} value length:`, cookie.value.length);
             console.log(
               `Cookie ${name} value preview:`,
-              cookie.value.substring(0, 100)
+              cookie.value.substring(0, 100),
             );
           }
           return cookie?.value;
@@ -69,7 +89,7 @@ export async function proxy(req: NextRequest) {
           });
         },
       },
-    }
+    },
   );
 
   // Refresh session if expired
@@ -108,5 +128,6 @@ export async function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  // matcher: ["/admin/:path*"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
