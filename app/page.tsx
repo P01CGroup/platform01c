@@ -110,8 +110,8 @@ const VALUES: Value[] = [
 ];
 
 // Force dynamic rendering for this page
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export default async function Home() {
   // Fetch SEO data for homepage

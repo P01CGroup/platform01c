@@ -37,8 +37,6 @@ export default function InsightsSlider({
   const navPrev = useRef<HTMLButtonElement | null>(null);
   const navNext = useRef<HTMLButtonElement | null>(null);
 
-  // Shuffle on mount — server sends ordered data (good for SEO),
-  // client shuffles after hydration (good for UX)
   const [insights, setInsights] = useState(rawInsights);
 
   useEffect(() => {
@@ -50,7 +48,6 @@ export default function InsightsSlider({
     setInsights(shuffled);
   }, []);
 
-  // Ensure at least 4 slides for looping/navigation
   let displayInsights = insights;
   while (displayInsights.length < 4) {
     displayInsights = displayInsights.concat(insights);
