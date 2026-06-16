@@ -9,12 +9,21 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ["framer-motion", "lucide-react", "swiper"],
   },
 
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-    return config;
+  // webpack: (config) => {
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ["@svgr/webpack"],
+  //   });
+  //   return config;
+  // },
+
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
+      },
+    },
   },
 
   async redirects() {
@@ -384,6 +393,8 @@ const nextConfig: NextConfig = {
         hostname: "platform01consulting.com",
       },
     ],
+    qualities: [25, 50, 75, 80, 85, 90, 95, 100],
+
     // Optimize image delivery
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 31536000, // 1 year
