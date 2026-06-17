@@ -18,13 +18,14 @@ import { credentialsService } from "@/lib/services/CredentialsService";
 import { Credential } from "@/lib/types/cms";
 import { getTeamDataForPage } from "@/lib/data/team-data";
 import { getSeoMetadata } from "@/lib/seo-config";
-import LazyInsightsSlider from "@/components/sections/LazyInsightsSlider";
+// import LazyInsightsSlider from "@/components/sections/LazyInsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import { Users, Target, Award, TrendingUp } from "lucide-react";
+import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 
 // Enable static generation with revalidation
-export const dynamic = "force-static";
-export const revalidate = 60; // Revalidate every minute for faster updates
+// export const dynamic = "force-static";
+export const revalidate = 3600; // Revalidate every minute for faster updates
 
 export async function generateMetadata() {
   let seo = {
@@ -368,7 +369,8 @@ const MaConsulting = async () => {
           supportingText: valuesData.supportingText,
         })}
       />
-      <LazyInsightsSlider bgSurface={false} />
+      <DynamicInsightsSlider bgSurface={false} />
+      {/* <LazyInsightsSlider bgSurface={false} /> */}
       <CallToAction
         heading="Ready to Work with a Leading M&A Advisory Firm?"
         description="We'd love to hear about your M&A ambitions. Whether you're aiming to sell your business, raise capital, or make strategic investments, our team is here to guide you through every step."
