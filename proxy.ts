@@ -128,8 +128,8 @@ export async function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
-  // matcher: [
-  //   "/((?!_next/static|_next/image|_next/webpack-hmr|favicon.ico|.*\\.(?:png|jpg|jpeg|gif|svg|ico|webp)).*)",
-  // ],
+  // matcher: ["/admin/:path*"],
+  matcher: [
+    "/((?!_next/static|_next/image|_next/webpack-hmr|favicon.ico|.*\\.(?:png|jpg|jpeg|gif|svg|ico|webp)).*)",
+  ],
 };
