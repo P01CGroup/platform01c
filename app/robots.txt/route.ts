@@ -34,16 +34,16 @@ export async function GET() {
 
   let robots = "";
 
-  try {
-    const { data } = await supabaseAdmin
-      .from("site_settings")
-      .select("value")
-      .eq("key", "robots_txt")
-      .single();
-    if (data && data.value) {
-      robots = data.value;
-    }
-  } catch (e) {}
+  // try {
+  //   const { data } = await supabaseAdmin
+  //     .from("site_settings")
+  //     .select("value")
+  //     .eq("key", "robots_txt")
+  //     .single();
+  //   if (data && data.value) {
+  //     robots = data.value;
+  //   }
+  // } catch (e) {}
 
   if (!robots) {
     robots = [
