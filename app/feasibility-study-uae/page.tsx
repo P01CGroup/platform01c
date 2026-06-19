@@ -257,6 +257,130 @@ const FeasibilityStudyUAE = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Feasibility Study Services UAE",
+            description:
+              "Institutional-grade feasibility studies in UAE covering market research, financial modelling, and business strategy. 250+ projects delivered.",
+            url: "https://platform01consulting.com/feasibility-study-uae",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+            areaServed: "United Arab Emirates",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Feasibility Study UAE",
+                item: "https://www.platform01consulting.com/feasibility-study-uae",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is a feasibility study, and why is it critical for projects in Dubai and UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A feasibility study assesses the commercial and financial viability of your business idea, ensuring investment decisions are data-driven and aligned with market realities.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide feasibility study services in Dubai and across UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, our feasibility study consultants in Dubai deliver tailored reports covering market, financial, and technical assessments for investors and developers across the region.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes Platform01 a leading feasibility study firm?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our work is led by feasibility study experts with deep industry experience, emphasizing actionable insights, financial robustness, and market realism.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to complete a market feasibility study?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A standard market feasibility study typically takes 6 to 8 weeks depending on project complexity.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help improve an existing feasibility report?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, our feasibility study professionals can review and enhance your existing report with updated data and refined analysis.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide bilingual feasibility study reports?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide bilingual feasibility study documentation in English and Arabic to meet UAE regulatory and submission requirements.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...feasibilityStudyData}
         // showButton={true}

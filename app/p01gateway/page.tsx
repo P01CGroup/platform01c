@@ -732,6 +732,138 @@ const TurnaroundAdvisory = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "P01Gateway GCC Market Entry Services",
+            description:
+              "End-to-end GCC market entry and go-to-market execution solution for international companies, investors, and growth-stage businesses expanding into the Gulf region.",
+            url: "https://www.platform01consulting.com/p01gateway",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "P01Gateway",
+                item: "https://www.platform01consulting.com/p01gateway",
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the best strategy for entering the GCC market?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The best GCC market entry strategy depends on industry, target customers, regulatory environment, and commercial objectives. P01Gateway helps organizations develop tailored entry strategies aligned with long-term growth goals.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can a company expand into the UAE market?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Expansion typically requires market research, GTM planning, business setup advisory, commercial positioning, and partnership development, supported end-to-end by Platform01 Consulting.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can foreign companies enter the Saudi Arabia market?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Entering Saudi Arabia requires strategic localization, regulatory understanding, partnership alignment, and long-term commercial planning, supported through structured GTM and market entry support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does Platform01 Consulting provide GCC market entry consulting?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, Platform01 Consulting provides premium GCC market entry consulting and GTM execution support through the P01Gateway solution.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What industries can benefit from GCC expansion?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Industries including technology, AI, SaaS, fintech, healthcare, manufacturing, energy, professional services, infrastructure, logistics, and retail can benefit significantly.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is a GCC go-to-market strategy?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A GCC go-to-market strategy defines how a company positions, launches, markets, sells, and scales its products across Gulf markets, including partnerships and execution planning.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why is local execution support important for GCC expansion?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Many international companies fail in GCC expansion due to lack of local ecosystem understanding; local execution support helps accelerate integration and reduce operational risks.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does Platform01 Consulting support implementation or only strategy?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Platform01 Consulting focuses on both strategy and implementation, with P01Gateway designed as an execution-focused market expansion solution.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can startups use P01Gateway for GCC expansion?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, startups and growth-stage businesses can use P01Gateway to validate opportunities, define GTM strategies, build partnerships, and accelerate regional expansion.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Which GCC countries does Platform01 Consulting support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Platform01 Consulting primarily supports organizations entering the United Arab Emirates and Saudi Arabia while advising on broader GCC expansion opportunities.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...TurnaroundAdvisoryData}
         whatsAppButtonMobileView={false}

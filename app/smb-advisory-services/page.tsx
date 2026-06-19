@@ -300,6 +300,125 @@ const Restructuring = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "SMB Advisory Services",
+            description:
+              "Bespoke consulting solutions for Small and Medium Businesses in the UK covering financial modelling, market sizing, and business strategy.",
+            url: "https://www.platform01consulting.com/smb-advisory-services",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: "United Kingdom",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "SMB Advisory Services",
+                item: "https://www.platform01consulting.com/smb-advisory-services",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is SMB advisory and why is it important in the UK?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "SMB advisory services help businesses navigate growth, funding, and operational decisions in competitive UK markets with complex regulations.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What types of financial models do you create for UK businesses?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We build investor-grade financial models including P&L forecasts, cash flow projections, valuation models, and unit economics tailored to funding rounds and board reviews.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help UK startups prepare for VC fundraising?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, including pitch deck preparation, financial storytelling, and fundraising strategy aligned with UK VCs and international investors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do you conduct market sizing for UK SMBs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We combine secondary research, local datasets, industry reports, and competitor analysis to deliver TAM/SAM/SOM insights for UK cities like London and Manchester.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What industries do you serve in the UK?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Fintech, SaaS, consumer goods and D2C, health and wellness, food and beverage, professional services, and retail and e-commerce.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you work with remote or international clients from the UK?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, most UK clients are supported remotely through virtual sessions, collaborative tools, and flexible scheduling.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...RestructuringData}
         whatsAppButtonMobileView={false}

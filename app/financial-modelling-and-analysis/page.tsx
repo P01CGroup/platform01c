@@ -424,6 +424,178 @@ const FeasibilityStudyGeneric = async () => {
   }));
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Financial Modelling Services",
+            description:
+              "Bespoke and investor-grade financial modelling including 3-statement models, project finance models, and valuation analysis, built exclusively in Excel.",
+            url: "https://www.platform01consulting.com/financial-modelling-and-analysis",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Financial Modelling Services",
+                item: "https://www.platform01consulting.com/financial-modelling-and-analysis",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Do you use any software for financial modelling?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, all financial models are built exclusively using Microsoft Excel, ensuring full transparency of formulas, flexibility for updates, and compatibility with banks and investors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who offers professional financial modelling services?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Platform01 Consulting delivers structured, investor-aligned financial models in investment analysis, project finance, bank funding, and feasibility studies.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is the cost of financial modelling services?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Cost depends on business complexity, forecast duration, scenario analysis depth, and valuation requirements. A short scoping discussion is recommended for accurate pricing.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do I need financial projections for bank loans?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Requirements vary by bank, so we recommend confirming directly with your bank and consulting with our advisory team.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What financial model is required for investor funding?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most investors expect an integrated 3-statement model, revenue forecast, cash flow projection, IRR and NPV analysis, and sensitivity modelling.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to build a financial model?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Standard SME models take 1 to 3 weeks, multi-entity models take 2 to 4 weeks, and complex project finance models take 3 to 6 weeks.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can professional financial modelling help startups raise capital?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, a structured financial model enhances investor confidence, valuation credibility, and growth scalability demonstration.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is the difference between financial modelling and financial forecasting?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Forecasting focuses on revenue and cost projections, while modelling integrates financial statements, valuation metrics, and scenario analysis into a full decision-making framework.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are your financial models suitable for bank submission?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, our models are structured in formats typically accepted by banks, though final requirements should be verified with your specific bank.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you update or review an existing financial model?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we audit and stress-test existing models, correct formula errors, and rebuild models for institutional presentation.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How accurate are financial models?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Reliability depends on input data quality, market assumptions, and sensitivity testing. Structured modelling improves decision-making though no model predicts the future with certainty.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is financial modelling mandatory for business expansion?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "It is often commercially necessary when seeking bank financing, raising investor capital, or launching large-scale projects, reducing risk and improving funding success rates.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...feasibilityStudyData}
         whatsAppButtonMobileView={false}

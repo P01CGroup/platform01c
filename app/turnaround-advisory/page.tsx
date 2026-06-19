@@ -337,6 +337,181 @@ const TurnaroundAdvisory = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Turnaround Advisory",
+            description:
+              "High-stakes turnaround advisory for businesses facing financial distress, operational breakdowns, or strategic misalignment.",
+            url: "https://www.platform01consulting.com/turnaround-advisory",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Turnaround Advisory",
+                item: "https://www.platform01consulting.com/turnaround-advisory",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Do you offer turnaround advisory services in the UAE and Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide turnaround and business restructuring services across the UAE and KSA, working extensively in Dubai, Abu Dhabi, Riyadh, and Jeddah.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes Platform01 a leading turnaround consulting firm in the GCC?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our blend of regional expertise, hands-on leadership, and tailored execution makes us a trusted turnaround partner with deep stakeholder alignment.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What types of businesses do you support with turnaround consulting in the UAE and Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We support family-owned businesses, mid-market firms, and corporates across industrial, real estate, retail, F&B, construction, logistics, and healthcare sectors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are your turnaround consultants based in United Arab Emirates and Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we have on-the-ground presence with senior consultants in Riyadh, Dubai, Jeddah, and the Eastern Province.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is the difference between turnaround advisory and financial restructuring?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Turnaround advisory is broader, including operational, strategic, and leadership transformation, while financial restructuring focuses on balance sheet stress and liquidity.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How quickly can your turnaround consultants start working on-site in the UAE or Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We can deploy senior advisors within weeks, especially in time-sensitive or high-pressure environments.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What does a turnaround plan from Platform01 typically include?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Liquidity and cash flow management, cost and operational restructuring, management realignment, business model shifts, and performance milestones.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide interim CEO, CFO, or CSO support during turnaround engagements?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we offer interim C-suite leadership including Chief Strategy Officers for distressed businesses in the UAE and KSA.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do you handle sensitive stakeholder situations during a turnaround?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "With discretion, diplomacy, and a clear value restoration plan, managing complex family dynamics and board-level conflicts.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What industries do you have the most turnaround experience in across the GCC?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Industrial, energy, retail, healthcare, logistics, F&B, real estate, construction, and education.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide business turnaround consulting for distressed startups or early-stage ventures in the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, supporting fast-scaling startups facing cash burn, operational inefficiencies, or founder misalignment.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you assist with out-of-court restructurings under Saudi Arabia's bankruptcy framework?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, collaborating with legal, tax, and financial advisors on out-of-court and formal restructuring processes under Saudi Bankruptcy Law.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why is Platform01 considered a premium turnaround advisory firm in Dubai and Riyadh?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our practitioner insight, boardroom trust, and execution credibility set us apart from conventional consulting firms in the region.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...TurnaroundAdvisoryData}
         whatsAppButtonMobileView={false}

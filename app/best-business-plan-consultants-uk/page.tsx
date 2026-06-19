@@ -348,6 +348,154 @@ const BusinessPlan = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Business Plan Development Services",
+            description:
+              "Investor-ready, insight-rich Business Plans crafted by Platform01 Consulting, empowering founders, boards, and corporate leaders to pursue growth and raise capital.",
+            url: "https://www.platform01consulting.com/best-business-plan-consultants-uk",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm - ConsultancyME 2025",
+                "Top Strategist GCC - Industrials, Healthcare & Technology 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Business Plan Consultants UK",
+                item: "https://www.platform01consulting.com/best-business-plan-consultants-uk",
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is a business plan, and why is it important?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A business plan is a structured document that outlines your business vision, strategy, market opportunity, and financials. It's essential for raising funds and aligning stakeholders.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How is a Platform01 business plan different from a freelancer or template-based version?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Unlike off-the-shelf templates, we create custom, investor-grade business plans grounded in strategic logic and financial depth.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to complete a business plan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Typically, 3 to 5 weeks depending on complexity and responsiveness, with fast-track timelines available on request.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What financials are included in the business plan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our plans include detailed 3 to 5 year forecasts: profit and loss statement, cash flow statement, balance sheet, sensitivity analysis, KPI dashboards, and cap table where applicable.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help if we don't have all the information ready?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. We guide you through key assumptions and build the plan collaboratively, even from a conceptual stage.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is the business plan suitable for investors?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Absolutely. We tailor language, data points, and format to meet investor expectations from VCs, family offices, and banks.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you support pitch deck preparation as well?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. We often bundle the business plan, financial model, and pitch deck into a single engagement.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Will you update the plan in the future?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We offer ongoing support packages for updates, reforecasting, or adapting the plan for new audiences or funding rounds.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is my information confidential?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. All client data is treated with strict confidentiality, and NDAs are signed prior to project commencement upon request.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              ...(member.text2 && { description: member.text2 }),
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
       <ServiceHero
         {...BusinessPlanData}
         whatsAppButtonMobileView={false}

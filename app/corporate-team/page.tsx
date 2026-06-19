@@ -51,8 +51,58 @@ const CorporateTeam = () => {
   const ManagingDirector = getCorporateTeamDataForPage(
     "corporate-managing-director",
   );
+  const allMembers = [...ManagingDirector, ...Team, ...Advisors];
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Corporate Team",
+                item: "https://www.platform01consulting.com/corporate-team",
+              },
+            ],
+          }),
+        }}
+      />
+      {allMembers.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              ...(member.text2 && { description: member.text2 }),
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+              ...(member.education && { alumniOf: member.education }),
+              ...(member.professionalQualifications && {
+                hasCredential: member.professionalQualifications,
+              }),
+            }),
+          }}
+        />
+      ))}
+
       <HeroInner title={Hero.title} supportingText={Hero.supportingText} />
       <div className="container pt-5">
         <Header text="Our Corporate Team" className="mb-26" />

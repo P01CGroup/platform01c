@@ -238,6 +238,157 @@ const GrowthStrategy = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Growth Strategy Consulting",
+            description:
+              "Growth strategy consulting for corporations, SMEs, and new ventures, specializing in company growth strategies across Saudi Arabia and the UAE.",
+            url: "https://www.platform01consulting.com/hire-growth-strategy-consultants",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Growth Strategy Consultants",
+                item: "https://www.platform01consulting.com/hire-growth-strategy-consultants",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What industries do you specialize in for growth strategy consulting?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We serve clients across consumer goods, real estate, F&B, logistics, financial services, and technology, tailored to both UAE and Saudi Arabia markets.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you help with implementation or just strategy?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We go beyond strategy and support ongoing implementation, PMO setup, and performance tracking.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes Platform01 different from other consulting firms?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We adopt a practitioner mindset, with consultants who are former operators and industry professionals rather than just advisors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help a startup or SME, or do you only work with large corporations?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We work with startups, family offices, and mid-sized enterprises, tailoring advice to stage, resources, and ambition.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does a typical growth strategy engagement take?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most projects take 6 to 12 weeks from diagnosis to full strategy delivery, depending on complexity.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is your service available in Arabic?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide bilingual support in English and Arabic to ensure stakeholder alignment.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you help with market entry into Saudi Arabia or the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we design and validate market entry strategies for international clients entering the GCC and local businesses expanding regionally.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Will I get a presentation or a full strategy report?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We deliver a comprehensive strategy document with financial modeling, a growth roadmap, and execution tools.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you work with internal teams during the engagement?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we actively collaborate with marketing, operations, and finance teams to ensure knowledge transfer and alignment.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do we get started?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Contact us for a free consultation to assess your current situation and growth objectives.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...GrowthStrategyData}
         whatsAppButtonMobileView={false}

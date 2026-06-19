@@ -337,6 +337,221 @@ const FeasibilityStudySceondary = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Feasibility Study Services Saudi Arabia",
+            description:
+              "Bankable feasibility studies in Saudi Arabia aligned with Vision 2030 and institutional financing requirements.",
+            url: "https://www.platform01consulting.com/feasibility-study-ksa-3",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+            areaServed: "Saudi Arabia",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Feasibility Study Saudi Arabia",
+                item: "https://www.platform01consulting.com/feasibility-study-ksa-3",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      {corporateTeamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is a feasibility study, and why is it critical for large-scale projects?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A feasibility study assesses the commercial and financial viability of a proposed project, mitigating risk and enabling confident decision-making by stakeholders.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What types of feasibility studies does Platform01 Consulting provide in Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We offer integrated feasibility studies for industrial projects, infrastructure, healthcare, education, energy, and real estate, grounded in market realism and financial rigor.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes Platform01 different from generic feasibility consultants?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our studies are led by senior practitioners with real-world investment and operations experience, emphasizing commercial logic over academic templates.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What does a typical feasibility study from Platform01 include?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Market and demand analysis, competitive landscape, technical feasibility, financial modelling, sensitivity and risk analysis, and regulatory framework insights.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer Arabic-language feasibility studies for submission?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we deliver bilingual feasibility reports in English and Arabic to comply with local Saudi Arabia requirements.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer feasibility studies for industrial projects?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we conduct technical and market feasibility for factories, warehouses, logistics hubs, and industrial clusters aligned with Vision 2030.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you support PPP and infrastructure feasibility studies?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we help evaluate bankability, risk-sharing, and returns for public-private partnership infrastructure projects.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to complete a feasibility study?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A standard feasibility study can take between 6 to 8 weeks depending on project complexity and input availability.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer tailored scopes for early-stage or greenfield projects?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we create modular scopes ranging from concept validation to full investment-grade feasibility studies.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help revise or validate an existing feasibility study?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we can review, validate, or enhance an existing feasibility study with updated market data and improved financial modeling.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can a feasibility study determine the potential profitability of my business idea?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, a financial feasibility study includes a financial model covering income statement, balance sheet, and cash flow projections.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What are some of the development financial institutions in Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Key institutions include Saudi Industrial Development Fund, Agriculture Development Fund, Islamic Development Bank, Social Development Bank, and Saudi Fund for Development.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What factors should I consider when choosing a feasibility study company?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Consider industry experience, market research expertise, financial analysis capability, and client testimonials.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I get started with a feasibility study from Platform01 Consulting?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Get in touch through our contact page and we will schedule a scoping call to understand your project objectives and deliverables.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Why is Platform01 Consulting the best feasibility study firm in Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Platform01 is locally licensed in Riyadh, led by graduates of top global business schools, holds leading professional designations including CFA, FRM, and FMVA, and has a track record of zero rejections based on study quality, recognized with multiple awards at the Consultancy Middle East Awards 2025.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...feasibilityStudyData}
         // showButton={true}

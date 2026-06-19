@@ -270,6 +270,149 @@ const ValueCreation = () => {
   const teamData = getTeamDataForPage("value-creation");
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Value Creation Strategy Services",
+            description:
+              "Value creation strategy consulting helping businesses drive EBITDA growth, optimize operations, and unlock long-term enterprise value.",
+            url: "https://www.platform01consulting.com/value-creation-strategy-services",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Value Creation Strategy Services",
+                item: "https://www.platform01consulting.com/value-creation-strategy-services",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Who is this service for?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Private equity investors, family offices, and large private businesses looking to unlock or accelerate value pre or post acquisition.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you only work post-acquisition?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No, we support the full investment lifecycle including pre-deal planning, post-deal implementation, ongoing transformation, and pre-exit preparation.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do you define value in value creation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We track financial metrics like EBITDA and cash flow, strategic metrics like market share and retention, and investor metrics like IRR.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Will you work with our internal teams or take full control?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We act as co-pilots, collaborating to enable and upskill internal teams while executing at pace.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide implementation support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, including project management, team training, vendor selection, and progress tracking.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes your approach different from other consulting firms?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We combine investment acumen with operator experience, having worked in both boardrooms and control rooms.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the typical project duration?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Projects range from 6 weeks for a focused sprint to 12 to 24 months for full-scale transformation with embedded support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you support value creation for public companies or only private equity?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We support public, private, and investor-owned businesses, focused on performance improvement and sustainable outcomes.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you assist in defining KPIs and dashboards?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we help create custom dashboards that align with strategy and drive organizational accountability.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...ValueCreationData}
         whatsAppButtonMobileView={false}

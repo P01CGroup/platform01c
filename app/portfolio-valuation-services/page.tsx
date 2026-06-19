@@ -259,6 +259,133 @@ const PortfolioValuation = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Portfolio Valuation Services",
+            description:
+              "Independent portfolio valuation services for private equity, venture capital, and institutional investors, aligned with IPEV Guidelines.",
+            url: "https://www.platform01consulting.com/portfolio-valuation-services",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Portfolio Valuation Services",
+                item: "https://www.platform01consulting.com/portfolio-valuation-services",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the IPEV framework and why is it important?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The International Private Equity and Venture Capital Valuation Guidelines provide globally accepted standards for valuing private investments, ensuring audit defensibility and investor confidence.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are your valuations audit-compliant?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, our valuations are designed for audit readiness using methodologies that hold up under scrutiny from top-tier auditors globally.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you handle complex capital structures like convertibles or preference shares?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we build fully diluted cap tables, waterfall models, and use option pricing or backsolve methods for hybrid or structured instruments.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer recurring quarterly valuations?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we support funds and family offices with quarterly or semi-annual NAV updates including valuation memos and summary dashboards.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What formats do you deliver?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We provide full Excel models, detailed valuation memos in Word or PDF, and summary packs for internal and investor communication.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help us prepare for a fund audit or LP inspection?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we offer valuation defensibility reviews, audit preparation, and LP presentation support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How are you different from big audit or fund admin firms?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We offer tailored, investor-centric service with senior team involvement and full flexibility, unlike automated or black-box valuations.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...PortfolioValuationData}
         whatsAppButtonMobileView={false}

@@ -211,6 +211,71 @@ const BusinessValuation = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Business Valuation Services",
+            description:
+              "Bespoke business valuation services covering standard, distressed, startup, brand, and portfolio valuations.",
+            url: "https://www.platform01consulting.com/business-valuation-services-uk",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Business Valuation Services",
+                item: "https://www.platform01consulting.com/business-valuation-services-uk",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              ...(member.text2 && { description: member.text2 }),
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
       <ServiceHero
         {...BusinessValuationData}
         whatsAppButtonMobileView={false}

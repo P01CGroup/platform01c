@@ -668,6 +668,190 @@ const TurnaroundAdvisory = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "P01SOaaS Strategy Office as a Service",
+            description:
+              "Embedded strategy office providing ongoing support across strategy, M&A, corporate finance, restructuring, and execution for ambitious organizations.",
+            url: "https://www.platform01consulting.com/p01soaas",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: [
+              "United Arab Emirates",
+              "Saudi Arabia",
+              "United Kingdom",
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "P01SOaaS",
+                item: "https://www.platform01consulting.com/p01soaas",
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is P01SOaaS?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "P01SOaaS is a fully integrated Strategy Office as a Service platform giving organizations access to multidisciplinary consulting capabilities including corporate strategy, business transformation, PMO support, financial modelling, and fractional strategic leadership.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What are the best Strategy Office as a Service solutions in the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "P01SOaaS is designed as a premium Strategy Office as a Service solution for UAE businesses requiring strategy implementation, PMO support, and execution-focused consulting.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Which firms provide PMO and strategy implementation services in Dubai and Abu Dhabi?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Platform01 Consulting provides PMO support, strategic execution, project management office services, and strategy implementation for businesses across the UAE.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are analysts and fractional strategic support services available in Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, P01SOaaS supports Saudi Arabia businesses with strategy analysts, PMO support, financial analysis, and flexible strategic support solutions.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can businesses in the UK opt for strategy execution and PMO support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, Platform01 Consulting supports UK-based businesses with strategic implementation support, PMO coordination, and performance management capabilities.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is Strategy Office as a Service?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Strategy Office as a Service is a model where businesses outsource ongoing strategy execution, PMO coordination, and strategic implementation through an external partner without building large internal teams.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How is P01SOaaS different from traditional consulting firms?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Traditional firms use billable-hour, short-term project models, while P01SOaaS is a long-term execution-focused partnership emphasizing implementation and operational value creation.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does P01SOaaS include PMO and project management support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, including PMO support, project tracking, initiative coordination, management reporting, and governance support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can businesses use P01SOaaS instead of hiring a fractional CFO or strategy team?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, many organizations use P01SOaaS as an alternative to building large internal strategy, finance, or transformation teams.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does Platform01 Consulting provide analysts and strategic associates?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, supporting financial analysis, market research, commercial analysis, and reporting support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who should use P01SOaaS?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "SMEs, mid-market businesses, growth-stage companies, founder-led organizations, corporates undergoing transformation, investors, and family offices.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is P01SOaaS available in the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, supporting businesses and investors across the UAE through strategy execution, PMO support, and business transformation engagements.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is P01SOaaS available in Saudi Arabia (KSA)?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, supporting businesses and investors in Saudi Arabia through strategic execution support, PMO advisory, and management consulting capabilities.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is P01SOaaS available in the United Kingdom (UK)?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, supporting UK-based businesses and leadership teams requiring flexible strategic execution and PMO coordination.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can P01SOaaS support strategy implementation services?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, strategy implementation is a core focus area, bridging the gap between strategic planning and execution through structured monitoring and accountability.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What industries does Platform01 Consulting support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Healthcare, manufacturing, industrials, technology, retail, construction, logistics, professional services, hospitality, real estate, energy, and investment platforms.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...TurnaroundAdvisoryData}
         whatsAppButtonMobileView={false}

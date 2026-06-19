@@ -320,6 +320,149 @@ const MaConsulting = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "M&A Advisory Services",
+            description:
+              "Proven M&A advisory services across industries for buying, selling, or merging businesses, including sell-side advisory, business valuation, and divestments.",
+            url: "https://www.platform01consulting.com/ma-advisory",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: "United Arab Emirates",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "M&A Advisory",
+                item: "https://www.platform01consulting.com/ma-advisory",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What type of clients does our M&A advisory firm work with?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We work with mid-market companies with annual revenue of AED 40 million or above, high-growth companies, corporate groups divesting non-core assets, and investors and family offices planning structured exits.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I rely solely on our M&A advisory firm for my transaction?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our services enhance M&A readiness and strategic position but do not replace licensed financial, legal, or tax advisors; we often work alongside other advisors as part of a broader deal team.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I sell my business in the UAE with an M&A advisory firm?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We guide clients through valuation, packaging a growth story, documentation support, due diligence support, and transaction support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does a business sale take?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most business sales take between 6 to 24 months depending on deal complexity, industry dynamics, and buyer interest.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can you help me succeed in an M&A transaction if I'm not clear about the process?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We act as your management consultant, defining objectives, assessing readiness, crafting the deal story, identifying buyers and investors, and supporting negotiation and transaction.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How does our M&A advisory firm's experience set us apart?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our team includes former investment bankers, corporate strategists, and private equity professionals with deep transactional experience across the MENAP region.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How does our M&A advisory firm support buy-side clients?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We provide strategic consulting to identify acquisition targets, conduct preliminary commercial due diligence, evaluate synergies, and define investment-aligned strategies.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does our M&A advisory firm provide cross-border M&A services?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we support cross-border M&A transactions, understanding regional cultural nuances and working closely with client advisory teams.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Does our M&A advisory firm help with negotiations?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we guide clients through deal structuring, valuation discussions, term sheet reviews, and LOI assessments on a best-effort basis.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...MaConsultingData}
         whatsAppButtonMobileView={false}

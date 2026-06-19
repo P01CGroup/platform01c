@@ -48,5 +48,32 @@ import InsightsClientPage from "./client-page";
 
 // Use client-side rendering for better real-time updates
 export default function InsightsPage() {
-  return <InsightsClientPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Insights",
+                item: "https://www.platform01consulting.com/insights",
+              },
+            ],
+          }),
+        }}
+      />
+      <InsightsClientPage />
+    </>
+  );
 }

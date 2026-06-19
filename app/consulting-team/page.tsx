@@ -49,8 +49,58 @@ const ConsultingTeam = () => {
   const TeamPrimary = getTeamDataForPage("consulting-team-primary");
   const TeamSecondary = getTeamDataForPage("consulting-team-secondary");
   const ManagingDirector = getTeamDataForPage("consulting-managing-director");
+
+  const allMembers = [...ManagingDirector, ...TeamPrimary, ...TeamSecondary];
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Consulting Team",
+                item: "https://www.platform01consulting.com/consulting-team",
+              },
+            ],
+          }),
+        }}
+      />
+      {allMembers.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              ...(member.text2 && { description: member.text2 }),
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+              ...(member.education && { alumniOf: member.education }),
+              ...(member.professionalQualifications && {
+                hasCredential: member.professionalQualifications,
+              }),
+            }),
+          }}
+        />
+      ))}
+
       <HeroInner title={Hero.title} supportingText={Hero.supportingText} />
       <div className="container pt-5">
         <Header text="Our Consulting Team" className="mb-26" />

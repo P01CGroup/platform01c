@@ -692,6 +692,130 @@ const Restructuring = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "UAE SME Advisory Services",
+            description:
+              "Bespoke consulting solutions for Small and Medium Enterprises in the UAE covering financial modelling, market sizing, and business strategy.",
+            url: "https://www.platform01consulting.com/smb-advisory-services-uae",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+            areaServed: "United Arab Emirates",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "UAE SME Advisory Services",
+                item: "https://www.platform01consulting.com/smb-advisory-services-uae",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is SME advisory and why is it important in the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "SME advisory services help businesses navigate rapid growth, funding, and operational decisions in the Middle East.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What types of financial models do you create for UAE businesses?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We build investor-grade financial models including P&L forecasts, cash flow projections, valuation models, and unit economics for UAE and GCC contexts.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help UAE startups prepare for VC fundraising?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, including pitch deck preparation, financial storytelling, and fundraising strategy aligned with regional VCs and international investors.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do you conduct market sizing for UAE SMEs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We combine secondary research, local economic datasets, industry reports, and regional competitor analysis for Dubai, Abu Dhabi, Sharjah, and the wider GCC.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What industries do you serve in the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Fintech, SaaS, consumer goods and D2C, health and wellness, food and beverage, professional services, and retail and e-commerce, with experience in free zone and mainland regulatory frameworks.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you work with clients across the GCC?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we support clients across the entire GCC region through virtual sessions, collaborative tools, and flexible scheduling.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...RestructuringData}
         whatsAppButtonMobileView={false}

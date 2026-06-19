@@ -29,9 +29,72 @@ export default async function InsightPage({ params }: InsightPageProps) {
   const { slug } = await params;
   const insight = await fetchInsight(slug);
   if (!insight) return notFound();
+  const pageUrl = `https://www.platform01consulting.com/insights/${slug}`;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: insight.title,
+            description: insight.excerpt,
+            image: insight.image_url,
+            datePublished: insight.published_date,
+            dateModified: insight.updated_at || insight.published_date,
+            author: [
+              {
+                "@type": "Person",
+                name: insight.author,
+              },
+              ...(insight.co_author
+                ? [{ "@type": "Person", name: insight.co_author }]
+                : []),
+            ],
+            publisher: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.platform01consulting.com/logo.png",
+              },
+            },
+            mainEntityOfPage: pageUrl,
+            ...(insight.tags?.length && { keywords: insight.tags.join(", ") }),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Insights",
+                item: "https://www.platform01consulting.com/insights",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: insight.title,
+                item: pageUrl,
+              },
+            ],
+          }),
+        }}
+      />
       <HeroInsight
         title={insight.title}
         backgroundImage={insight.image_url}

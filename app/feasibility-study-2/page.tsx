@@ -387,6 +387,47 @@ const FeasibilityStudyGenericSecondary = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Feasibility Study Services",
+            description:
+              "Bankable and commercial feasibility studies trusted for equity investment, bank loans, DFI financing, and grants. 250+ studies delivered.",
+            url: "https://www.platform01consulting.com/feasibility-study-2",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Feasibility Study",
+                item: "https://www.platform01consulting.com/feasibility-study-2",
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...feasibilityStudyData}
         // showButton={true}

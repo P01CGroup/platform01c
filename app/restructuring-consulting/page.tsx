@@ -283,6 +283,133 @@ const Restructuring = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Restructuring Consulting Services",
+            description:
+              "Restructuring consulting helping businesses stabilize operations, manage financial distress, and execute turnaround strategies across UAE and Saudi Arabia.",
+            url: "https://www.platform01consulting.com/restructuring-consulting",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Restructuring Consulting",
+                item: "https://www.platform01consulting.com/restructuring-consulting",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What are the early signs that a company needs restructuring advice?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Common indicators include persistent cash flow shortages, overdue obligations, breach of financial covenants, rapid decline in margins, management turnover, and missed payroll or tax obligations.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is a turnaround plan and how do you help create one?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A turnaround plan stabilizes and restores a struggling business through financial review, cost reduction, working capital optimization, and management alignment.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How is a distressed business valuation different from a standard valuation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Distressed valuation considers limited cash flow visibility, liquidation risks, and uncertain turnaround assumptions, using scenario modeling and risk-weighted cash flows.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help us value our business in the context of a family dispute or potential exit?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we support family businesses during shareholder disputes, succession discussions, or potential buyouts.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What restructuring options do we have if we're in financial distress?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Options include debt refinancing, cost-cutting, asset divestment, equity injection, and strategic partnerships or mergers.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help us prepare presentations or materials for banks or investors?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, including restructuring proposals, business viability plans, financial models, and commercial briefs for creditor engagement.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is your work confidential?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, all restructuring engagements are treated with strict confidentiality and professional discretion.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...RestructuringData}
         whatsAppButtonMobileView={false}

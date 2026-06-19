@@ -52,6 +52,29 @@ export async function generateMetadata() {
 export default function CredentialsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Credentials",
+                item: "https://www.platform01consulting.com/credentials",
+              },
+            ],
+          }),
+        }}
+      />
       <HeroInner
         title="Decades of experience.<br/>Billions in advisory value."
         supportingText="Platform01 Consulting's leadership team has successfully delivered 200+ strategic and financial consulting engagements globally in 100+ years of professional experience with globally renowned corporates, investors and services firms."

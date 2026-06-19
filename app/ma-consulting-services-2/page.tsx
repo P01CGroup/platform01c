@@ -182,6 +182,98 @@ const MaConsulting2 = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Mergers and Acquisitions Consulting",
+            description:
+              "Leading mergers and acquisitions firm in Dubai and UAE offering professional consulting, valuation, and transaction advisory services.",
+            url: "https://www.platform01consulting.com/ma-consulting-services-2",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+            areaServed: "United Arab Emirates",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Mergers and Acquisitions Consulting",
+                item: "https://www.platform01consulting.com/ma-consulting-services-2",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Who benefits most from our Mergers & Acquisitions Services?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Businesses planning expansion, acquisition, or divestment in the UAE can leverage our services to achieve strategic growth and financial clarity.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you assist with Mergers and Acquisitions in UAE and Dubai?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we provide full-spectrum advisory and consulting support for mergers and acquisitions in the UAE and Dubai, including local and cross-border deals.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...MaConsultingData}
         whatsAppButtonMobileView={false}

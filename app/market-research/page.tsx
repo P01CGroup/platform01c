@@ -345,6 +345,157 @@ const MarketResearch = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Market Research Services",
+            description:
+              "Bespoke market research delivering strategic market intelligence for confident decision-making across GCC markets.",
+            url: "https://www.platform01consulting.com/market-research",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Market Research",
+                item: "https://www.platform01consulting.com/market-research",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Do you provide market research services specifically for Saudi Arabia and the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, Saudi Arabia and the UAE are our primary markets, with research designed for local regulatory, economic, and cultural contexts.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What sectors do you cover in the UAE and Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We cover healthcare, retail, industrials, logistics, education, technology, financial services, and emerging sectors like green economy and smart infrastructure.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you support investment decisions with your research in Saudi Arabia and the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, our research supports investors from market sizing to competitor analysis to exit landscape assessments, frequently supporting VCs and private equity firms.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you conduct local fieldwork in the UAE and Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, depending on project needs we conduct interviews, surveys, and mystery shopping using our network of on-ground researchers.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is your market research suitable for feasibility studies in Saudi Arabia or UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, market research is a core component of feasibility studies in both Saudi Arabia and the UAE, helping clients assess viability before committing capital.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you conduct fast-turnaround research projects in the UAE or Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, while most engagements range from 2 to 8 weeks, we also offer rapid research sprints for time-sensitive decisions.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are your research reports suitable for regulatory submissions in Saudi Arabia or UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "In many cases yes, our reports are often used as part of business licensing, investment applications, and strategy documentation.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you support international companies entering the Saudi or UAE markets?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we support international firms with insights on market potential, customer segments, competitive landscape, and localization strategies.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes your firm different from other market research firms in the UAE and Saudi Arabia?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We deliver consulting-grade research grounded in strategic context and deep regional understanding, with a track record working with investors, corporates, and regulators.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I get started with a market research project in Saudi Arabia or the UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Reach out through our website or email to schedule a discovery call, after which we scope a customized proposal aligned with your needs.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...MarketResearchData}
         whatsAppButtonMobileView={false}

@@ -303,6 +303,146 @@ const DueDiligence = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Commercial Due Diligence Services",
+            description:
+              "Commercial due diligence delivering strategic intelligence for investors and acquirers.",
+            url: "https://www.platform01consulting.com/commercial-due-diligence-services-uk",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+              award: [
+                "Top Consulting Firm ConsultancyME 2025",
+                "Top Strategist GCC 2026",
+                "Top M&A Advisory Boutique 2025",
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Commercial Due Diligence",
+                item: "https://www.platform01consulting.com/commercial-due-diligence-services-uk",
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is Commercial Due Diligence and how is it different from financial due diligence?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Commercial Due Diligence assesses the market, competitive positioning, and business model viability of a target, while financial due diligence focuses on the numbers.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you offer standalone CDD or integrated support with financial/legal advisors?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We offer standalone CDD as well as collaboration with your financial, legal, or technical due diligence teams.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What sectors do you specialize in for CDD?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We have strong experience across FMCG, technology, education, healthcare, logistics, real estate, and industrials.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How fast can you deliver a CDD report?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We typically deliver CDD projects in 3 to 5 weeks depending on complexity and depth of validation required.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you conduct primary market interviews?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we regularly conduct customer, competitor, supplier, and expert interviews to generate first-hand commercial insights.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is your team based locally?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we have on-ground presence enabling real-time access to market participants and regulators.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you help post-transaction with value creation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we offer post-deal strategic advisory to support integration, market expansion, and revenue growth planning.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What level of reporting do you provide?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We deliver a detailed report including qualitative and quantitative analysis, management summaries, red flags, and board-level recommendations.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              ...(member.text2 && { description: member.text2 }),
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
       <ServiceHero
         {...DueDiligenceData}
         whatsAppButtonMobileView={false}

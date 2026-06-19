@@ -249,6 +249,157 @@ const TransactionSupport = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Transaction Advisory Services",
+            description:
+              "End-to-end transaction advisory including M&A support, financial modelling, investor documentation, and deal execution across UAE and Saudi Arabia.",
+            url: "https://www.platform01consulting.com/transactions-advisory-services",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Transaction Advisory Services",
+                item: "https://www.platform01consulting.com/transactions-advisory-services",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.team.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is transaction support in consulting?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Transaction support includes services that help companies prepare for and execute M&A, fundraising, or strategic transactions, covering financial modelling and investor documents.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who needs transaction support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Any business planning to raise funds, sell a stake, acquire another company, or undergo a strategic partnership.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How does financial modelling support a transaction?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A well-built financial model helps stakeholders understand past performance and future projections, enabling sensitivity testing and negotiation preparation.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes a good Information Memorandum?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "An effective IM covers company background, market opportunity, financials, team, risks, and transaction rationale in a structured, investor-friendly way.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What's the difference between a teaser and an IM?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A teaser is a 1 to 2 page anonymized summary for initial outreach, while the IM is a detailed confidential document shared under NDA.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to prepare for a transaction?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "On average 4 to 8 weeks, including building the model, drafting documents, setting up a data room, and preparing for investor meetings.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you help with investor introductions?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We may support investor targeting and introductions depending on the client mandate and geography.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are you registered in the KSA and UAE?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we are a licensed management consultancy in the UAE and KSA.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can you work with startups or only large businesses?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We work across all sizes, including fast-growing scale-ups preparing for Seed to Series B rounds.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide post-transaction support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we offer post-deal management consulting to ensure smooth business transition after the transaction.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...TransactionSupportData}
         whatsAppButtonMobileView={false}

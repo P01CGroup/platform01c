@@ -139,20 +139,54 @@ export default async function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <Hero backgroundImages={HERO_BACKGROUND_IMAGES} />
-      <ConsultingServices />
-      <CredentialsRealtime
-        type="slider"
-        filters={{ is_active: true }}
-        tabs={tabs}
-        bgSurface={true}
-        heading="Our Credentials"
-        supportingText="We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision."
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Platform01 Consulting",
+            url: "https://www.platform01consulting.com",
+            description:
+              "We deliver bespoke consulting solutions in strategy, corporate finance, M&A, feasibility studies, and business transformation for corporations, investors, and institutions across UAE and Saudi Arabia.",
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+            knowsAbout: [
+              "Strategy Consulting",
+              "M&A Advisory",
+              "Feasibility Studies",
+              "Business Transformation",
+              "Corporate Finance",
+            ],
+          }),
+        }}
       />
-      <DynamicInsightsSlider />
-      <OurValuesSlider values={VALUES} bgSurface={true} />
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Platform01 Consulting",
+            url: "https://www.platform01consulting.com",
+          }),
+        }}
+      />
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <Hero backgroundImages={HERO_BACKGROUND_IMAGES} />
+        <ConsultingServices />
+        <CredentialsRealtime
+          type="slider"
+          filters={{ is_active: true }}
+          tabs={tabs}
+          bgSurface={true}
+          heading="Our Credentials"
+          supportingText="We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision."
+        />
+        <DynamicInsightsSlider />
+        <OurValuesSlider values={VALUES} bgSurface={true} />
+      </div>
+    </>
   );
 }

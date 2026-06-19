@@ -315,6 +315,154 @@ const BrandStrategy = async () => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Real Estate Consulting Services",
+            description:
+              "Real estate advisory services including feasibility studies, highest and best use studies, and transaction support across UAE and Saudi Arabia.",
+            url: "https://www.platform01consulting.com/real-estate-consulting",
+            provider: {
+              "@type": "Organization",
+              name: "Platform01 Consulting",
+            },
+            areaServed: ["United Arab Emirates", "Saudi Arabia"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Real Estate Consulting",
+                item: "https://www.platform01consulting.com/real-estate-consulting",
+              },
+            ],
+          }),
+        }}
+      />
+      {teamData.map((member) => (
+        <script
+          key={member.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: member.name,
+              jobTitle: member.text1,
+              image: `https://www.platform01consulting.com${member.image.src}`,
+              worksFor: {
+                "@type": "Organization",
+                name: "Platform01 Consulting",
+              },
+            }),
+          }}
+        />
+      ))}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is a real estate feasibility study, and why do I need one?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A real estate feasibility study assesses whether a proposed project is viable from a financial, market, and regulatory standpoint, analyzing costs, demand, revenues, risks, and ROI.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is a Highest and Best Use (HBU) study?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "An HBU study identifies the most profitable, legally permissible, and physically possible use of a property based on market trends, financial returns, and zoning regulations.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "When should I conduct a feasibility study for a real estate project?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Before acquiring land, before starting project design, or before seeking investors or financing, to validate the project and reduce investment risks.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to complete a real estate feasibility study?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "A standard feasibility study can be completed within 4 to 6 weeks, with additional time required for larger or more complex developments.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What information do you need from clients to start a feasibility study or HBU study?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Property location and size, intended development concept, title deeds, budget parameters, and any preliminary design layouts if available.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What sectors do you cover in real estate feasibility and HBU studies?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Residential, commercial, retail, hospitality, industrial, and mixed-use developments across the UAE and KSA.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How are your real estate transaction consulting services different from a broker?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our services focus on strategy, valuation, due diligence, structuring, and negotiation, acting solely in the client's best interest rather than facilitating transactions like a broker.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you provide independent real estate valuations as part of your advisory services?",
+                acceptedAnswer: { "@type": "Answer", text: "No." },
+              },
+              {
+                "@type": "Question",
+                name: "In which regions do you offer real estate consulting services?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Primarily across the United Arab Emirates and Kingdom of Saudi Arabia, including Dubai, Abu Dhabi, Riyadh, and Jeddah.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How can I get a proposal or quote for a feasibility study, HBU study, or real estate transaction advisory?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Contact Platform01 Consulting through the website's contact page or email to receive a tailored proposal outlining scope, timelines, and pricing.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <ServiceHero
         {...BrandStrategyData}
         whatsAppButtonMobileView={false}

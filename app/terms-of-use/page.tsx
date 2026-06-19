@@ -42,6 +42,29 @@ const TermsOfUse = () => {
   };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.platform01consulting.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Terms of Use",
+                item: "https://www.platform01consulting.com/terms-of-use",
+              },
+            ],
+          }),
+        }}
+      />
       <HeroInner title={Hero.title} />
       <div className="container flex flex-col gap-10 py-10 text-dark/50">
         <p>
