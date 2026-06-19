@@ -14,7 +14,12 @@ export async function proxy(req: NextRequest) {
     if (!isWWW || !isHTTPS) {
       const correctHost = isWWW ? host : `www.${host}`;
       const redirectUrl = `https://${correctHost}${req.nextUrl.pathname}${req.nextUrl.search}`;
-      return NextResponse.redirect(redirectUrl, { status: 301 });
+      return new NextResponse(null, {
+        status: 301,
+        headers: {
+          Location: redirectUrl,
+        },
+      });
     }
   }
 
