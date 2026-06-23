@@ -691,6 +691,12 @@ export const teamConfigs = {
     "mirta-khan",
     "maha-tauqeer",
   ],
+  "real-estate-consulting-ksa": [
+    "mustafa-nadeem",
+    "shafi-akhund",
+    "shammaas-abdullah",
+    "mohammed-ashir",
+  ],
 
   // Corporate team page
   "corporate-team": [

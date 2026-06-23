@@ -33,7 +33,7 @@ export async function generateMetadata() {
     title:
       "Expert M&A Advisory in UAE | Award-Winning Boutique Firm — Platform01",
     description:
-      "Platform01 is a leading M&A advisory firm in UAE offering sell-side advisory, business valuation, divestments & deal support. Talk to an expert today",
+      "Platform01 is a leading M&A advisory firm in UAE offering sellside advisory, business valuation, divestments & deal support. Talk to an expert today.",
     keywords:
       "M&A advisory firm, M&A firm in UAE, M&A advisory company, M&A consulting, mergers and acquisitions UAE, mergers and acquisitions Dubai, M&A services, M&A specialist, M&A business advisors, M&A transaction advisory services Dubai, business valuation UAE, transaction advisory",
     og_title: "M&A Advisory Firm in UAE | Premium M&A Consulting Services",
