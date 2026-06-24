@@ -52,22 +52,25 @@ export default function Credentials({
   supportingText = "We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision.",
 }: CredentialsProps) {
   const [activeTab, setActiveTab] = useState(tabs[0]?.value || "");
-  const [currentSlides, setCurrentSlides] = useState<CredentialSlide[]>([]);
+  const [currentSlides, setCurrentSlides] = useState<CredentialSlide[]>(slides);
+  // const [currentSlides, setCurrentSlides] = useState<CredentialSlide[]>([]);
   const [hasShuffled, setHasShuffled] = useState(false);
   const navPrev = useRef<HTMLButtonElement | null>(null);
   const navNext = useRef<HTMLButtonElement | null>(null);
   const swiperRef = useRef<any>(null);
 
-  // Shuffle slides on client side when component mounts or slides change
   useEffect(() => {
-    if (slides.length > 0 && !hasShuffled) {
-      setCurrentSlides(shuffleArray(slides));
-      setHasShuffled(true);
-    } else if (slides.length > 0) {
-      // For subsequent updates, also shuffle to maintain randomness
-      setCurrentSlides(shuffleArray(slides));
-    }
-  }, [slides, hasShuffled]);
+    setCurrentSlides(shuffleArray(slides));
+    setHasShuffled(true);
+  }, [slides]);
+  // useEffect(() => {
+  //   if (slides.length > 0 && !hasShuffled) {
+  //     setCurrentSlides(shuffleArray(slides));
+  //     setHasShuffled(true);
+  //   } else if (slides.length > 0) {
+  //     setCurrentSlides(shuffleArray(slides));
+  //   }
+  // }, [slides, hasShuffled]);
 
   const filteredSlides = disableTabs
     ? currentSlides

@@ -6,6 +6,8 @@ import OurValuesSlider, { Value } from "@/components/sections/OurValuesSlider";
 import { BackgroundImages } from "@/lib/types";
 import Seo from "@/components/Seo";
 import { supabaseAdmin } from "@/lib/supabase/admin";
+import { credentialsService } from "@/lib/services/CredentialsService";
+
 import {
   Users,
   Target,
@@ -14,6 +16,8 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
+import Credentials from "@/components/sections/Credentials";
+import { Credential } from "@/lib/types/cms";
 
 export async function generateMetadata() {
   // Fetch SEO data for homepage
@@ -138,6 +142,22 @@ export default async function Home() {
     { label: "Service", value: "service" },
   ];
 
+  const { data: credentials, error } = await credentialsService.getCredentials({
+    // service_tags: [""],
+    is_active: true,
+  });
+
+  const slides = credentials.flatMap((c: Credential) => {
+    const entries = [];
+    for (const tag of c.industry_tags ?? []) {
+      entries.push({ type: "industry", category: tag, title: c.title });
+    }
+    for (const tag of c.service_tags ?? []) {
+      entries.push({ type: "service", category: tag, title: c.title });
+    }
+    return entries;
+  });
+
   return (
     <>
       <script
@@ -176,14 +196,23 @@ export default async function Home() {
         {/* Hero Section */}
         <Hero backgroundImages={HERO_BACKGROUND_IMAGES} />
         <ConsultingServices />
-        <CredentialsRealtime
+        <Credentials
+          slides={slides}
+          // type="slider"
+          // filters={{ is_active: true }}
+          tabs={tabs}
+          bgSurface={true}
+          heading="Our Credentials"
+          supportingText="We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision."
+        />
+        {/* <CredentialsRealtime
           type="slider"
           filters={{ is_active: true }}
           tabs={tabs}
           bgSurface={true}
           heading="Our Credentials"
           supportingText="We bring a history of performance across corporate strategy, capital structuring, and investment advisory — built on deep expertise and delivered with precision."
-        />
+        /> */}
         <DynamicInsightsSlider />
         <OurValuesSlider values={VALUES} bgSurface={true} />
       </div>
