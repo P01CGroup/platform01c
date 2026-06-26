@@ -19,6 +19,14 @@ import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TeamTab from "./TeamTab";
 import { span } from "framer-motion/client";
+import {
+  ChartNoAxesCombined,
+  CheckCheck,
+  Globe,
+  GraduationCap,
+  Handshake,
+  ShieldHalf,
+} from "lucide-react";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -335,6 +343,39 @@ const FeasibilityStudySceondary = async () => {
     title: c.title,
   }));
 
+  const bullets = [
+    {
+      title: "Bankable & Financing-Ready",
+      desc: "Meets DFI, bank & investor standards (SIDF, ADF, CDF)",
+      icon: Handshake,
+    },
+    {
+      title: "SAR 2.5B+ in 12 Months",
+      desc: "Recent SIDF feasibility studies delivered",
+      icon: ChartNoAxesCombined,
+    },
+    {
+      title: "250+ Projects Delivered",
+      desc: "Across SAR 100B+ in project value",
+      icon: CheckCheck,
+    },
+    {
+      title: "Elite, Accredited Team",
+      desc: "Top business schools, global qualifications",
+      icon: GraduationCap,
+    },
+    {
+      title: "Global DFI, Big 4 & Fortune 500 Pedigree",
+      desc: "Team from global institutions & corporations",
+      icon: Globe,
+    },
+    {
+      title: "Investment-Grade, Vision 2030-Aligned",
+      desc: "Insights built for institutional financing",
+      icon: ShieldHalf,
+    },
+  ];
+
   return (
     <>
       <script
@@ -562,28 +603,49 @@ const FeasibilityStudySceondary = async () => {
         showContactForm={true}
         showContactFormMobileView={true}
       />
-      <div className="container pt-5">
-        <Header text="Feasibility Study Consultant" className="mb-26" />
-        <h2 className="heading-4 max-w-[1010px]">
-          Our Feasibility Study Expert service has been designed for clients
-          looking for Premium and Bespoke Consulting services delivered through
-          our unique "Practitioner-Driven" approach that brings deep Industry
-          Expertise with Financial Acumen to deliver High-Quality strategic
-          insights. Through our feasibility study consulting services in Saudi
-          Arabia, we deliver investment-grade insights that align with Vision
-          2030 and institutional financing requirements.
-        </h2>
+      <section className="bg-surface">
+        <div className="container pt-5">
+          <Header text="Feasibility Study Services" className="mb-26" />
+          <h2 className="heading-4 max-w-[1010px]">
+            Premium, Practitioner-Driven Feasibility Studies
+          </h2>
+          {/* <h2 className="heading-4 max-w-[1010px]">
+            Our Feasibility Study Expert service has been designed for clients
+            looking for Premium and Bespoke Consulting services delivered
+            through our unique "Practitioner-Driven" approach that brings deep
+            Industry Expertise with Financial Acumen to deliver High-Quality
+            strategic insights. Through our feasibility study consulting
+            services in Saudi Arabia, we deliver investment-grade insights that
+            align with Vision 2030 and institutional financing requirements.
+          </h2> */}
+          <div className="grid md:grid-cols-3 gap-3 mt-12 mb-20">
+            {bullets.map((item, index) => (
+              <div
+                key={index + 1}
+                className="flex items-center gap-4 bg-white p-3 "
+              >
+                <div className="bg-surface flex items-center p-3 w-14 min-w-14 h-14 [&_svg]:w-full [&_svg]:h-full">
+                  <item.icon />
+                </div>
+                <div className="flex flex-col">
+                  <h5 className="heading-6 leading-none">{item.title}</h5>
+                  <p className="text-dark/50 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
-        <div className="flex flex-col gap-0 mt-12 mb-16">
-          {checklistItems.map((item, index) => (
-            <ChecklistItem
-              key={index}
-              text={item}
-              className="last:border-b-0 border-b border-dark/10 py-6"
-            />
-          ))}
+          <div className="flex flex-col gap-0 mt-12 ">
+            {checklistItems.map((item, index) => (
+              <ChecklistItem
+                key={index}
+                text={item}
+                className="last:border-b-0 border-b border-dark/10 py-6"
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       {/* <TeamText>
         <div>
           <h2 className="heading-3 max-w-[450px]">
@@ -658,10 +720,11 @@ const FeasibilityStudySceondary = async () => {
 
       {/* <DynamicInsightsSlider bgSurface={true} /> */}
       <CallToAction
-        heading="Let' Talk - Feasibility Report of a Project"
+        heading="Let's Talk - Feasibility Report of a Project"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you with Bankable Feasibility Study expertise."
       />
       <FAQSection
+        leftAligned={true}
         calendlyButtonVisibility={false}
         faqs={faqData}
         showCTA={false}
