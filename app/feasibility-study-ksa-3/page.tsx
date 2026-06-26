@@ -34,8 +34,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Feasibility Study | Platform01 Consulting",
-    description: "Description for Feasibility Study page.",
+    title: "Industrial & Market Feasibility Studies KSA | Platform01",
+    description:
+      "Validate market demand and viability before you invest. Investment-grade market feasibility studies for KSA projects across all sectors. 250+ projects. Book a call.",
     keywords: "",
     og_title: "",
     og_description: "",
@@ -384,9 +385,9 @@ const FeasibilityStudySceondary = async () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            name: "Feasibility Study Services Saudi Arabia",
+            name: "Industrial & Market Feasibility Studies KSA | Platform01",
             description:
-              "Bankable feasibility studies in Saudi Arabia aligned with Vision 2030 and institutional financing requirements.",
+              "Validate market demand and viability before you invest. Investment-grade market feasibility studies for KSA projects across all sectors. 250+ projects. Book a call.",
             url: "https://www.platform01consulting.com/feasibility-study-ksa-3",
             provider: {
               "@type": "Organization",

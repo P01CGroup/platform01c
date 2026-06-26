@@ -25,7 +25,7 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Feasibility Study | Platform01 Consulting",
+    title: "Feasibility Study Saudi Arabia | Platform01 Consulting",
     description: "Description for Feasibility Study page.",
     keywords: "",
     og_title: "",
@@ -70,7 +70,8 @@ export async function generateMetadata() {
 
 const feasibilityStudyData: ServiceHeroData = {
   subheading: "Feasibility Study Services",
-  heading: "Building Solid Foundations for Success",
+  heading:
+    "Bankable feasibility studies for SIDF, banks & investors in KSA. 250+ projects worth SAR 100B+ delivered. Talk to an expert today.",
   smallHeading: "Licensed Management Consulting firm in Saudi Arabia",
   backgroundImages: {
     mobile: "/services/mobile/feasibility-study.png",
@@ -353,9 +354,9 @@ const FeasibilityStudySceondary = async () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            name: "Feasibility Study Services Saudi Arabia",
+            name: "Feasibility Study Saudi Arabia | Platform01 Consulting",
             description:
-              "Bankable feasibility studies in Saudi Arabia aligned with Vision 2030 and institutional financing requirements including SIDF and ADF.",
+              "Bankable feasibility studies for SIDF, banks & investors in KSA. 250+ projects worth SAR 100B+ delivered. Talk to an expert today.",
             url: "https://www.platform01consulting.com/feasibility-study-ksa",
             provider: {
               "@type": "Organization",

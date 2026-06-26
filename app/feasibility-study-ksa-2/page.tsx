@@ -25,8 +25,9 @@ export const revalidate = 0;
 
 export async function generateMetadata() {
   let seo = {
-    title: "Feasibility Study | Platform01 Consulting",
-    description: "Description for Feasibility Study page.",
+    title: "Bankable SIDF Feasibility Study | Platform01 KSA",
+    description:
+      "Get a bankable SIDF feasibility study in KSA from a team that's secured SAR 2B+ in approvals. Government-grade reports. Talk to our team.",
     keywords: "",
     og_title: "",
     og_description: "",
@@ -352,9 +353,9 @@ const FeasibilityStudySceondary = async () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            name: "Feasibility Study Services Saudi Arabia",
+            name: "Bankable SIDF Feasibility Study | Platform01 KSA",
             description:
-              "Bankable feasibility studies in Saudi Arabia aligned with Vision 2030 and institutional financing requirements.",
+              "Get a bankable SIDF feasibility study in KSA from a team that's secured SAR 2B+ in approvals. Government-grade reports. Talk to our team.",
             url: "https://www.platform01consulting.com/feasibility-study-ksa-2",
             provider: {
               "@type": "Organization",
