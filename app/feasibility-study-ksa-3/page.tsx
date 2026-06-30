@@ -605,7 +605,7 @@ const FeasibilityStudySceondary = async () => {
         showContactFormMobileView={true}
       />
       <section className="bg-surface">
-        <div className="container pt-5">
+        <div className="container pt-5 pb-10">
           <Header text="Feasibility Study Services" className="mb-26" />
           <h2 className="heading-4 max-w-[1010px]">
             Premium, Practitioner-Driven Feasibility Studies
@@ -619,7 +619,7 @@ const FeasibilityStudySceondary = async () => {
             services in Saudi Arabia, we deliver investment-grade insights that
             align with Vision 2030 and institutional financing requirements.
           </h2> */}
-          <div className="grid md:grid-cols-3 gap-3 mt-12 mb-20">
+          <div className="grid md:grid-cols-3 gap-3 mt-12 ">
             {bullets.map((item, index) => (
               <div
                 key={index + 1}
@@ -636,7 +636,7 @@ const FeasibilityStudySceondary = async () => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-0 mt-12 ">
+          {/* <div className="flex flex-col gap-0 mt-12 ">
             {checklistItems.map((item, index) => (
               <ChecklistItem
                 key={index}
@@ -644,7 +644,7 @@ const FeasibilityStudySceondary = async () => {
                 className="last:border-b-0 border-b border-dark/10 py-6"
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
       {/* <TeamText>

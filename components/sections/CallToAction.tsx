@@ -42,11 +42,15 @@ const CallToAction = ({
             <p className="text-white/50 max-w-[450px]">{parse(description)}</p>
           </div>
           <div className="flex gap-4">
-            <CTAButton text={buttonText || "Talk to an expert"} />
+            <CTAButton
+              link={"/contact-us"}
+              text={buttonText || "Talk to an expert"}
+            />
             {secondButton && secondLink && (
               <CTAButton
                 text={secondButton}
-                link={secondLink}
+                // link={secondLink}
+                link={"/contact-us"}
                 iconURL={iconURL}
               />
             )}

@@ -49,6 +49,7 @@ export default function ConditionalFooter() {
     "/business-valuation-services-uk",
     "/best-business-plan-consultants-uk",
     "/financial-modelling-and-analysis-uk",
+    "/real-estate-consulting-ksa",
   ];
 
   const shouldExcludeSaudi = excludeSaudiPages.includes(pathname);

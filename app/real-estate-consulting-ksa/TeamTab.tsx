@@ -39,7 +39,7 @@ const TeamTab = ({ corporateTeamData, consultingTeamData }: TeamTabProps) => {
       {activeTab === "corporate" && (
         <TeamShowcase
           headingFullWidth={true}
-          title="Our Feasibility Study Firm Corporate Team"
+          title="Our Real Estate Firm Corporate Team"
           heading={corporateTeamData.heading}
           supportingText={corporateTeamData.supportingText}
           FourColumn={true}
@@ -52,7 +52,7 @@ const TeamTab = ({ corporateTeamData, consultingTeamData }: TeamTabProps) => {
       {activeTab === "consulting" && (
         <TeamShowcase
           headingFullWidth={true}
-          title="Our Feasibility Study Firm Consulting Team"
+          title="Our Real Estate Firm Consulting Team"
           heading={consultingTeamData.heading}
           supportingText={consultingTeamData.supportingText}
           FourColumn={true}
