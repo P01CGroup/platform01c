@@ -28,6 +28,7 @@ export const navigationData: (NavItemData | MegaMenuData)[] = [
       { label: "Firm", href: "/" },
       { label: "The Consulting Team", href: "/consulting-team" },
       { label: "The Corporate Team", href: "/corporate-team" },
+      { label: "Contact Us", href: "/contact-us" },
     ],
   },
 
