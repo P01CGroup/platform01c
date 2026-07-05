@@ -41,6 +41,7 @@ export default function CredentialForm({
     "Real Estate",
     "Food & Agriculture",
     "Consumer",
+    "Services",
   ];
 
   const serviceTags = [
@@ -69,6 +70,7 @@ export default function CredentialForm({
     "Financial Due Diligence",
     "Strategic Options Analysis",
     "Pro Bono",
+    "P01SOaaS",
   ];
 
   useEffect(() => {
