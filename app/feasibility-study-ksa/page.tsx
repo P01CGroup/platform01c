@@ -70,8 +70,7 @@ export async function generateMetadata() {
 
 const feasibilityStudyData: ServiceHeroData = {
   subheading: "Feasibility Study Services",
-  heading:
-    "Bankable feasibility studies for SIDF, banks & investors in KSA. 250+ projects worth SAR 100B+ delivered. Talk to an expert today.",
+  heading: "Building Solid Foundations for Success.",
   smallHeading: "Licensed Management Consulting firm in Saudi Arabia",
   backgroundImages: {
     mobile: "/services/mobile/feasibility-study.png",
@@ -674,10 +673,11 @@ const FeasibilityStudySceondary = async () => {
 
       {/* <DynamicInsightsSlider bgSurface={true} /> */}
       <CallToAction
-        heading="Let' Talk - Feasibility Report of a Project"
+        heading="Let's Talk - Feasibility Report of a Project"
         description="We'd love to hear about your project. Whether you're aiming to do a greenfield project, or expand with a brownfield project, our team is here to guide you with Bankable Feasibility Study expertise."
       />
       <FAQSection
+        leftAligned={true}
         calendlyButtonVisibility={false}
         faqs={faqData}
         showCTA={false}
