@@ -615,7 +615,12 @@ export const teamConfigs = {
   ],
 
   // Finance services
-  "ma-consulting": ["mustafa-nadeem", "ali-shah-khawaja", "shafi-akhund"],
+  "ma-consulting": [
+    "mustafa-nadeem",
+    "ali-shah-khawaja",
+    "shafi-akhund",
+    "zoha-ayaz",
+  ],
   "transaction-support": [
     "mustafa-nadeem",
     "shwetabh-sameer",

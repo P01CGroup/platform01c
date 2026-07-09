@@ -26,16 +26,33 @@ export default function CredentialsBrowser({
     { label: "Service", value: "service" },
   ];
 
+  const EXCLUDED_TAGS = new Set([
+    "Pro Bono",
+    "Commercial Due Diligence UK",
+    "Business Valuation UK",
+  ]);
+
   // Extract unique tags
+  // const allIndustryTags = Array.from(
+  //   new Set(currentCredentials.flatMap((c) => c.industry_tags)),
+  // ).sort();
+  // const allServiceTags = Array.from(
+  //   new Set(currentCredentials.flatMap((c) => c.service_tags)),
+  // ).sort();
+
   const allIndustryTags = Array.from(
-    new Set(currentCredentials.flatMap((c) => c.industry_tags))
-  ).sort();
+    new Set(currentCredentials.flatMap((c) => c.industry_tags)),
+  )
+    .filter((tag) => !EXCLUDED_TAGS.has(tag))
+    .sort();
   const allServiceTags = Array.from(
-    new Set(currentCredentials.flatMap((c) => c.service_tags))
-  ).sort();
+    new Set(currentCredentials.flatMap((c) => c.service_tags)),
+  )
+    .filter((tag) => !EXCLUDED_TAGS.has(tag))
+    .sort();
 
   const [activeTopTab, setActiveTopTab] = useState<"industry" | "service">(
-    "industry"
+    "industry",
   );
   const [activeSubTab, setActiveSubTab] = useState("Show All");
 
