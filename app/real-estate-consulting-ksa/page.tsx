@@ -108,12 +108,10 @@ const feasibilityStudyData: ServiceHeroData = {
 };
 
 const checklistItems = [
-  "Enables financing from DFIs (SIDF, ADF, CDF, etc. included), commercial banks, NBFCs, and institutional investors by ensuring a bankable feasibility study that meets global standards.",
-  "Last 12 Months: Prepared SIDF real estate for projects worth over SAR 2 billion",
-  "250+ Projects successfully delivered by Team Members for projects worth above SAR 100 billion",
-  "Accredited Team from Top Business Schools and with Global Professional Qualifications",
-  "Experienced Team from Global Financial Institutions, Fortune 500 Companies, Big 4 Advisory, and other Reputable Firms",
-  "We deliver investment-grade insights that align with Vision 2030 and institutional financing requirements",
+  "Strategic advisory across the entire real estate investment and development lifecycle.",
+  "Independent market intelligence and financial analysis to support confident investment decisions.",
+  "Expert guidance for acquisitions, developments, asset repositioning, and portfolio growth.",
+  "Tailored consulting solutions designed to maximize asset value and long-term returns.",
 ];
 
 const teamData = {
@@ -565,25 +563,10 @@ const FeasibilityStudySceondary = async () => {
         <div className="container pt-5 pb-20">
           <Header text="Real Estate" className="mb-26" />
           <h2 className="heading-4 max-w-[1010px]">
-            At Platform01 Consulting, we partner with investors, developers,
-            corporations, and landowners to deliver strategic real estate
-            consulting services tailored to today's dynamic markets in the Saudi
-            Arabia. Whether you are assessing a new development, repositioning
-            an existing asset, or seeking transaction advisory opportunities in
-            the sector, our practitioner-led team helps you make condent,
-            data-driven decisions.
+            Strategic Real Estate Solutions
           </h2>
-          {/* <h2 className="heading-4 max-w-[1010px]">
-          Our Feasibility Study Expert service has been designed for clients
-          looking for Premium and Bespoke Consulting services delivered through
-          our unique "Practitioner-Driven" approach that brings deep Industry
-          Expertise with Financial Acumen to deliver High-Quality strategic
-          insights. Through our feasibility study consulting services in Saudi
-          Arabia, we deliver investment-grade insights that align with Vision
-          2030 and institutional financing requirements.
-        </h2> */}
 
-          {/* <div className="flex flex-col gap-0 mt-12 mb-16">
+          <div className="flex flex-col gap-0 mt-12 mb-16">
             {checklistItems.map((item, index) => (
               <ChecklistItem
                 key={index}
@@ -591,7 +574,7 @@ const FeasibilityStudySceondary = async () => {
                 className="last:border-b-0 border-b border-dark/10 py-6"
               />
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
       {/* <TeamText>
