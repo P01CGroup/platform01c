@@ -77,7 +77,7 @@ export default function AdminRootPage() {
             </div>
             <div className="bg-white flex justify-start items-center p-6 border border-dark/10 gap-4">
               <div className="bg-surface text-dark p-5">
-              <Users size={28} />
+                <Users size={28} />
               </div>
               <div className="flex flex-col items-start justify-center">
                 <div className="text-3xl font-heading">{stats.activeCredentials}</div>
@@ -86,7 +86,7 @@ export default function AdminRootPage() {
             </div>
             <div className="bg-white flex justify-start items-center p-6 border border-dark/10 gap-4">
               <div className="bg-surface text-dark p-5">
-              <FileText size={28} />
+                <FileText size={28} />
               </div>
               <div className="flex flex-col items-start justify-center">
                 <div className="text-3xl font-heading">{stats.totalInsights}</div>
@@ -95,7 +95,7 @@ export default function AdminRootPage() {
             </div>
             <div className="bg-white flex justify-start items-center p-6 border border-dark/10 gap-4">
               <div className="bg-surface text-dark p-5">
-              <CheckCircle size={28} />
+                <CheckCircle size={28} />
               </div>
               <div className="flex flex-col items-start justify-center">
                 <div className="text-3xl font-heading">{stats.publishedInsights}</div>
@@ -158,7 +158,7 @@ export default function AdminRootPage() {
                   className="relative border border-dark/10 bg-white px-6 py-5 flex-col flex items-start gap-4 space-x-3 hover:border-dark/20 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-dark"
                 >
                   <div className="flex-shrink-0 w-16 h-16 bg-surface flex items-center justify-center">
-                  <svg className="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>

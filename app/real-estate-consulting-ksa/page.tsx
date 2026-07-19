@@ -582,13 +582,13 @@ const FeasibilityStudySceondary = async () => {
         showContactFormMobileView={true}
       />
       <section className="bg-surface">
-        <div className="container pt-5 pb-20">
+        <div className="container pt-5 pb-10">
           <Header text="Real Estate" className="mb-26" />
           <h2 className="heading-4 max-w-[1010px]">
             Strategic Real Estate Solutions
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-3 mt-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-3 mt-8">
             {bullets.map((item, index) => (
               <div
                 key={index}

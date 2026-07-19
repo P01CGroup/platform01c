@@ -22,11 +22,11 @@ interface AdminUser {
 // Helper function to check if session cookies exist
 const hasSessionCookies = (): boolean => {
   if (typeof document === 'undefined') return false;
-  
+
   const cookies = document.cookie.split(';');
   const sessionCookies = ['sb-access-token', 'sb-refresh-token', 'supabase-auth-token'];
-  
-  return sessionCookies.some(cookieName => 
+
+  return sessionCookies.some(cookieName =>
     cookies.some(cookie => cookie.trim().startsWith(`${cookieName}=`))
   );
 };
@@ -34,25 +34,25 @@ const hasSessionCookies = (): boolean => {
 // Helper function to clear all session data on client side
 const clearClientSession = () => {
   if (typeof document === 'undefined') return;
-  
+
   // Clear all possible session cookies
   const cookiesToClear = [
     'sb-access-token',
-    'sb-refresh-token', 
+    'sb-refresh-token',
     'supabase-auth-token',
     'supabase-auth-refresh-token',
     'admin-session',
     'auth-session'
   ];
-  
+
   cookiesToClear.forEach(cookieName => {
     document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   });
-  
+
   // Clear localStorage and sessionStorage
   localStorage.clear();
   sessionStorage.clear();
-  
+
   // Clear any cached data
   if ('caches' in window) {
     caches.keys().then(names => {
@@ -79,7 +79,7 @@ export default function AdminNavbar() {
         console.log('AdminNavbar: API response status:', response.status);
         const data = await response.json();
         console.log('AdminNavbar: API response data:', data);
-        
+
         if (response.ok && data.user) {
           console.log('AdminNavbar: User loaded successfully:', data.user.email);
           setUser(data.user);
@@ -109,24 +109,24 @@ export default function AdminNavbar() {
     setIsSigningOut(true);
     try {
       console.log('AdminNavbar: Starting sign out process');
-      
-      const response = await fetch('/api/auth/logout', { 
+
+      const response = await fetch('/api/auth/logout', {
         method: 'POST',
         credentials: 'include' // Ensure cookies are sent
       });
-      
+
       console.log('AdminNavbar: Logout API response status:', response.status);
-      
+
       // Always clear client-side session data regardless of API response
       clearClientSession();
       setUser(null);
-      
+
       if (response.ok) {
         console.log('AdminNavbar: Server logout successful');
       } else {
         console.error('AdminNavbar: Server logout failed, but client session cleared');
       }
-      
+
       // Force a hard redirect to clear any cached state and ensure middleware picks up the logout
       console.log('AdminNavbar: Redirecting to login page');
       window.location.href = '/admin/login';
