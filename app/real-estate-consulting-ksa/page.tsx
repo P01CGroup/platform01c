@@ -18,6 +18,12 @@ import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TeamTab from "./TeamTab";
+import {
+  Compass,
+  LineChart,
+  TrendingUp,
+  Target,
+} from "lucide-react";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -107,11 +113,27 @@ const feasibilityStudyData: ServiceHeroData = {
   showContactForm: true,
 };
 
-const checklistItems = [
-  "Strategic advisory across the entire real estate investment and development lifecycle.",
-  "Independent market intelligence and financial analysis to support confident investment decisions.",
-  "Expert guidance for acquisitions, developments, asset repositioning, and portfolio growth.",
-  "Tailored consulting solutions designed to maximize asset value and long-term returns.",
+const bullets = [
+  {
+    title: "Strategic Advisory",
+    desc: "Strategic advisory across the entire real estate investment and development lifecycle.",
+    icon: Compass,
+  },
+  {
+    title: "Market Intelligence",
+    desc: "Independent market intelligence and financial analysis to support confident investment decisions.",
+    icon: LineChart,
+  },
+  {
+    title: "Expert Guidance",
+    desc: "Expert guidance for acquisitions, developments, asset repositioning, and portfolio growth.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Tailored Solutions",
+    desc: "Tailored consulting solutions designed to maximize asset value and long-term returns.",
+    icon: Target,
+  },
 ];
 
 const teamData = {
@@ -566,13 +588,20 @@ const FeasibilityStudySceondary = async () => {
             Strategic Real Estate Solutions
           </h2>
 
-          <div className="flex flex-col gap-0 mt-12 mb-16">
-            {checklistItems.map((item, index) => (
-              <ChecklistItem
+          <div className="grid md:grid-cols-2 gap-3 mt-12 mb-16">
+            {bullets.map((item, index) => (
+              <div
                 key={index}
-                text={item}
-                className="last:border-b-0 border-b border-dark/10 py-6"
-              />
+                className="flex items-center gap-4 bg-white p-3 "
+              >
+                <div className="bg-surface flex items-center p-3 w-14 min-w-14 h-14 [&_svg]:w-full [&_svg]:h-full">
+                  <item.icon />
+                </div>
+                <div className="flex flex-col">
+                  <h5 className="heading-6 leading-none">{item.title}</h5>
+                  <p className="text-dark/50 text-sm">{item.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
