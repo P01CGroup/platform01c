@@ -28,7 +28,7 @@ export async function generateMetadata() {
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
-  } catch (e) {}
+  } catch (e) { }
   return {
     title: seo.title,
     description: seo.description,
@@ -171,14 +171,14 @@ const CorporateTeam = () => {
           years of Corporate Management experience, supported by a Dynamic and
           Professional staff dedicated to assisting our clients
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-5 pb-20" >
           <div className="md:col-start-2 md:col-span-4 grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-10">
             {Team.map((member, index) => (
               <TeamCard key={member.id} member={member} />
             ))}
           </div>
         </div>
-        <hr className="border-dark/10 my-20" />
+        {/* <hr className="border-dark/10 my-20" />
         <h2 className="heading-3 mb-4 max-w-[1060px] pb-10">
           Our External Advisors have deep rooted industry relationships,
           connections and expertise from reputable Global Corporations and
@@ -190,7 +190,7 @@ const CorporateTeam = () => {
               <TeamCard key={member.id} member={member} />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

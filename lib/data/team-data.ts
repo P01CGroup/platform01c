@@ -660,7 +660,7 @@ export const teamConfigs = {
   "restructuring-consulting": [
     "mustafa-nadeem",
     "saad-jilani",
-    "shafi-akhund",
+    // "shafi-akhund",
     "ali-shah-khawaja",
   ],
   "turnaround-advisory": ["saad-jilani", "shwetabh-sameer", "shafi-akhund"],

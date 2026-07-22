@@ -18,6 +18,12 @@ import { DynamicInsightsSlider } from "@/components/sections/InsightsSlider";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TeamTab from "./TeamTab";
+import {
+  Compass,
+  LineChart,
+  TrendingUp,
+  Target,
+} from "lucide-react";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -47,7 +53,7 @@ export async function generateMetadata() {
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
-  } catch (e) {}
+  } catch (e) { }
   return {
     title: seo.title,
     description: seo.description,
@@ -107,13 +113,27 @@ const feasibilityStudyData: ServiceHeroData = {
   showContactForm: true,
 };
 
-const checklistItems = [
-  "Enables financing from DFIs (SIDF, ADF, CDF, etc. included), commercial banks, NBFCs, and institutional investors by ensuring a bankable feasibility study that meets global standards.",
-  "Last 12 Months: Prepared SIDF real estate for projects worth over SAR 2 billion",
-  "250+ Projects successfully delivered by Team Members for projects worth above SAR 100 billion",
-  "Accredited Team from Top Business Schools and with Global Professional Qualifications",
-  "Experienced Team from Global Financial Institutions, Fortune 500 Companies, Big 4 Advisory, and other Reputable Firms",
-  "We deliver investment-grade insights that align with Vision 2030 and institutional financing requirements",
+const bullets = [
+  {
+    title: "Strategic Advisory",
+    desc: "Strategic advisory across the entire real estate investment and development lifecycle.",
+    icon: Compass,
+  },
+  {
+    title: "Market Intelligence",
+    desc: "Independent market intelligence and financial analysis to support confident investment decisions.",
+    icon: LineChart,
+  },
+  {
+    title: "Expert Guidance",
+    desc: "Expert guidance for acquisitions, developments, asset repositioning, and portfolio growth.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Tailored Solutions",
+    desc: "Tailored consulting solutions designed to maximize asset value and long-term returns.",
+    icon: Target,
+  },
 ];
 
 const teamData = {
@@ -562,36 +582,28 @@ const FeasibilityStudySceondary = async () => {
         showContactFormMobileView={true}
       />
       <section className="bg-surface">
-        <div className="container pt-5 pb-20">
-          <Header text="Real Estate" className="mb-26" />
+        <div className="container pt-5 pb-10">
+          <Header text="Real Estate" className="mb-4" />
           <h2 className="heading-4 max-w-[1010px]">
-            At Platform01 Consulting, we partner with investors, developers,
-            corporations, and landowners to deliver strategic real estate
-            consulting services tailored to today's dynamic markets in the Saudi
-            Arabia. Whether you are assessing a new development, repositioning
-            an existing asset, or seeking transaction advisory opportunities in
-            the sector, our practitioner-led team helps you make condent,
-            data-driven decisions.
+            Strategic Real Estate Solutions
           </h2>
-          {/* <h2 className="heading-4 max-w-[1010px]">
-          Our Feasibility Study Expert service has been designed for clients
-          looking for Premium and Bespoke Consulting services delivered through
-          our unique "Practitioner-Driven" approach that brings deep Industry
-          Expertise with Financial Acumen to deliver High-Quality strategic
-          insights. Through our feasibility study consulting services in Saudi
-          Arabia, we deliver investment-grade insights that align with Vision
-          2030 and institutional financing requirements.
-        </h2> */}
 
-          {/* <div className="flex flex-col gap-0 mt-12 mb-16">
-            {checklistItems.map((item, index) => (
-              <ChecklistItem
+          <div className="grid md:grid-cols-2 gap-3 mt-8">
+            {bullets.map((item, index) => (
+              <div
                 key={index}
-                text={item}
-                className="last:border-b-0 border-b border-dark/10 py-6"
-              />
+                className="flex items-center gap-4 bg-white p-3 "
+              >
+                <div className="bg-surface flex items-center p-3 w-14 min-w-14 h-14 [&_svg]:w-full [&_svg]:h-full">
+                  <item.icon />
+                </div>
+                <div className="flex flex-col">
+                  <h5 className="heading-6 leading-none">{item.title}</h5>
+                  <p className="text-dark/50 text-sm">{item.desc}</p>
+                </div>
+              </div>
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
       {/* <TeamText>
@@ -663,7 +675,7 @@ const FeasibilityStudySceondary = async () => {
         showCTA={false}
         services={servicesData}
         heading="At Platform01 Consulting, We differentiate ourselves with"
-        // supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to real estate. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
+      // supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to real estate. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
       />
 
       {/* <DynamicInsightsSlider bgSurface={true} /> */}

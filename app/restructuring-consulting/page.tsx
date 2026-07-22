@@ -19,6 +19,7 @@ import { Credential } from "@/lib/types/cms";
 import { getTeamDataForPage } from "@/lib/data/team-data";
 import { getSeoMetadata } from "@/lib/seo-config";
 import { supabaseAdmin } from "@/lib/supabase/admin";
+import NumberedList from "@/components/ui/NumberedList";
 
 // Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
@@ -49,7 +50,7 @@ export async function generateMetadata() {
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
-  } catch (e) {}
+  } catch (e) { }
   return {
     title: seo.title,
     description: seo.description,
@@ -69,8 +70,34 @@ const RestructuringData: ServiceHeroData = {
     desktop: "/services/desktop/restructuring.png",
     ultrawide: "/services/ultrawide/restructuring.png",
   },
+  awards: [
+    {
+      image: "/awards/top-consulting-firm-middle-east.png",
+      text: "Top Consulting Firm <br/> ConsultancyME",
+      alt: "Top Consulting Firm 2025 Middle East 2025",
+    },
+    {
+      image: "/awards/strategist-award.png",
+      text: "Top Strategist GCC <br/> Industrials, Healthcare & Technology",
+      alt: "Top Strategist - 2026",
+    },
+    {
+      image: "/awards/ma-award-1.png",
+      text: "Top M&A Advisory <br/> Boutique 2025",
+      alt: "Top M&A Advisory Boutique 2025",
+    },
+  ],
   showContactForm: true,
 };
+
+const checklistItems = [
+  "Financial distress and liquidity challenges",
+  "Operational underperformance",
+  "Debt restructuring and capital optimization",
+  "Strategic business reviews",
+  "Recovery and turnaround planning",
+  "Independent management advisory",
+];
 
 const teamData = {
   heading: "Restructuring <br/> Consulting Team",
@@ -418,12 +445,12 @@ const Restructuring = async () => {
         showContactFormMobileView={true}
       />
       <div className="container pt-5 pb-20">
-        <Header text="Restructuring Consulting" className="mb-26" />
-        <h2 className="heading-2 max-w-[640px] mb-8">
+        <Header text="Restructuring Consulting" className="mb-4" />
+        <h2 className="heading-2 max-w-[640px] mb-4">
           Guiding Businesses Through Complexity
         </h2>
         <hr className="border-dark/10 mb-8" />
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-20">
+        {/* <div className="grid grid-cols-1 md:grid-cols-5 gap-20">
           <h2 className="heading-4 md:col-span-3">
             In today's volatile business environment, companies may face
             financial distress, operational underperformance, or strategic
@@ -439,6 +466,14 @@ const Restructuring = async () => {
             clarity, assess alternatives, and build credible strategies for
             recovery.
           </p>
+        </div> */}
+        <h2 className="heading-4 max-w-[1010px]">
+          We help organizations navigate:
+        </h2>
+        <div className="gap-y-4 grid grid-cols-1 md:grid-cols-2 mb-8 mt-4">
+          {checklistItems.map((item, index) => (
+            <NumberedList key={index + 1} title={item} idx={index} />
+          ))}
         </div>
       </div>
       <TeamShowcase
@@ -446,23 +481,12 @@ const Restructuring = async () => {
         heading={teamData.heading}
         supportingText={teamData.supportingText}
         bgSurface={true}
+        FourColumn={true}
       >
         {teamData.team.map((item, index) => (
           <TeamCard key={index} member={item} bgSurface={false} />
         ))}
       </TeamShowcase>
-
-      <ServicesSection
-        services={servicesData}
-        bgSurface={false}
-        heading="Our Restructuring Consulting Services"
-      />
-
-      <OurValuesSlider
-        values={valuesData.values}
-        bgSurface={true}
-        {...(valuesData.heading && { heading: valuesData.heading })}
-      />
 
       <Credentials
         slides={slides}
@@ -474,13 +498,26 @@ const Restructuring = async () => {
         }
       />
 
-      <DynamicInsightsSlider bgSurface={true} />
+      <ServicesSection
+        services={servicesData}
+        bgSurface={true}
+        heading="Our Restructuring Consulting Services"
+        fullWidth={true}
+      />
+
+      <OurValuesSlider
+        values={valuesData.values}
+        {...(valuesData.heading && { heading: valuesData.heading })}
+      />
+
+
+      {/* <DynamicInsightsSlider bgSurface={true} /> */}
 
       <CallToAction
         heading="Let's Talk <br/> Confidentially"
         description="If your business is facing financial stress, operational challenge, or shareholder uncertainty, our restructuring team is ready to support."
       />
-      <FAQSection faqs={faqData} />
+      <FAQSection faqs={faqData} leftAligned={true} />
     </>
   );
 };

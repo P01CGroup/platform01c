@@ -43,13 +43,13 @@ export async function POST(request: NextRequest) {
       password,
     });
 
-    console.log('Login API: Supabase signIn result:', { 
-      hasData: !!data, 
-      hasUser: !!data?.user, 
+    console.log('Login API: Supabase signIn result:', {
+      hasData: !!data,
+      hasUser: !!data?.user,
       hasSession: !!data?.session,
       userEmail: data?.user?.email,
       userRole: data?.user?.user_metadata?.role,
-      error: error?.message 
+      error: error?.message
     });
 
     if (error) {
@@ -70,15 +70,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Create response and let Supabase set the cookies
-    let response = NextResponse.json({ 
-      success: true, 
-      user: data.user 
+    let response = NextResponse.json({
+      success: true,
+      user: data.user
     });
 
     // Let Supabase handle the cookie setting automatically
     if (data.session) {
       console.log('Login API: Login successful for user:', data.user.email);
-      
+
       // Create a new Supabase client that can set cookies on the response
       const supabaseWithCookies = createServerClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,

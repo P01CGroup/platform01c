@@ -5,7 +5,7 @@ export async function proxy(req: NextRequest) {
   const host = req.headers.get("host") || "";
   const isLocalhost = host.includes("localhost") || host.includes("127.0.0.1");
 
-  if (!isLocalhost) {
+  if (!isLocalhost && !host.endsWith(".vercel.app")) {
     const proto = req.headers.get("x-forwarded-proto") || "";
     const primaryProto = proto.split(",")[0].trim();
     const isWWW = host.startsWith("www.");
