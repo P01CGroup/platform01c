@@ -55,7 +55,7 @@ export async function generateMetadata() {
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
-  } catch (e) {}
+  } catch (e) { }
   return {
     title: seo.title,
     description: seo.description,
@@ -635,7 +635,7 @@ const FeasibilityStudySceondary = async () => {
       </section> */}
       <section className="bg-surface">
         <div className="container pt-5 pb-10">
-          <Header text="Feasibility Study Services" className="mb-26" />
+          <Header text="Feasibility Study Services" className="mb-4" />
           <h2 className="heading-4 max-w-[1010px]">
             Premium, Practitioner-Driven Feasibility Studies
           </h2>

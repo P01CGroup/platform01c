@@ -53,7 +53,7 @@ export async function generateMetadata() {
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
-  } catch (e) {}
+  } catch (e) { }
   return {
     title: seo.title,
     description: seo.description,
@@ -583,7 +583,7 @@ const FeasibilityStudySceondary = async () => {
       />
       <section className="bg-surface">
         <div className="container pt-5 pb-10">
-          <Header text="Real Estate" className="mb-26" />
+          <Header text="Real Estate" className="mb-4" />
           <h2 className="heading-4 max-w-[1010px]">
             Strategic Real Estate Solutions
           </h2>
@@ -675,7 +675,7 @@ const FeasibilityStudySceondary = async () => {
         showCTA={false}
         services={servicesData}
         heading="At Platform01 Consulting, We differentiate ourselves with"
-        // supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to real estate. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
+      // supportingText='We understand that every project is Unique. There&apos;s NO "One-Size-Fits-All" approach to real estate. We tailor the scope of each study to your Specific Needs, Vision, Scale, and Target Audience, ensuring Optimal Value and Efficient Resource Allocation when you Conduct a Feasibility Study.'
       />
 
       {/* <DynamicInsightsSlider bgSurface={true} /> */}

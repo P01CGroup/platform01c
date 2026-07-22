@@ -30,7 +30,7 @@ const TeamShowcase = ({
       className={`${className} pb-26 pt-5 ${bgSurface ? "bg-surface" : ""}`}
     >
       <div className={`container ${noHeader ? "pt-26" : ""}`}>
-        {!noHeader && <Header className="mb-26" text={title} />}
+        {!noHeader && <Header className="mb-4" text={title} />}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
           <div
             className={`mb-16 ${FourColumn ? "md:col-span-4" : "md:col-start-2 md:col-span-3"}`}

@@ -51,7 +51,7 @@ export async function generateMetadata() {
     if (data?.seo) {
       seo = { ...seo, ...data.seo, keywords: data.seo.keywords || "" };
     }
-  } catch (e) {}
+  } catch (e) { }
   return {
     title: seo.title,
     description: seo.description,
@@ -623,7 +623,7 @@ const FeasibilityStudyGeneric = async () => {
       </div> */}
       <div className="">
         <div className="container pt-5">
-          <Header text="Financial Modelling Services " className="mb-26" />
+          <Header text="Financial Modelling Services " className="mb-4" />
           <h2 className="heading-4 max-w-[1010px] ">
             At Platform01 Consulting, we offer professional financial modelling
             services for businesses, investors and leaders. We develop:
