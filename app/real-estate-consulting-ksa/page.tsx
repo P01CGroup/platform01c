@@ -583,7 +583,7 @@ const FeasibilityStudySceondary = async () => {
       />
       <section className="bg-surface">
         <div className="container pt-5 pb-10">
-          <Header text="Real Estate" className="mb-4" />
+          <Header text="Real Estate" className="mb-6" />
           <h2 className="heading-4 max-w-[1010px]">
             Strategic Real Estate Solutions
           </h2>

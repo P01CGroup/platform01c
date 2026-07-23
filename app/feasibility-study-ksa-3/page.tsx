@@ -606,7 +606,7 @@ const FeasibilityStudySceondary = async () => {
       />
       <section className="bg-surface">
         <div className="container pt-5 pb-10">
-          <Header text="Feasibility Study Services" className="mb-4" />
+          <Header text="Feasibility Study Services" className="mb-6" />
           <h2 className="heading-4 max-w-[1010px]">
             Premium, Practitioner-Driven Feasibility Studies
           </h2>

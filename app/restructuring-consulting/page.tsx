@@ -445,7 +445,7 @@ const Restructuring = async () => {
         showContactFormMobileView={true}
       />
       <div className="container pt-5 pb-20">
-        <Header text="Restructuring Consulting" className="mb-4" />
+        <Header text="Restructuring Consulting" className="mb-6" />
         <h2 className="heading-2 max-w-[640px] mb-4">
           Guiding Businesses Through Complexity
         </h2>
